@@ -3,8 +3,8 @@ FROM php:8.2-apache
 WORKDIR /var/www
 COPY ./src /var/www
 
-# RUN chown www-data:www-data -R /var/www/bootstrap/cache\
-#   &&chown www-data:www-data -R /var/www/storage
+RUN chown www-data:www-data -R /var/www/bootstrap/cache\
+  &&chown www-data:www-data -R /var/www/storage
 
 COPY ./config/vhost.conf /etc/apache2/sites-enabled/000-default.conf
 # COPY ./config/ports.conf /etc/apache2/ports.conf
