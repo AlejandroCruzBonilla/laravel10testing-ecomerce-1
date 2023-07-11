@@ -18,8 +18,22 @@
 
 <body class="font-sans antialiased">
     <div class="min-h-screen bg-gray-100">
-        @include('layouts.navigation')
+        {{-- @include('layouts.navigation') --}}
 
+        {{-- {{ dd(Helper::getRoutesByStarting('web')) }} --}}
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex">
+                    <!-- Logo -->
+                    <div class="shrink-0 flex items-center">
+                        <a href="{{ route('web.home') }}">
+                            <x-application-logo class="block h-9 w-auto fill-current text-gray-800" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- Page Heading -->
         @if (isset($header))
             <header class="bg-white shadow">
