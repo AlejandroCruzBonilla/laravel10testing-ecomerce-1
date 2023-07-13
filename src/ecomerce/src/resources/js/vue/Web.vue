@@ -1,5 +1,5 @@
 <template>
-  <v-layout class="max-w-screen-2xl mx-auto lg:px-4">
+  <v-layout class="max-w-screen-2xl mx-auto px-2">
     <slot name="nav_bar"></slot>
 
     <v-main lg class="mx-auto">

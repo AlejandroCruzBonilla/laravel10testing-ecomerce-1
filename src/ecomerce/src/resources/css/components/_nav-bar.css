@@ -37,6 +37,11 @@
     display: none;
 }
 
+.navigation__bar .nav__bar.nav__bar-sm,
+.navigation__bar .nav__bar.nav__bar-lg {
+    @apply px-2;
+}
+
 @media (min-width: 1024px) {
     .navigation__bar .nav__bar.nav__bar-sm {
         display: none;
@@ -55,11 +60,5 @@
         display: flex;
         justify-content: center;
         /* align-items: center; */
-    }
-}
-
-@media (min-width: 1024px) and (max-width: 1920px) {
-    .navigation__bar .nav__bar.nav__bar-lg {
-        @apply px-4;
     }
 }
