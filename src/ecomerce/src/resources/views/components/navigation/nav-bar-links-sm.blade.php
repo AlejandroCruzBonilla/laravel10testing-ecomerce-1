@@ -1,13 +1,11 @@
 <div class="nav__bar nav__bar-sm">
     <div class="nav__bar-wrapper">
         <div class="nav__menu">
-            <v-app-bar-nav-icon class="z-10"></v-app-bar-nav-icon>
+            {{$menu_icon}}
         </div>
-        <div class="nav__logo">
-            <a href="/">
-                <v-img src="https://placehold.co/150x50"></v-img>
-            </a>
-        </div>
+        <x-navigation.nav-logo>
+            {{ $logo }}
+        </x-navigation.nav-logo>
     </div>
 </div>
 

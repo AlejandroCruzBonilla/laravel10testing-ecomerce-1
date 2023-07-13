@@ -3,7 +3,6 @@ import { router } from "./router";
 
 //Own
 import WebApp from "./Web.vue";
-import DesktopLinks from "./components/Layout/navigation/nav-links/_desktop_links.vue";
 
 //Vuetify Imports
 import '@mdi/font/css/materialdesignicons.css'
@@ -47,7 +46,7 @@ if (app) {
     webApp.use(PrimeVue, { unstyled: true });
     //Own
     webApp.component("WebApp", WebApp);
-    webApp.component("DesktopLinks", DesktopLinks);
+
     //PrimeVue
     webApp.component("Button", Button);
     webApp.component("Menu", Menu);

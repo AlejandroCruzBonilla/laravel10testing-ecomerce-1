@@ -1,4 +1,4 @@
-<div class="nav__logo z-10">
+<div class="nav__logo">
     <a href="{{ route('web.home') }}">
         {{ $slot }}
     </a>

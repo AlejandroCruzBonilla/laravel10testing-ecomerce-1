@@ -1,11 +1,8 @@
 <template>
-  <v-layout>
-    <nav-bar>
-      <template v-slot:navigation_desktop>
-        <slot name="navigation_desktop"></slot>
-      </template>
-    </nav-bar>
-    <v-main class="d-flex align-center justify-center">
+  <v-layout class="max-w-screen-2xl mx-auto lg:px-4">
+    <slot name="nav_bar"></slot>
+
+    <v-main lg class="mx-auto">
       <slot name="content"></slot>
     </v-main>
     <v-footer app name="footer">
@@ -15,7 +12,6 @@
 </template>
 
 <script setup>
-import NavBar from './components/Layout/navigation/nav-bar.vue'
 import { onMounted } from "vue";
 
 

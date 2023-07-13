@@ -46,17 +46,20 @@
     }
 
     .navigation__bar .nav__bar-lg {
-        max-width: 90%;
+        @apply max-w-screen-2xl;
     }
 
     .navigation__bar .nav__bar-lg .nav__bar-wrapper .nav__links {
         height: 100%;
         width: 100%;
-        /* position: absolute; */
-        /* top: 0; */
-        /* left: 0; */
         display: flex;
         justify-content: center;
         /* align-items: center; */
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1920px) {
+    .navigation__bar .nav__bar.nav__bar-lg {
+        @apply px-4;
     }
 }

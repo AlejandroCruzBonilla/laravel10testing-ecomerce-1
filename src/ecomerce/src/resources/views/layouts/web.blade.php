@@ -16,45 +16,51 @@
 
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-
-    <style>
-        body {
-            padding-bottom: 150vh;
-        }
-    </style>
 </head>
 
-<body>
+<body id="web-app">
     <div class="bg-gray-100">
-        {{-- <x-navigation.nav-bar></x-navigation.nav-bar> --}}
-        <!-- Page Heading -->
-        {{-- @if (isset($header))
-            <header class="bg-white shadow">
-                <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                    {{ $header }}
-                </div>
-            </header>
-        @endif --}}
-        <!-- Page Content -->
-        <main id="web-app">
-            <web-app>
-                <template v-slot:navigation_desktop>
-                    <x-navigation.nav-bar-links-lg>
-                        <x-slot name="logo">
-                            <v-img src="https://placehold.co/150x50"></v-img>
-                        </x-slot>
-                    </x-navigation.nav-bar-links-lg>
-                </template>
-                <template v-slot:content>
-                    <div>
-                        {{ $slot }}
+        <web-app>
+
+            <template v-slot:nav_bar>
+                <x-navigation.nav-bar>
+                    <x-slot name="navigation">
+                        <x-navigation.nav-bar-links-sm>
+                            <x-slot name="menu_icon">
+                                <v-app-bar-nav-icon class="z-10"></v-app-bar-nav-icon>
+                            </x-slot>
+                            <x-slot name="logo">
+                                <v-img src="https://placehold.co/150x50"></v-img>
+                            </x-slot>
+                        </x-navigation.nav-bar-links-sm>
+                        <x-navigation.nav-bar-links-lg>
+                            <x-slot name="logo">
+                                <v-img src="https://placehold.co/150x50"></v-img>
+                            </x-slot>
+                        </x-navigation.nav-bar-links-lg>
+                    </x-slot>
+                </x-navigation.nav-bar>
+            </template>
+
+            <template v-slot:content>
+
+                @if (isset($header))
+                    <div class="bg-white shadow">
+                        <div class="mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                            {{ $header }}
+                        </div>
                     </div>
-                </template>
-                <template v-slot:footer>
-                    Footer
-                </template>
-            </web-app>
-        </main>
+                @endif
+                <div>
+                    {{ $slot }}
+                </div>
+
+            </template>
+            <template v-slot:footer>
+                Footer
+            </template>
+        </web-app>
+
     </div>
 </body>
 
