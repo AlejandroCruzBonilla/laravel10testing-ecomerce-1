@@ -1,29 +1,54 @@
 import { createApp } from "vue";
 import { router } from "./router";
-//
-import WebApp from './Web.vue';
-//
+
+//Own
+import WebApp from "./Web.vue";
+import DesktopLinks from "./components/Layout/navigation/nav-links/_desktop_links.vue";
+
+//Vuetify Imports
+import '@mdi/font/css/materialdesignicons.css'
+import "vuetify/styles";
+import { createVuetify } from "vuetify";
+import * as components from "vuetify/components";
+import * as directives from "vuetify/directives";
+
+//PrimeVue
 import PrimeVue from "primevue/config";
 import Button from "primevue/button";
-import Menu from 'primevue/menu';
-import DataTable from 'primevue/datatable';
-import Column from 'primevue/column';
-import ColumnGroup from 'primevue/columngroup';   // optional
-import Row from 'primevue/row';     
-import Rating from 'primevue/rating';  
-import Tag from 'primevue/tag';  
-import Toast from 'primevue/toast';
-import "primevue/resources/themes/lara-light-blue/theme.css";
-// import "primevue/resources/primevue.min.css";
+import Menu from "primevue/menu";
+import DataTable from "primevue/datatable";
+import Column from "primevue/column";
+import ColumnGroup from "primevue/columngroup"; // optional
+import Row from "primevue/row";
+import Rating from "primevue/rating";
+import Tag from "primevue/tag";
+import Toast from "primevue/toast";
+// import "primevue/resources/themes/lara-light-blue/theme.css";
 
+//Vuetify Imports
+const vuetify = createVuetify({
+    components,
+    directives,
+});
 
+//VueApp
 const app = document.querySelector("#web-app");
 
 if (app) {
     const webApp = createApp();
-    webApp.use(router);
-    webApp.use(PrimeVue, { ripple: true });
+
+    //Services
+    // webApp.use(router);
+
+    //Vuetify
+    webApp.use(vuetify);
+    //PrimeVue
+    // webApp.use(PrimeVue, { ripple: true ,unstyled: true});
+    webApp.use(PrimeVue, { unstyled: true });
+    //Own
     webApp.component("WebApp", WebApp);
+    webApp.component("DesktopLinks", DesktopLinks);
+    //PrimeVue
     webApp.component("Button", Button);
     webApp.component("Menu", Menu);
     webApp.component("DataTable", DataTable);
@@ -32,7 +57,8 @@ if (app) {
     webApp.component("Row", Row);
     webApp.component("Rating", Rating);
     webApp.component("Tag", Tag);
-    webApp.component("Tag", Tag);
     webApp.component("Toast", Toast);
+
+    //
     webApp.mount(app);
 }

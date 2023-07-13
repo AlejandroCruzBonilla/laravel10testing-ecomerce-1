@@ -13,17 +13,17 @@
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <!-- Web Navigation Links -->
-                    <x-navigation.navs.web-links />
+                    <x-navigation.web-links />
                     <!-- Admin Navigation Links -->
-                    <x-navigation.navs.admin-links />
+                    <x-navigation.admin-links />
                 </div>
             </div>
 
             <!-- Settings Dropdown -->
 
-            <x-navigation.navs.profile-links />
+            <x-navigation.profile-links />
 
-            <x-navigation.navs.auth-links />
+            <x-navigation.auth-links />
 
             <!-- Hamburger -->
             <div class="-mr-2 flex items-center sm:hidden">
@@ -45,12 +45,12 @@
     <div :class="{ 'block': open, 'hidden': !open }" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
             <!-- Web Navigation Links -->
-            <x-navigation.navs.responsive-web-links />
+            <x-navigation.responsive-web-links />
             <!-- Admin Navigation Links -->
-            <x-navigation.navs.responsive-admin-links />
+            <x-navigation.responsive-admin-links />
         </div>
 
         <!-- Responsive Settings Options -->
-        <x-navigation.navs.responsive-profile-links />
+        <x-navigation.responsive-profile-links />
     </div>
 </nav>

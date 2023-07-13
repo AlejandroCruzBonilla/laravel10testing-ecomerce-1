@@ -1,13 +1,17 @@
 <template>
-  <div>
-    <NavBar/>
-    <slot name="header"></slot>
-    <slot name="content"></slot>
-    <slot name="footer"></slot>
-    <div class="card flex justify-content-center">
-      <Button label="Check" icon="pi pi-check" />
-    </div>
-  </div>
+  <v-layout>
+    <nav-bar>
+      <template v-slot:navigation_desktop>
+        <slot name="navigation_desktop"></slot>
+      </template>
+    </nav-bar>
+    <v-main class="d-flex align-center justify-center">
+      <slot name="content"></slot>
+    </v-main>
+    <v-footer app name="footer">
+      <slot name="footer"></slot>
+    </v-footer>
+  </v-layout>
 </template>
 
 <script setup>

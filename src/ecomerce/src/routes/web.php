@@ -21,7 +21,10 @@ Route::group(['as' => 'web.'], function () {
         return view('web.home');
     })->name('home');
     
-  
+    Route::get('/products', function () {
+        return view('web.products');
+    })->name('products');
+
     Route::get('/about', function () {
         return view('web.about');
     })->name('about');
@@ -29,10 +32,6 @@ Route::group(['as' => 'web.'], function () {
     Route::get('/contact', function () {
         return view('web.contact');
     })->name('contact');
-
-    Route::get('/products', function () {
-        return view('web.products');
-    })->name('products');
 });
 
 Route::group(['as' => 'admin.'], function () {
