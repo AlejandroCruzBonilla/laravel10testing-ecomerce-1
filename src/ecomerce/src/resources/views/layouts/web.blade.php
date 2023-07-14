@@ -53,6 +53,7 @@
                 </div>
 
             </template>
+            
             <template v-slot:footer>
                 Footer
             </template>

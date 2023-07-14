@@ -33,6 +33,6 @@ header .v-toolbar__content,
         width: 100%;
         display: flex;
         justify-content: flex-start;
-        margin-left: 3rem;
+        margin-left: 1rem;
     }
 }
