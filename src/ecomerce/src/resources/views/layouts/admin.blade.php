@@ -11,30 +11,51 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/primeicons@6.0.1/primeicons.css">
 
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="font-sans antialiased">
-    <div class="min-h-screen bg-gray-100">
+<body id="admin-app">
+    <div class="bg-gray-100">
+        <admin-app>
 
-        <x-navigation.nav-bar></x-navigation.nav-bar>
+            <template v-slot:nav_bar={mobile_menu_drawer,toggle_mobile_menu_drawer}>
+                <x-navigation.navigation>
+                    <x-slot name="navigation__bar">
+                        <x-navigation.nav-bar>
+                            <x-slot name="menu_icon">
+                                <v-app-bar-nav-icon class="z-10" @click="toggle_mobile_menu_drawer">
+                                </v-app-bar-nav-icon>
+                            </x-slot>
+                            <x-slot name="logo">
+                                <v-img src="https://placehold.co/150x50"></v-img>
+                            </x-slot>
+                        </x-navigation.nav-bar>
+                    </x-slot>
+                </x-navigation.navigation>
+            </template>
 
-        <!-- Page Content -->
-        <main id="admin-app">
-            <!-- Page Heading -->
-            @if (isset($header))
-                <header class="bg-white shadow">
-                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                        {{ $header }}
+            <template v-slot:content>
+
+                @if (isset($header))
+                    <div class="bg-white shadow">
+                        <div class="mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                            {{ $header }}
+                        </div>
                     </div>
-                </header>
-            @endif
-            <hello-world></hello-world>
-            <example-component></example-component>
-            {{ $slot }}
-        </main>
+                @endif
+                <div>
+                    {{ $slot }}
+                </div>
+
+            </template>
+            <template v-slot:footer>
+                Footer
+            </template>
+
+        </admin-app>
     </div>
 </body>
 

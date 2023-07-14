@@ -1,16 +1,28 @@
 import { createApp } from "vue";
-import HelloWorld from "./components/HelloWorld.vue";
-import ExampleComponent from "./components/ExampleComponent.vue";
 
+//Own
+import AdminApp from "./Admin.vue";
+
+//Vuetify Imports
+import '@mdi/font/css/materialdesignicons.css'
+import "vuetify/styles";
+import { createVuetify } from "vuetify";
+import * as components from "vuetify/components";
+import * as directives from "vuetify/directives";
+
+const vuetify = createVuetify({
+    components,
+    directives,
+});
+
+//VueApp
 const app = document.querySelector("#admin-app");
 
 if (app) {
-    const adminApp = createApp({
-        components: {
-            HelloWorld,
-            ExampleComponent,
-        },
-    });
-
+    const adminApp = createApp();
+    //Vuetify
+    adminApp.use(vuetify);
+    //Own
+    adminApp.component("AdminApp", AdminApp);
     adminApp.mount(app);
 }
