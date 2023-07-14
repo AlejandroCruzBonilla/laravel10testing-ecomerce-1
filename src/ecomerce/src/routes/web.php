@@ -37,7 +37,7 @@ Route::group(['as' => 'web.'], function () {
 Route::group(['as' => 'admin.'], function () {
     Route::get('/dashboard', function () {
         return view('admin.dashboard');
-    })->middleware(['auth', 'verified'])->name('dashboard');
+    })->middleware(['auth', 'valid_role:admin'])->name('dashboard');
 });
 
 

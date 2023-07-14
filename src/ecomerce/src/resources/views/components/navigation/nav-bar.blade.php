@@ -17,3 +17,6 @@
         </div>
     </div>
 </div>
+<template v-slot:append>
+    <x-navigation.auth-dropdown></x-navigation.auth-dropdown>
+</template>
