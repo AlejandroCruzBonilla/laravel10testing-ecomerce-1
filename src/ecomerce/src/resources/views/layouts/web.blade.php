@@ -23,9 +23,9 @@
         <web-app>
 
             <template v-slot:nav_bar={mobile_menu_drawer,toggle_mobile_menu_drawer}>
-                <x-navigation.navigation>
+                <x-nav.app-bar>
                     <x-slot name="navigation__bar">
-                        <x-navigation.nav-bar>
+                        <x-nav.toolbar>
                             <x-slot name="menu_icon">
                                 <v-app-bar-nav-icon class="z-10" @click="toggle_mobile_menu_drawer">
                                 </v-app-bar-nav-icon>
@@ -34,9 +34,9 @@
                                 {{-- <v-img  :width="150"src="https://placehold.co/150x50"></v-img> --}}
                                 <x-application-logo width="50px" height="50px"></x-application-logo>
                             </x-slot>
-                        </x-navigation.nav-bar>
+                        </x-nav.toolbar>
                     </x-slot>
-                </x-navigation.navigation>
+                </x-nav.app-bar>
             </template>
 
             <template v-slot:content>

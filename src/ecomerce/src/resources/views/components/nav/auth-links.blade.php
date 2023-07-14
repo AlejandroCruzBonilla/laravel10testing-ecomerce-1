@@ -3,9 +3,9 @@
         @auth
             <v-list>
                 <v-list-item>
-                    <x-navigation.nav-link class="w-full" :href="route('profile.edit')" :active="request()->routeIs('profile.edit')">
+                    <x-nav.link class="w-full" :href="route('profile.edit')" :active="request()->routeIs('profile.edit')">
                         {{ __('My Profile') }}
-                    </x-navigation.nav-link>
+                    </x-nav.link>
                 </v-list-item>
                 <v-list-item>
                     <form method="POST" action="{{ route('logout') }}">
@@ -19,15 +19,15 @@
         @else
             <v-list>
                 <v-list-item>
-                    <x-navigation.nav-link class="w-full" :href="route('login')" :active="request()->routeIs('login')">
+                    <x-nav.link class="w-full" :href="route('login')" :active="request()->routeIs('login')">
                         {{ __('Login') }}
-                    </x-navigation.nav-link>
+                    </x-nav.link>
                 </v-list-item>
                 @if (Route::has('register'))
                     <v-list-item>
-                        <x-navigation.nav-link class="w-full" :href="route('register')" :active="request()->routeIs('register')">
+                        <x-nav.link class="w-full" :href="route('register')" :active="request()->routeIs('register')">
                             {{ __('Register') }}
-                        </x-navigation.nav-link>
+                        </x-nav.link>
                     </v-list-item>
                 @endif
             </v-list>

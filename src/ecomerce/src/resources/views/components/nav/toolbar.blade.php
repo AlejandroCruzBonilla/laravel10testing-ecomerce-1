@@ -7,18 +7,18 @@
 </template>
 <div class="nav__bar">
     <div class="nav__bar-wrapper">
-        <x-navigation.nav-logo>
+        <x-nav.logo>
             {{ $logo }}
-        </x-navigation.nav-logo>
+        </x-nav.logo>
         <div class="nav__links hidden lg:block">
             @foreach (Helpers::getRoutesByStarting('web') as $name => $route)
-                <x-navigation.nav-link class="mx-2" :href="route($name)" :active="request()->routeIs($name)">
+                <x-nav.link class="mx-2" :href="route($name)" :active="request()->routeIs($name)">
                     {{ __(Helpers::cleanRouteName($name)) }}
-                </x-navigation.nav-link>
+                </x-nav.link>
             @endforeach
         </div>
     </div>
 </div>
 <template v-slot:append>
-    <x-navigation.auth-dropdown></x-navigation.auth-dropdown>
+    <x-nav.auth-dropdown></x-nav.auth-dropdown>
 </template>

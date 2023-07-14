@@ -4,6 +4,6 @@
         </v-btn>
     </div>
     <v-menu activator="#profile-dropdown">
-        <x-navigation.auth-links></x-navigation.auth-links>
+        <x-nav.auth-links></x-nav.auth-links>
     </v-menu>
 @endif
