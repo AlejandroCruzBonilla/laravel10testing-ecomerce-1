@@ -22,24 +22,20 @@
     <div class="bg-gray-100">
         <web-app>
 
-            <template v-slot:nav_bar>
-                <x-navigation.nav-bar>
-                    <x-slot name="navigation">
-                        <x-navigation.nav-bar-links-sm>
+            <template v-slot:nav_bar={mobile_menu_drawer,toggle_mobile_menu_drawer}>
+                <x-navigation.navigation>
+                    <x-slot name="navigation__bar">
+                        <x-navigation.nav-bar>
                             <x-slot name="menu_icon">
-                                <v-app-bar-nav-icon class="z-10"></v-app-bar-nav-icon>
+                                <v-app-bar-nav-icon class="z-10" @click="toggle_mobile_menu_drawer">
+                                </v-app-bar-nav-icon>
                             </x-slot>
                             <x-slot name="logo">
                                 <v-img src="https://placehold.co/150x50"></v-img>
                             </x-slot>
-                        </x-navigation.nav-bar-links-sm>
-                        <x-navigation.nav-bar-links-lg>
-                            <x-slot name="logo">
-                                <v-img src="https://placehold.co/150x50"></v-img>
-                            </x-slot>
-                        </x-navigation.nav-bar-links-lg>
+                        </x-navigation.nav-bar>
                     </x-slot>
-                </x-navigation.nav-bar>
+                </x-navigation.navigation>
             </template>
 
             <template v-slot:content>
