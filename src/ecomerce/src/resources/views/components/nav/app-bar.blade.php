@@ -3,8 +3,11 @@
 </v-app-bar>
 
 <div class="nav-drawer lg:hidden">
-    <v-navigation-drawer v-model="mobile_menu_drawer" location="left" temporary
-        @update:model-value="toggle_mobile_menu_drawer">
+    <v-navigation-drawer
+      v-model="mobile_menu_drawer"
+      location="left"
+      temporary
+      @update:model-value="toggle_mobile_menu_drawer">
         <v-list>
             @foreach (Helpers::getRoutesByStarting('web') as $name => $route)
                 <v-list-item>

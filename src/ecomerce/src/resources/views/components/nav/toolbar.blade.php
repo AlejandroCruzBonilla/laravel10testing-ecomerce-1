@@ -22,3 +22,4 @@
 <template v-slot:append>
     <x-nav.auth-dropdown></x-nav.auth-dropdown>
 </template>
+<x-nav.admin.app-bar></x-nav.admin.app-bar>

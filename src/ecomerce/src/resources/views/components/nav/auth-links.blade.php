@@ -3,6 +3,9 @@
         @auth
             <v-list>
                 <v-list-item>
+                    <div class="p-2 text-center bg-slate-200 rounded-md">{{ Auth::user()->name }}</div>
+                </v-list-item>
+                <v-list-item>
                     <x-nav.link class="w-full" :href="route('profile.edit')" :active="request()->routeIs('profile.edit')">
                         {{ __('My Profile') }}
                     </x-nav.link>
