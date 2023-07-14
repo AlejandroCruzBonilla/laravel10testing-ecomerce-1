@@ -1,3 +1,10 @@
+header .v-toolbar__content,
+.navigation__bar .nav__bar,
+.navigation__bar .nav__bar .nav__bar-wrapper{
+    @apply max-w-screen-2xl;
+    margin: 0 auto;
+}
+
 .navigation__bar .nav__bar {
     margin: 0 auto;
 }
@@ -8,41 +15,24 @@
     height: 100%;
     display: flex;
     align-items: center;
-}
-
-.navigation__bar .nav__logo a {
-    display: block;
-    width: 150px;
-    height: 50px;
+    justify-content: center;
 }
 
 .navigation__bar .nav__bar .nav__logo {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    justify-content: center;
+    display: inline-flex;
     align-items: center;
 }
 
-.navigation__bar .nav__bar {
-    @apply px-2;
-    @apply max-w-screen-2xl;
+.navigation__bar .nav__bar .nav__logo a {
+    width: 100%;
 }
 
 @media (min-width: 1024px) {
-    .navigation__bar .nav__bar .nav__logo {
-        position: unset;
-        width: auto;
-        height: auto;
-    }
     .navigation__bar .nav__bar .nav__bar-wrapper .nav__links {
         height: 100%;
         width: 100%;
         display: flex;
         justify-content: flex-start;
-        margin-left: 4rem;
+        margin-left: 3rem;
     }
 }

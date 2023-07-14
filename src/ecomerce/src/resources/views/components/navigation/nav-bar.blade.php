@@ -1,10 +1,12 @@
+<template v-slot:prepend>
+    @if ($menu_icon)
+        <div class="nav__menu lg:hidden">
+            {{ $menu_icon }}
+        </div>
+    @endif
+</template>
 <div class="nav__bar">
     <div class="nav__bar-wrapper">
-        @if ($menu_icon)
-            <div class="nav__menu lg:hidden">
-                {{ $menu_icon }}
-            </div>
-        @endif
         <x-navigation.nav-logo>
             {{ $logo }}
         </x-navigation.nav-logo>

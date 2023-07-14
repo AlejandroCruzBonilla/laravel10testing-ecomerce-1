@@ -30,7 +30,8 @@
                                 </v-app-bar-nav-icon>
                             </x-slot>
                             <x-slot name="logo">
-                                <v-img src="https://placehold.co/150x50"></v-img>
+                                {{-- <v-img  :width="150"src="https://placehold.co/150x50"></v-img> --}}
+                                <x-application-logo width="50px" height="50px"></x-application-logo>
                             </x-slot>
                         </x-navigation.nav-bar>
                     </x-slot>
