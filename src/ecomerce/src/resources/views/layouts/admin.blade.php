@@ -18,8 +18,8 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body id="admin-app">
-    <div class="bg-gray-100">
+<body class="bg-gray-100">
+    <div id="admin-app">
         <admin-app>
 
             <template v-slot:nav_bar={mobile_menu_drawer,toggle_mobile_menu_drawer}>
@@ -55,7 +55,7 @@
             </template>
 
             <template v-slot:footer>
-                Footer
+                <x-layout.footer></x-layout.footer>
             </template>
 
         </admin-app>
