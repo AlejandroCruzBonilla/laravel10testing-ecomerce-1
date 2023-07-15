@@ -55,7 +55,7 @@
             </template>
             
             <template v-slot:footer>
-                Footer
+                <x-layout.footer.footer></x-layout.footer.footer>
             </template>
 
         </web-app>
