@@ -13,7 +13,7 @@
                 <v-list-item>
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
-                        <button type="submit" class="w-full mx-auto p-2 hover:bg-gray-200 hover:rounded-md">
+                        <button type="submit" class="w-full mx-auto p-2 font-light text-opacity-75 hover:text-opacity-100 hover:font-bold">
                             {{ __('Log Out') }}
                         </button>
                     </form>
