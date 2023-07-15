@@ -1,17 +1,26 @@
 {{-- 
-  * Logo Principal
-  * Links
-  * Social Links
+  # * Logo Principal
+  # * Links
+  # * Social Links
   * Aviso Privacidad
   * Terminos y condiciones
   * Site-map
-  * CopyRigth
-  * Direccion
-  * Correo
-  * Telefono
-  * Legales
+  # * CopyRigth
+  * Direccion, Correo, Telefono
+  * Disclaimers
   * Marcas o logos,
 --}}
+
+@php
+    $copy = '© 2023 Copyright Brand';
+    
+    $icons = [
+        'mdi-facebook' => 'https://facebook.com',
+        'mdi-twitter' => 'https://twitter.com',
+        'mdi-linkedin' => 'https://linkedin.com',
+        'mdi-instagram' => 'https://instagram.com',
+    ];
+@endphp
 
 <v-footer class="w-full mx-auto">
     <div class="w-full h-full bg-slate-900">
@@ -31,10 +40,10 @@
                         </x-nav.link>
                     @endforeach
                 </div>
-                <x-layout.social></x-layout.social>
+                <x-layout.social :icons="$icons"></x-layout.social>
             </div>
 
-            <x-layout.copyright></x-layout.copyright>
+            <x-layout.copyright :copy="$copy"></x-layout.copyright>
         </div>
     </div>
 </v-footer>
