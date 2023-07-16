@@ -18,7 +18,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="bg-gray-100">
+<body class="bg-gray-300">
     <div id="admin-app">
         <admin-app>
 
@@ -49,7 +49,6 @@
                     @endif
                     {{ $slot }}
                 </div>
-
             </template>
 
             <template v-slot:footer>
