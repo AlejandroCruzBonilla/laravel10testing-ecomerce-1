@@ -1,18 +1,14 @@
 <template>
-  <v-layout class="flex-col">
-    <div class="w-full max-w-screen-2xl mx-auto">
-      <slot
-        name="nav_bar"
-        :mobile_menu_drawer="mobile_menu_drawer"
-        :toggle_mobile_menu_drawer="toggleMobileMenuDrawer">
+  <v-layout class="justify-center">
+    <div class="flex flex-col w-full max-w-screen-2xl">
+      <slot name="nav_bar" :mobile_menu_drawer="mobile_menu_drawer" :toggle_mobile_menu_drawer="toggleMobileMenuDrawer">
       </slot>
 
-      <main>
+      <v-main id="main">
         <slot name="content"></slot>
-      </main>
-
+      </v-main>
+      <slot name="footer"></slot>
     </div>
-    <slot name="footer"></slot>
   </v-layout>
 </template>
 

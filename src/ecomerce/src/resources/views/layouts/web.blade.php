@@ -37,21 +37,18 @@
                         </x-nav.toolbar>
                     </x-slot>
                 </x-nav.app-bar>
+                <x-nav.drawer></x-nav.drawer>
             </template>
 
             <template v-slot:content>
-
-                @if (isset($header))
-                    <div class="bg-white shadow">
-                        <div class="mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                <div class="px-2 py-6">
+                    @if (isset($header))
+                        <x-page-title>
                             {{ $header }}
-                        </div>
-                    </div>
-                @endif
-                <div>
+                        </x-page-title>
+                    @endif
                     {{ $slot }}
                 </div>
-
             </template>
 
             <template v-slot:footer>
