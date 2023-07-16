@@ -41,7 +41,7 @@
             </template>
 
             <template v-slot:content>
-                <div class="xs:px-2 md:px-1 py-6">
+                <div class="px-2 py-6">
                     @if (isset($header))
                         <x-page-title>
                             {{ $header }}
