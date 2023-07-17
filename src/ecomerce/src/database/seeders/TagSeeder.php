@@ -14,15 +14,83 @@ class TagSeeder extends Seeder
     public function run(): void
     {
         DB::table('tags')->insert([
-            'id' => 1,
-            'name' => 'tag abc',
-            'description' => 'Testing abc',
+            'name' => 'tag abc 1 ',
+            'description' => 'Testing abc 1',
         ]);
 
         DB::table('tags')->insert([
-            'id' => 2,
-            'name' => 'tag xyz',
-            'description' => 'Testing xyz',
+            'name' => 'tag xyz 2 ',
+            'description' => 'Testing xyz 2',
+        ]);
+
+        DB::table('tags')->insert([
+            'name' => 'tag abc 3 ',
+            'description' => 'Testing abc 3',
+        ]);
+
+        DB::table('tags')->insert([
+            'name' => 'tag xyz 4 ',
+            'description' => 'Testing xyz 4',
+        ]);
+
+        DB::table('tags')->insert([
+            'name' => 'tag abc 5 ',
+            'description' => 'Testing abc 5',
+        ]);
+
+        DB::table('tags')->insert([
+            'name' => 'tag xyz 6 ',
+            'description' => 'Testing xyz 6',
+        ]);
+
+        DB::table('tags')->insert([
+            'name' => 'tag abc 7 ',
+            'description' => 'Testing abc 7',
+        ]);
+
+        DB::table('tags')->insert([
+            'name' => 'tag xyz 8',
+            'description' => 'Testing xyz 8',
+        ]);
+
+        DB::table('tags')->insert([
+            'name' => 'tag abc 9',
+            'description' => 'Testing abc 9',
+        ]);
+
+        DB::table('tags')->insert([
+            'name' => 'tag xyz 10',
+            'description' => 'Testing xyz 10',
+        ]);
+
+        DB::table('tags')->insert([
+            'name' => 'tag abc 11',
+            'description' => 'Testing abc 11',
+        ]);
+
+        DB::table('tags')->insert([
+            'name' => 'tag xyz 12',
+            'description' => 'Testing xyz 12',
+        ]);
+
+        DB::table('tags')->insert([
+            'name' => 'tag abc 13',
+            'description' => 'Testing abc 13',
+        ]);
+
+        DB::table('tags')->insert([
+            'name' => 'tag xyz 14',
+            'description' => 'Testing xyz 14',
+        ]);
+
+        DB::table('tags')->insert([
+            'name' => 'tag abc 15',
+            'description' => 'Testing abc 15',
+        ]);
+
+        DB::table('tags')->insert([
+            'name' => 'tag xyz 16',
+            'description' => 'Testing xyz 16',
         ]);
     }
 }

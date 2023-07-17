@@ -22,7 +22,7 @@ const toggleMobileMenuDrawer = () => {
 }
 
 onMounted(function () {
-  console.log("Hooray!!! Onmounted() is triggered")
+  console.log("Admin Layout")
 });
 
 </script>
