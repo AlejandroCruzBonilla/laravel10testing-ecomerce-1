@@ -28,7 +28,7 @@
 
         <div class="flex justify-center my-2">
             <x-nav.logo>
-                <x-application-logo class="fill-slate-200" width="50px" height="50px"></x-application-logo>
+                <x-common.application-logo class="fill-slate-200" width="50px" height="50px"></x-common.application-logo>
             </x-nav.logo>
         </div>
 

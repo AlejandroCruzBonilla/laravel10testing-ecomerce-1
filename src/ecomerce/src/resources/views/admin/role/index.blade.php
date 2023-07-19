@@ -1,4 +1,4 @@
-@section('title', 'Roles')
+@section('title', 'Role Index')
 @section('description', 'Roles Index')
 
 <x-admin-layout>

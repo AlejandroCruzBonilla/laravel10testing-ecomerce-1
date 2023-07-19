@@ -32,7 +32,7 @@
                             </x-slot>
                             <x-slot name="logo">
                                 {{-- <v-img  :width="150"src="https://placehold.co/150x50"></v-img> --}}
-                                <x-application-logo width="50px" height="50px"></x-application-logo>
+                                <x-common.application-logo width="50px" height="50px"></x-common.application-logo>
                             </x-slot>
                         </x-nav.toolbar>
                     </x-slot>
@@ -43,9 +43,9 @@
             <template v-slot:content>
                 <div class="px-2 py-6">
                     @if (isset($header))
-                        <x-page-title>
+                        <x-common.page-title>
                             {{ $header }}
-                        </x-page-title>
+                        </x-common.page-title>
                     @endif
                     {{ $slot }}
                 </div>

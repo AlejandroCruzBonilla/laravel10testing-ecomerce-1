@@ -1,6 +1,6 @@
 {{-- {{ dd(Helpers::getRoutesByPrefix('admin.tags')) }} --}}
 
-@section('title', 'Tags')
+@section('title', 'Tag Index')
 @section('description', 'Tags Index')
 
 <x-admin-layout>
