@@ -1,11 +1,8 @@
 import { createApp } from "vue";
 // import { router } from "./router";
 
-//Own
-import WebApp from "./Web.vue";
-
 //Vuetify Imports
-import '@mdi/font/css/materialdesignicons.css'
+import "@mdi/font/css/materialdesignicons.css";
 import "vuetify/styles";
 import { createVuetify } from "vuetify";
 import * as components from "vuetify/components";
@@ -16,20 +13,13 @@ const vuetify = createVuetify({
     directives,
 });
 
-
 //PrimeVue
-// import PrimeVue from "primevue/config";
-// import Button from "primevue/button";
-// import Menu from "primevue/menu";
-// import DataTable from "primevue/datatable";
-// import Column from "primevue/column";
-// import ColumnGroup from "primevue/columngroup"; // optional
-// import Row from "primevue/row";
-// import Rating from "primevue/rating";
-// import Tag from "primevue/tag";
-// import Toast from "primevue/toast";
-// import "primevue/resources/themes/lara-light-blue/theme.css";
+import PrimeVue from "primevue/config";
+import DataTable from "primevue/datatable";
+import Column from "primevue/column";
 
+//Own
+import WebApp from "./layouts/Web.vue";
 
 //VueApp
 const app = document.querySelector("#web-app");
@@ -42,23 +32,17 @@ if (app) {
 
     //Vuetify
     webApp.use(vuetify);
+
     //PrimeVue
     // webApp.use(PrimeVue, { ripple: true ,unstyled: true});
     // webApp.use(PrimeVue, { unstyled: true });
+    webApp.use(PrimeVue);
+    webApp.component("DataTable", DataTable);
+    webApp.component("Column", Column);
+    // webApp.component("Row", Row);
+
+
     //Own
     webApp.component("WebApp", WebApp);
-
-    //PrimeVue
-    // webApp.component("Button", Button);
-    // webApp.component("Menu", Menu);
-    // webApp.component("DataTable", DataTable);
-    // webApp.component("Column", Column);
-    // webApp.component("ColumnGroup", ColumnGroup);
-    // webApp.component("Row", Row);
-    // webApp.component("Rating", Rating);
-    // webApp.component("Tag", Tag);
-    // webApp.component("Toast", Toast);
-
-    //
     webApp.mount(app);
 }

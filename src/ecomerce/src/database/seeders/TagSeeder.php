@@ -92,5 +92,35 @@ class TagSeeder extends Seeder
             'name' => 'tag xyz 16',
             'description' => 'Testing xyz 16',
         ]);
+
+        DB::table('tags')->insert([
+            'name' => 'tag xyz 17',
+            'description' => 'Testing xyz 17',
+        ]);
+
+        DB::table('tags')->insert([
+            'name' => 'tag abc 18',
+            'description' => 'Testing abc 18',
+        ]);
+
+        DB::table('tags')->insert([
+            'name' => 'tag xyz 19',
+            'description' => 'Testing xyz 19',
+        ]);
+
+        DB::table('tags')->insert([
+            'name' => 'tag xyz 20',
+            'description' => 'Testing xyz 20',
+        ]);
+
+        DB::table('tags')->insert([
+            'name' => 'tag abc 21',
+            'description' => 'Testing abc 21',
+        ]);
+
+        DB::table('tags')->insert([
+            'name' => 'tag xyz 22',
+            'description' => 'Testing xyz 22',
+        ]);
     }
 }

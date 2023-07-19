@@ -46,6 +46,6 @@ class Helpers
 
   public static function cleanRouteName($name): string {
 
-    return $name = ucfirst(preg_replace('/^\w+./', '', $name));
+    return $name = ucfirst(preg_replace('/^\w+.(\w+).\w+$/', '${1}', $name));
   }
 }

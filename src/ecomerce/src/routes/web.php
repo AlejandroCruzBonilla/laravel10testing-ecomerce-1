@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Web\BlogController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,19 +19,23 @@ use Illuminate\Support\Facades\Route;
 Route::group(['as' => 'web.'], function () {
     Route::get('/', function () {
         return view('web.home');
-    })->name('home');
-    
+    })->name('home.index');
+
     Route::get('/products', function () {
         return view('web.products');
-    })->name('products');
+    })->name('products.index');
+
+    Route::group(['prefix' => 'blog',],function () {
+        Route::get('/', [BlogController::class ,'index'])->name('blog.index');
+    });
 
     Route::get('/about', function () {
         return view('web.about');
-    })->name('about');
+    })->name('about.index');
 
     Route::get('/contact', function () {
         return view('web.contact');
-    })->name('contact');
+    })->name('contact.index');
 });
 
 

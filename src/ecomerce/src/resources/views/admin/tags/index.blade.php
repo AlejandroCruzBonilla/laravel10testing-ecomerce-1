@@ -9,9 +9,33 @@
             {{ __('Tags') }}
         </h2>
     </x-slot>
-    @foreach ($tags as $tag)
-        <h1>{{ $tag }}</h1>
-    @endforeach
 
-    <div class="paginador">{{ $tags->toJson() }}</div>
+
+
+    <index-table csrf-token="{{ csrf_token() }}" :raw-data="{{ $tags->toJson() }}"
+        :items="{{ json_encode($tags->items()) }}"
+        :actions="{
+            edit: true,
+            delete: false
+        }"
+        :paginator="{
+            totalItems: {{ $tags->total() }},
+            perPageItems: {{ $tags->perPage() }},
+            hasPages: {{ $tags->hasPages() ? 'true' : 'false' }},
+            pageItems: {{ $tags->count() }},
+            currentPage: {{ $tags->currentPage() }},
+            prevPageUrl: '{{ $tags->previousPageUrl() }}',
+            nextPageUrl: '{{ $tags->nextPageUrl() }}',
+            lastPage: {{ $tags->lastPage() }},
+            path: '{{ $tags->getOptions()['path'] }}',
+            from: {{ $tags->firstItem() }},
+            to: {{ $tags->lastItem() }},
+        }">
+    </index-table>
+
+    <div class="paginador">{{ $tags->links() }}</div>
+
+    {{-- <debug-component :debug="{{ $tags->toJson() }}"></debug-component> --}}
 </x-admin-layout>
+
+{{-- {{dd(gettype($tags->hasPages()))}} --}}

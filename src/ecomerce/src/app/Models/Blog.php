@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
-class Role extends Model
+class Blog extends Model
 {
     use HasFactory;
 
@@ -16,12 +16,18 @@ class Role extends Model
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
-        'description',
+        'title',
+        'body',
+        'fonts',
+        'slug',
+        'status',
+        'seo_fields',
+        'og_fields',
+        'schema_org_fields',
     ];
 
-    function users(): BelongsToMany
+    function tags(): BelongsToMany
     {
-        return $this->belongsToMany(User::class)->withTimestamps();
+        return $this->belongsToMany(Tag::class)->withTimestamps();
     }
 }
