@@ -9,5 +9,17 @@
         </h2>
     </x-slot>
 
+    <div class="mx-auto space-y-6">
+        <div class="p-4 xs:p-8 bg-white shadow xs:rounded-lg">
+            <div>
+                <form method="POST" action="{{ route('admin.blog.store') }}">
+                    @csrf
+                    @include('admin.blog.partials.form')
+                </form>
+            </div>
+        </div>
+    </div>
+
+
 
 </x-admin-layout>

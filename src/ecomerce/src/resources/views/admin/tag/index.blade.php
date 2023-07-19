@@ -12,7 +12,7 @@
     </x-slot>
 
 
-    @if ($tags->items() && $tags->items()->count())
+    @if ($tags->items() && count($tags->items()))
         <index-table csrf-token="{{ csrf_token() }}" :raw-data="{{ $tags->toJson() }}"
             :items="{{ json_encode($tags->items()) }}"
             :actions="{

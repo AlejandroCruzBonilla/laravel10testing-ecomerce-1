@@ -16,12 +16,12 @@ return new class extends Migration
             $table->string('title');
             $table->longText('body');
             $table->longText('fonts');
+            $table->string('author')->nullable();
             $table->timestamps();
             
             //page Settings
             $table->string('slug')->unique();
             $table->enum('status',['published','unpublished'])->default('unpublished');
-            $table->string('author');
 
             //Seo
             $table->longText('seo_fields');

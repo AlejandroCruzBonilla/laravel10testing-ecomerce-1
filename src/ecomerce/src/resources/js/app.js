@@ -2,8 +2,8 @@ import './bootstrap';
 import './vue/web'
 import './vue/admin'
 
-import Alpine from 'alpinejs';
+// import Alpine from 'alpinejs';
 
-window.Alpine = Alpine;
+// window.Alpine = Alpine;
 
-Alpine.start();
+// Alpine.start();

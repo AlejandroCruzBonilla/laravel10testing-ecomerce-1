@@ -9,7 +9,7 @@
         </h2>
     </x-slot>
 
-    @if ($blogs->items() && $blogs->items()->count())
+    @if ($blogs->items() && count($blogs->items()))
         <index-table csrf-token="{{ csrf_token() }}" :raw-data="{{ $blogs->toJson() }}"
             :items="{{ json_encode($blogs->items()) }}"
             :actions="{

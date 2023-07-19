@@ -19,6 +19,7 @@ class Blog extends Model
         'title',
         'body',
         'fonts',
+        'author',
         'slug',
         'status',
         'seo_fields',

@@ -9,7 +9,7 @@
         </h2>
     </x-slot>
 
-    @if ($roles->items() && $roles->items()->count())
+    @if ($roles->items() && count($roles->items()))
         <index-table csrf-token="{{ csrf_token() }}" :raw-data="{{ $roles->toJson() }}"
             :items="{{ json_encode($roles->items()) }}"
             :actions="{
