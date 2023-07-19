@@ -3,40 +3,56 @@
 namespace App\Helpers;
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Str;
 
 class Helpers
 {
-  public static function getJsonRoutesByStarting($start = '')
+ 
+
+  public static function getRoutesByPrefix($prefix = '')
   {
     $list = Route::getRoutes()->getRoutesByName();
-    if (empty($start)) {
+    if (empty($prefix)) {
       return $list;
     }
 
     $routes = [];
     foreach ($list as $name => $route) {
-      if (\Illuminate\Support\Str::startsWith($name, $start)) {
-        $name = self::cleanRouteName($name);
-        $routes[] = [
-          "name" => $name,
-          "uri" => $route->uri,
-        ];
+      if (Str::startsWith($name, $prefix)) {
+        $routes[$name] = $route;
       }
     }
 
-    return json_encode($routes);
+    return $routes;
   }
 
-  public static function getRoutesByStarting($start = '')
+  public static function getRoutesBySuffix($suffix = '')
   {
     $list = Route::getRoutes()->getRoutesByName();
-    if (empty($start)) {
+    if (empty($suffix)) {
       return $list;
     }
 
     $routes = [];
     foreach ($list as $name => $route) {
-      if (\Illuminate\Support\Str::startsWith($name, $start)) {
+      if (Str::endWith($name, $suffix)) {
+        $routes[$name] = $route;
+      }
+    }
+
+    return $routes;
+  }
+
+  public static function getRoutesByPrefix_Suffix($prefix, $suffix)
+  {
+    $list = Route::getRoutes()->getRoutesByName();
+
+    $routes = [];
+    foreach ($list as $name => $route) {
+      if (
+        Str::startsWith($name, $prefix) &&
+        Str::endsWith($name, $suffix)
+      ) {
         $routes[$name] = $route;
       }
     }

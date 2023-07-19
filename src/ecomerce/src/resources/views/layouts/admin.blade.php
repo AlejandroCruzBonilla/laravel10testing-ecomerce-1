@@ -19,6 +19,8 @@
 </head>
 
 <body class="bg-gray-300">
+    {{-- {{dd(Helpers::getRoutesByPrefix_Suffix('admin.','.index') )}} --}}
+
     <div id="admin-app">
         <admin-app>
 

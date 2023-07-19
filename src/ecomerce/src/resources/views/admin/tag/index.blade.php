@@ -1,4 +1,4 @@
-{{-- {{ dd(Helpers::getRoutesByStarting('admin.tags')) }} --}}
+{{-- {{ dd(Helpers::getRoutesByPrefix('admin.tags')) }} --}}
 
 @section('title', 'Tags')
 @section('description', 'Tags Index')
@@ -28,8 +28,8 @@
             nextPageUrl: '{{ $tags->nextPageUrl() }}',
             lastPage: {{ $tags->lastPage() }},
             path: '{{ $tags->getOptions()['path'] }}',
-            from: {{ $tags->firstItem() }},
-            to: {{ $tags->lastItem() }},
+            from: {{ $tags->firstItem() | 0}},
+            to: {{ $tags->lastItem() | 0}},
         }">
     </index-table>
 

@@ -23,8 +23,8 @@
             nextPageUrl: '{{ $roles->nextPageUrl() }}',
             lastPage: {{ $roles->lastPage() }},
             path: '{{ $roles->getOptions()['path'] }}',
-            from: {{ $roles->firstItem() }},
-            to: {{ $roles->lastItem() }},
+            from: {{ $roles->firstItem() | 0}},
+            to: {{ $roles->lastItem() | 0}},
         }">
     </index-table>
 

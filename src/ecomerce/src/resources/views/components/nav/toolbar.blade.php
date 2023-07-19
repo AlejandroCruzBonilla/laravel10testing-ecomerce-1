@@ -11,7 +11,7 @@
             {{ $logo }}
         </x-nav.logo>
         <div class="nav__links hidden lg:block">
-            @foreach (Helpers::getRoutesByStarting('web') as $name => $route)
+            @foreach (Helpers::getRoutesByPrefix('web') as $name => $route)
                 <x-nav.link class="mx-2" :href="route($name)" :active="request()->routeIs($name)">
                     {{ __(Helpers::cleanRouteName($name)) }}
                 </x-nav.link>

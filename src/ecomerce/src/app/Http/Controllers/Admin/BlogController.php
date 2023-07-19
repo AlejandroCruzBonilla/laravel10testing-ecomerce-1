@@ -13,7 +13,12 @@ class BlogController extends Controller
      */
     public function index()
     {
-        //
+        $blogs = Blog::select('id', 'title')
+            ->paginate(10)
+            ->onEachSide(2);
+        return view('admin.blog.index', [
+            'blogs' => $blogs,
+        ]);
     }
 
     /**

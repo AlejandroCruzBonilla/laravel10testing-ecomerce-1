@@ -1,5 +1,6 @@
 <template>
 	<DataTable
+		v-if="tableRows.length"
 	  :lazy="false"
 	  :paginator="false"
 	  :rows="tablePagination.perPageItems"
@@ -64,7 +65,7 @@ export default {
 				lastPage: 1,
 				path: '',
 				from: 1,
-				to: 1
+				to: 1,
 			}
 		}
 	},

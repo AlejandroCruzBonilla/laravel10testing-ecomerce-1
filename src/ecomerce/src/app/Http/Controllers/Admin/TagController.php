@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Tag;
 use Illuminate\Http\Request;
 
-class TagsController extends Controller
+class TagController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +16,7 @@ class TagsController extends Controller
         $tags = Tag::select('id', 'name', 'description')
             ->paginate(10)
             ->onEachSide(2);
-        return view('admin.tags.index', [
+        return view('admin.tag.index', [
             'tags' => $tags,
         ]);
     }
