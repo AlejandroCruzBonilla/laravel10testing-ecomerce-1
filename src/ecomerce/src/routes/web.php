@@ -21,12 +21,14 @@ Route::group(['as' => 'web.'], function () {
         return view('web.home');
     })->name('home.index');
 
-    Route::get('/products', function () {
-        return view('web.products');
-    })->name('products.index');
+    Route::group(['prefix' => 'products',], function () {
+        Route::get('/', function () {
+            return view('web.products.index');
+        })->name('products.index');
+    });
 
-    Route::group(['prefix' => 'blog',],function () {
-        Route::get('/', [BlogController::class ,'index'])->name('blog.index');
+    Route::group(['prefix' => 'blog',], function () {
+        Route::get('/', [BlogController::class, 'index'])->name('blog.index');
     });
 
     Route::get('/about', function () {

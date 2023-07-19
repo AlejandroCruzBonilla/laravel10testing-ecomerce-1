@@ -16,6 +16,7 @@ class ValidRole
      */
     public function handle(Request $request, Closure $next, $role = 'guest'): Response
     {
+        // TODO: Implement array of roles
         if ($role == 'guest') {
             return $next($request);
         } else if (Auth::user() && $request->user()->hasAnyRole($role)) {
