@@ -26,9 +26,5 @@ export default {
         },
     },
 
-    plugins: [
-        forms({
-            strategy: "class",
-        }),
-    ],
+    plugins: [forms],
 };

@@ -1,7 +1,6 @@
 import './bootstrap';
-import '../css/app.css';
 // import "primevue/resources/themes/lara-light-blue/theme.css";
-// import "@mdi/font/css/materialdesignicons.css";
+import "@mdi/font/css/materialdesignicons.css";
 // import "vuetify/styles";
 import './vue/web'
 import './vue/admin'

@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://unpkg.com/primeicons@6.0.1/primeicons.css">
 
     <!-- Scripts -->
-    @vite(['resources/js/app.js'])
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
 <body class="bg-gray-300">
@@ -58,6 +58,11 @@
             </template>
 
         </admin-app>
+        <img src="../../images/testing/80x80.png" width="150" height="150" alt="">
+        <img src="{{asset('../../images/testing/80x80.png')}}" width="150" height="150" alt="">
+        <hr>
+        <img src="{{'/images/testing/150x150.png'}}" width="150" height="150" alt="">
+        <img src="{{asset('/images/testing/150x150.png')}}" width="150" height="150" alt="">
     </div>
 </body>
 
