@@ -30,7 +30,3 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     forceTLS: (import.meta.env.VITE_PUSHER_SCHEME ?? 'https') === 'https',
 //     enabledTransports: ['ws', 'wss'],
 // });
-
-// import "primevue/resources/themes/lara-light-blue/theme.css";
-// import "@mdi/font/css/materialdesignicons.css";
-// import "vuetify/styles";

@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://unpkg.com/primeicons@6.0.1/primeicons.css">
 
     <!-- Scripts -->
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @vite(['resources/js/app.js'])
 </head>
 
 <body class="bg-gray-300">
