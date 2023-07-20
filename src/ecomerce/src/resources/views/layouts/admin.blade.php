@@ -58,11 +58,6 @@
             </template>
 
         </admin-app>
-        <img src="../../images/testing/80x80.png" width="150" height="150" alt="">
-        <img src="{{asset('../../images/testing/80x80.png')}}" width="150" height="150" alt="">
-        <hr>
-        <img src="{{'/images/testing/150x150.png'}}" width="150" height="150" alt="">
-        <img src="{{asset('/images/testing/150x150.png')}}" width="150" height="150" alt="">
     </div>
 </body>
 

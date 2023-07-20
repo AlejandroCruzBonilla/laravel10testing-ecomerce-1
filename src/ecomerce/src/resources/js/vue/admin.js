@@ -30,9 +30,9 @@ if (app) {
     adminApp.use(vuetify);
 
     //PrimeVue
+    // adminApp.use(PrimeVue);
     // adminApp.use(PrimeVue, { ripple: true ,unstyled: true});
-    // adminApp.use(PrimeVue, { unstyled: true });
-    adminApp.use(PrimeVue);
+    adminApp.use(PrimeVue, { unstyled: true });
     adminApp.component("DataTable", DataTable);
     adminApp.component("Column", Column);
     // adminApp.component("Row", Row);

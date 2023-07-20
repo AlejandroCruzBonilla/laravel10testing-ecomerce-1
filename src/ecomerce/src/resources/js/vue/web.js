@@ -32,9 +32,9 @@ if (app) {
     webApp.use(vuetify);
 
     //PrimeVue
+    // webApp.use(PrimeVue);
     // webApp.use(PrimeVue, { ripple: true ,unstyled: true});
-    // webApp.use(PrimeVue, { unstyled: true });
-    webApp.use(PrimeVue);
+    webApp.use(PrimeVue, { unstyled: true });
     webApp.component("DataTable", DataTable);
     webApp.component("Column", Column);
     // webApp.component("Row", Row);
