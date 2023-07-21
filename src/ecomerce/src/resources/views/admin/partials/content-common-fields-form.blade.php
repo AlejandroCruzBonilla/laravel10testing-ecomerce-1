@@ -17,5 +17,6 @@
     <input id="status" type="checkbox" class="rounded border-gray-900 text-indigo-600 shadow-sm focus:ring-indigo-500" name="status">
     <span class="ml-2 text-sm text-gray-600">{{ __('Published') }}</span>
   </label>
+  <v-checkbox label="Status"></v-checkbox>
   <x-forms.input-error class="mt-2" :messages="$errors->get('status')" />
 </div>
