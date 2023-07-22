@@ -193,7 +193,7 @@ export default {
             classes: true,
           }
         ],
-        disallow: [ /* HTML features to disallow */]
+        disallow: []
       }
     }
 
@@ -207,17 +207,19 @@ export default {
     const onEditorInput = (event) => {
       editorData.value = event;
     }
-
-
+    
     const onReady = (editor) => {
       // You can store the "editor" and use when it is needed.
-      // console.log("Editor is ready to use!", editor);
-      editor.editing.view.change((writer) => {
-        writer.setStyle({
-          'min-height': '250px',
-          'max-height': '250px'
-        }, editor.editing.view.document.getRoot())
-      });
+      // console.log("Editor is ready to use!", editor.editing.view);
+      // console.log("Editor is ready to use!", editor.editing.view.document.getRoot())
+      // console.log("Editor is ready to use!", editor.editing.view.getDomRoot().parentNode)
+
+      // editor.editing.view.change((writer) => {
+      //   writer.setStyle({
+      //     'min-height': '250px',
+      //     'max-height': '250px'
+      //   }, editor.editing.view.document.getRoot())
+      // });
     }
 
     return {

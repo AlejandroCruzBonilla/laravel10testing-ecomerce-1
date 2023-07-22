@@ -14,3 +14,14 @@
     border: none;
     border-radius: 6px !important;
 }
+
+.ck-content.ck-editor__editable,
+.ck-source-editing-area,
+.ck-source-editing-area textarea {
+    min-height: 250px;
+    max-height: 250px;
+}
+
+.ck-source-editing-area textarea {
+    overflow-y: scroll !important;
+}
