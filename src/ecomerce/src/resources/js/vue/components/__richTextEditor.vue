@@ -1,16 +1,7 @@
 <template>
   <slot name="label"></slot>
-  <ckeditor
-    class="border-solid border-gray-900"
-    :id="id"
-    :name="name"
-    :rows="10"
-    :editor="editor"
-    :config="editorConfig"
-    :model-value="editorData"
-    :disableTwoWayDataBinding="false"
-    @input="onEditorInput"
-    @ready="onReady"
+  <ckeditor class="border-solid border-gray-900" :id="id" :name="name" :rows="10" :editor="editor" :config="editorConfig"
+    :model-value="editorData" :disableTwoWayDataBinding="false" @input="onEditorInput" @ready="onReady"
     tag-name="textarea">
   </ckeditor>
 </template>
@@ -186,6 +177,23 @@ export default {
           'mergeTableCells',
           'tableCellProperties'
         ]
+      },
+      heading: {
+        options: [
+          { model: 'paragraph', title: 'Paragraph', class: 'ck-heading_paragraph' },
+          { model: 'heading1', view: { name: 'h1', classes: 'text-5xl' }, title: 'Heading 1', class: 'ck-heading_heading1' },
+          { model: 'heading2', view: { name: 'h2', classes: 'text-4xl' }, title: 'Heading 2', class: 'ck-heading_heading2' },
+          { model: 'heading3', view: { name: 'h3', classes: 'text-3xl' }, title: 'Heading 3', class: 'ck-heading_heading3' },
+
+        ]
+      },
+      htmlSupport: {
+        allow: [
+          {
+            classes: true,
+          }
+        ],
+        disallow: [ /* HTML features to disallow */]
       }
     }
 
@@ -205,10 +213,10 @@ export default {
       // You can store the "editor" and use when it is needed.
       // console.log("Editor is ready to use!", editor);
       editor.editing.view.change((writer) => {
-        writer.setStyle( {
+        writer.setStyle({
           'min-height': '250px',
           'max-height': '250px'
-        },editor.editing.view.document.getRoot())
+        }, editor.editing.view.document.getRoot())
       });
     }
 
