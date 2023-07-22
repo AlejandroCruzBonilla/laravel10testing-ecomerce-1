@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Blog;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 
 class BlogController extends Controller
 {
@@ -38,7 +39,8 @@ class BlogController extends Controller
     public function store(Request $request)
     {
         //
-        dd($request);
+        // dd($request);
+        return Redirect::back()->withInput();
         return ;
     }
 

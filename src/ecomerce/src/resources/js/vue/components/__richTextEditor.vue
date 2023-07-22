@@ -72,17 +72,23 @@ import WordCount from '@ckeditor/ckeditor5-word-count/src/wordcount.js';
 export default {
 
   props: {
+    id: {
+      type: String,
+      required: true
+    },
+
     name: {
       type: String,
       required: true
     },
-    id: {
+
+    value: {
       type: String,
-      required: true
-    }
+      default: ""
+    },
   },
 
-  setup() {
+  setup({ value }) {
     const editor = ClassicEditor;
 
 
@@ -197,7 +203,7 @@ export default {
       }
     }
 
-    const editorData = ref("");
+    const editorData = ref(value);
 
 
     const emptyEditor = () => {
@@ -207,7 +213,7 @@ export default {
     const onEditorInput = (event) => {
       editorData.value = event;
     }
-    
+
     const onReady = (editor) => {
       // You can store the "editor" and use when it is needed.
       // console.log("Editor is ready to use!", editor.editing.view);
