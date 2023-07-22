@@ -47,3 +47,6 @@ if (app) {
 
     adminApp.mount(app);
 }
+
+const editor = document.querySelector("#editor");
+

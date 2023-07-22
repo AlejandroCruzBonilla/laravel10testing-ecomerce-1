@@ -28,5 +28,10 @@ export default {
         },
     },
 
-    plugins: [forms],
+    plugins: [
+        forms({
+            strategy: "base", // only generate global styles
+            // strategy: "class", // only generate classes
+        }),
+    ],
 };

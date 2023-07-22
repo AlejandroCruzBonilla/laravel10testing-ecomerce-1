@@ -21,6 +21,10 @@ Route::group(['as' => 'web.'], function () {
         return view('web.home');
     })->name('home.index');
 
+    Route::get('/welcome', function () {
+        return view('welcome');
+    })->name('home.index');
+
     Route::group(['prefix' => 'products',], function () {
         Route::get('/', function () {
             return view('web.products.index');
