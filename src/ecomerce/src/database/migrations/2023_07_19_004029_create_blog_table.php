@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('blogs', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->longText('body');
-            $table->longText('fonts');
+            $table->longText('body')->nullable();
+            $table->longText('fonts')->nullable();
             $table->string('author')->nullable();
             $table->timestamps();
             
@@ -24,9 +24,9 @@ return new class extends Migration
             $table->enum('status',['published','unpublished'])->default('unpublished');
 
             //Seo
-            $table->longText('seo_fields');
-            $table->longText('og_fields');
-            $table->longText('schema_org_fields');
+            $table->longText('seo_fields')->nullable();
+            $table->longText('og_fields')->nullable();
+            $table->longText('schema_org_fields')->nullable();
 
             //Index
             $table->fullText('title');

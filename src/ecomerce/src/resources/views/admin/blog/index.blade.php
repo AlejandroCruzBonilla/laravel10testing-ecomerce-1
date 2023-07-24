@@ -9,6 +9,10 @@
         </h2>
     </x-slot>
 
+    <x-nav.link class="rounded px-6 py-2 bg-gray-900 mx-2 text-gray-100" :href="route('admin.blog.create')">
+        {{__('Create New')}}
+    </x-nav.link>
+
     @if ($blogs->items() && count($blogs->items()))
         <index-table csrf-token="{{ csrf_token() }}" :raw-data="{{ $blogs->toJson() }}"
             :items="{{ json_encode($blogs->items()) }}"
