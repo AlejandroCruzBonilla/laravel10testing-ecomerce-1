@@ -22,14 +22,14 @@
     ];
 @endphp
 
-<v-footer name="footer_app" color="var(--gray-900)">
+<v-footer name="footer_app">
 
     <div class="mx-auto py-4 px-2">
 
         <div class="flex justify-center my-2">
-            <x-nav.logo>
+            <x-nav.home-link>
                 <x-common.application-logo class="fill-slate-200" width="50px" height="50px"></x-common.application-logo>
-            </x-nav.logo>
+            </x-nav.home-link>
         </div>
 
         <div class="flex my-2 justify-center flex-col">

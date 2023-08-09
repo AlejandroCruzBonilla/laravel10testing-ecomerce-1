@@ -7,9 +7,9 @@
 </template>
 <div class="nav__bar">
     <div class="nav__bar-wrapper">
-        <x-nav.logo>
+        <x-nav.home-link>
             {{ $logo }}
-        </x-nav.logo>
+        </x-nav.home-link>
         <div class="nav__links hidden lg:block">
             @foreach (Helpers::getRoutesByPrefix('web') as $name => $route)
                 <x-nav.link class="mx-2" :href="route($name)" :active="request()->routeIs($name)">

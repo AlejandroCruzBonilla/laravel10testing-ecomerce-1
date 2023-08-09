@@ -4,6 +4,6 @@
 
 <div {{ $attributes->merge(['class' => $classes]) }}>
     @foreach ($icons as $icon => $uri)
-        <v-btn class="m-2" href="{{ $uri }}" icon="{{ $icon }}"></v-btn>
+        <v-btn class="m-2" href="{{ $uri }}" target="_blank" icon="{{ $icon }}"></v-btn>
     @endforeach
 </div>
