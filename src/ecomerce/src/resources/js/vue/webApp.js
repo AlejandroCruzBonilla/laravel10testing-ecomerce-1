@@ -17,7 +17,7 @@ import DataTable from "primevue/datatable";
 import Column from "primevue/column";
 
 //Own
-import WebApp from "./layouts/Web.vue";
+import WebLayout from "./layout/web.vue";
 
 //VueApp
 const app = document.querySelector("#web-app");
@@ -32,15 +32,11 @@ if (app) {
     webApp.use(vuetify);
 
     //PrimeVue
-    // webApp.use(PrimeVue);
-    // webApp.use(PrimeVue, { ripple: true ,unstyled: true});
     webApp.use(PrimeVue, { unstyled: true });
     webApp.component("DataTable", DataTable);
     webApp.component("Column", Column);
-    // webApp.component("Row", Row);
-
 
     //Own
-    webApp.component("WebApp", WebApp);
+    webApp.component("WebLayout", WebLayout);
     webApp.mount(app);
 }

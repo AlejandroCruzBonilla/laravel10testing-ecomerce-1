@@ -9,7 +9,7 @@ import ckeditor5 from "@ckeditor/vite-plugin-ckeditor5";
 export default defineConfig({
     plugins: [
         laravel({
-            input: ["resources/css/app.css", "resources/js/app.js"],
+            input: ["resources/css/index.css", "resources/js/index.js"],
             refresh: true,
         }),
         vue({

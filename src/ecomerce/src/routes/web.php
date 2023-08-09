@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(['as' => 'web.'], function () {
     Route::get('/', function () {
-        return view('web.home');
+        return view('pages.web.home');
     })->name('home.index');
 
     Route::get('/welcome', function () {

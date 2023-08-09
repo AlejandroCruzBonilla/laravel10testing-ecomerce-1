@@ -19,7 +19,7 @@ import Column from "primevue/column";
 import CKEditor from '@ckeditor/ckeditor5-vue';
 
 //Own
-import AdminApp from "./layouts/Admin.vue";
+import AdminLayout from "./layout/admin.vue";
 import Debug from'./components/__debug.vue';
 import IndexTable from'./components/__indexTable.vue';
 import RichTextEditor from'./components/__richTextEditor.vue';
@@ -35,27 +35,20 @@ if (app) {
     adminApp.use(vuetify);
 
     //PrimeVue
-    // adminApp.use(PrimeVue);
-    // adminApp.use(PrimeVue, { ripple: true ,unstyled: true});
     adminApp.use(PrimeVue, { unstyled: true });
     adminApp.component("DataTable", DataTable);
     adminApp.component("Column", Column);
-    // adminApp.component("Row", Row);
     
     //CkEditor
     adminApp.use(CKEditor);
 
     //Own
-    adminApp.component("AdminApp", AdminApp);
+    adminApp.component("AdminLayout", AdminLayout);
     adminApp.component("DebugComponent", Debug);
 
     adminApp.component("IndexTable", IndexTable);
     adminApp.component("RichTextEditor", RichTextEditor);
 
-
-
     adminApp.mount(app);
 }
-
-const editor = document.querySelector("#editor");
 

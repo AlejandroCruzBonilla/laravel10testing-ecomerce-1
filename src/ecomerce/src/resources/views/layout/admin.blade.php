@@ -19,8 +19,10 @@
 </head>
 
 <body class="bg-gray-300">
-    <div id="web-app">
-        <web-app>
+    {{-- {{dd(Helpers::getRoutesByPrefix_Suffix('admin.','.index') )}} --}}
+
+    <div id="admin-app">
+        <admin-layout>
 
             <template v-slot:nav_bar={mobile_menu_drawer,toggle_mobile_menu_drawer}>
                 <x-nav.app-bar>
@@ -55,7 +57,7 @@
                 <x-layout.footer></x-layout.footer>
             </template>
 
-        </web-app>
+        </admin-layout>
     </div>
 </body>
 

@@ -15,14 +15,12 @@
     <link rel="stylesheet" href="https://unpkg.com/primeicons@6.0.1/primeicons.css">
 
     <!-- Scripts -->
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @vite(['resources/css/index.css', 'resources/js/index.js'])
 </head>
 
 <body class="bg-gray-300">
-    {{-- {{dd(Helpers::getRoutesByPrefix_Suffix('admin.','.index') )}} --}}
-
-    <div id="admin-app">
-        <admin-app>
+    <div id="web-app">
+        <web-layout>
 
             <template v-slot:nav_bar={mobile_menu_drawer,toggle_mobile_menu_drawer}>
                 <x-nav.app-bar>
@@ -57,7 +55,7 @@
                 <x-layout.footer></x-layout.footer>
             </template>
 
-        </admin-app>
+        </web-layout>
     </div>
 </body>
 
