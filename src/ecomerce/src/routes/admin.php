@@ -17,11 +17,11 @@ Route::group([
 
   Route::middleware(['active'])->group(function () {
     // Route::get('/', [RoleController::class ,'index'])->name('roles.index');
-    Route::resource('role', RoleController::class);
+    Route::resource('roles', RoleController::class);
   });
 
   Route::middleware(['active'])->group(function () {
-    Route::resource('tag', TagController::class);
+    Route::resource('tags', TagController::class);
   });
   Route::middleware(['active'])->group(function () {
     Route::resource('blog', BlogController::class);
