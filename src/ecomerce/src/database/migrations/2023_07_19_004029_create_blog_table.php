@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->longText('body')->nullable();
-            $table->longText('fonts')->nullable();
+            $table->longText('references')->nullable();
             $table->string('author')->nullable();
             $table->timestamps();
             
