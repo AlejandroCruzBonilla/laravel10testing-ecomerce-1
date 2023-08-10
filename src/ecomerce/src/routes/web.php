@@ -23,7 +23,7 @@ Route::group(['as' => 'web.'], function () {
 
     Route::get('/welcome', function () {
         return view('welcome');
-    })->name('home.index');
+    })->name('welcome.index');
 
     Route::group(['prefix' => 'products',], function () {
         Route::get('/', function () {
