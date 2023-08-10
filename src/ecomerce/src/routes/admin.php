@@ -13,7 +13,7 @@ Route::group([
 
   Route::get('/dashboard', function () {
     return view('pages.admin.dashboard');
-  })->name('dashboard');
+  })->name('dashboard.index');
 
   Route::middleware(['active'])->group(function () {
     // Route::get('/', [RoleController::class ,'index'])->name('roles.index');

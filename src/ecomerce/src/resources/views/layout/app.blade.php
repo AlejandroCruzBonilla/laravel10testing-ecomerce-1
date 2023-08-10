@@ -18,7 +18,7 @@
     @vite(['resources/css/index.css', 'resources/js/index.js'])
 </head>
 
-<body class="bg-gray-300">
+<body>
     {{-- {{dd(Helpers::getRoutesByPrefix_Suffix('admin.','.index') )}} --}}
     <div id="app">
         <app-layout>

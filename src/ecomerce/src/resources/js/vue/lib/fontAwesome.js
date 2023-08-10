@@ -10,22 +10,24 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 
 import {
-  faGripLines,
-  faXmark,
-  faPhone,
   faEnvelope,
+  faGripLines,
+  faPhone,
+  faUser,
+  faXmark,
 } from '@fortawesome/free-solid-svg-icons';
 
 library.add(
+  faEnvelope,
   faFacebookF,
-  faInstagram,
-  faTiktok,
-  faLinkedin,
-  faTwitter,
   faGripLines,
-  faXmark,
+  faInstagram,
+  faLinkedin,
   faPhone,
-  faEnvelope
+  faTiktok,
+  faTwitter,
+  faUser,
+  faXmark,
 );
 
 export default FontAwesomeIcon;

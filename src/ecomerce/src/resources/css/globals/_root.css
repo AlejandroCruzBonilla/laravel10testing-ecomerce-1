@@ -2,3 +2,8 @@
   --layout-max-with: 1400px;
   --layout-base-padding: 1rem;
 }
+
+body {
+  background-color: var(--color-mischka);
+  font-size: 1rem;
+}

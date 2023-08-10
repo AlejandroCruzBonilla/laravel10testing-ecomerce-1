@@ -1,8 +1,3 @@
-<x-nav.link :href="route('admin.dashboard')" :active="request()->routeIs('admin.dashboard')">
-    {{ __('Dashboard') }}
-</x-nav.link>
-
-
 @foreach (
     Helpers::getRoutesByPrefix_Suffix('admin.', '.index') as $name => $route
 )
