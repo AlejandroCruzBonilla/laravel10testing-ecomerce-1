@@ -16,7 +16,7 @@ class TagController extends Controller
         $tags = Tag::select('id', 'name', 'description')
             ->paginate(10)
             ->onEachSide(2);
-        return view('admin.tag.index', [
+        return view('pages.admin.tag.index', [
             'tags' => $tags,
         ]);
     }

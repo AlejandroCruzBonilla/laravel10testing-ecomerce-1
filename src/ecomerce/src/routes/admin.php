@@ -12,7 +12,7 @@ Route::group([
 ], function () {
 
   Route::get('/dashboard', function () {
-    return view('admin.dashboard');
+    return view('pages.admin.dashboard');
   })->name('dashboard');
 
   Route::middleware(['active'])->group(function () {

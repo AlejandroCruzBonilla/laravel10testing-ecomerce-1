@@ -20,7 +20,7 @@
     </rich-text-editor>
 </div>
 
-@include('admin.partials.content-common-fields-form', [
+@include('pages.admin.partials.content-common-fields-form', [
     'node' => $blog,
 ])
 

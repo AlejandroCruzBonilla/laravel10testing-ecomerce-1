@@ -16,7 +16,7 @@ class RoleController extends Controller
         $roles = Role::select('id', 'name', 'description')
             ->paginate(10)
             ->onEachSide(2);
-        return view('admin.role.index', [
+        return view('pages.admin.role.index', [
             'roles' => $roles,
         ]);
     }

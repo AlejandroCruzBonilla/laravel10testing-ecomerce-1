@@ -14,7 +14,7 @@ class BlogController extends Controller
     public function index()
     {
         //
-        return view('web.blog.index');
+        return view('pages.web.blog.index');
     }
 
     /**
@@ -23,6 +23,6 @@ class BlogController extends Controller
     public function show(Blog $blog)
     {
         //
-        return view('web.blog.show');
+        return view('pages.web.blog.show');
     }
 }

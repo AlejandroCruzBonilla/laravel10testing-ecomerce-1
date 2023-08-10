@@ -1,7 +1,7 @@
 @section('title', 'Role Index')
 @section('description', 'Roles Index')
 
-<x-admin-layout>
+<x-app-layout>
 
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">

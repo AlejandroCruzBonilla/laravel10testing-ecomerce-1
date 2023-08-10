@@ -27,7 +27,7 @@ Route::group(['as' => 'web.'], function () {
 
     Route::group(['prefix' => 'products',], function () {
         Route::get('/', function () {
-            return view('web.products.index');
+            return view('pages.web.products.index');
         })->name('products.index');
     });
 
@@ -36,11 +36,11 @@ Route::group(['as' => 'web.'], function () {
     });
 
     Route::get('/about', function () {
-        return view('web.about');
+        return view('pages.web.about');
     })->name('about.index');
 
     Route::get('/contact', function () {
-        return view('web.contact');
+        return view('pages.web.contact');
     })->name('contact.index');
 });
 

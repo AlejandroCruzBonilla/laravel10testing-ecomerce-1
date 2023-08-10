@@ -1,4 +1,4 @@
-<x-web-layout>
+<x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Profile') }}
@@ -8,19 +8,19 @@
     <div class="mx-auto space-y-6">
         <div class="p-4 xs:p-8 bg-white shadow xs:rounded-lg">
             <div>
-                @include('auth.profile.partials.update-profile-information-form')
+                @include('pages.auth.profile.partials.update-profile-information-form')
             </div>
         </div>
 
         <div class="p-4 xs:p-8 bg-white shadow xs:rounded-lg">
             <div>
-                @include('auth.profile.partials.update-password-form')
+                @include('pages.auth.profile.partials.update-password-form')
             </div>
         </div>
 
         <div class="p-4 xs:p-8 bg-white shadow xs:rounded-lg">
             <div>
-                @include('auth.profile.partials.delete-user-form')
+                @include('pages.auth.profile.partials.delete-user-form')
             </div>
         </div>
     </div>

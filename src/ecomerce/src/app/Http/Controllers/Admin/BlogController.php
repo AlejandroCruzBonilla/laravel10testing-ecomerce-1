@@ -17,7 +17,7 @@ class BlogController extends Controller
         $blogs = Blog::select('id', 'title')
             ->paginate(10)
             ->onEachSide(2);
-        return view('admin.blog.index', [
+        return view('pages.admin.blog.index', [
             'blogs' => $blogs,
         ]);
     }
@@ -28,7 +28,7 @@ class BlogController extends Controller
     public function create()
     {
         $blog = new Blog();
-        return view('admin.blog.create',[
+        return view('pages.admin.blog.create',[
             'blog' => $blog,
         ]);
     }
