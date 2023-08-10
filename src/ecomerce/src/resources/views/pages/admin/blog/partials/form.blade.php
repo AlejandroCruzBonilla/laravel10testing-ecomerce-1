@@ -4,7 +4,7 @@
       id="title"
       name="title"
       type="text"
-      class="mt-1 block w-full"
+      class="block w-full"
       :value="old('title', $blog->title)"
       autofocus
       required

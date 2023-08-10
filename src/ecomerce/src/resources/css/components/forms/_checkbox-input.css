@@ -1,0 +1,3 @@
+input[type="checkbox"] {
+  @apply text-indigo-600;
+}
