@@ -22,10 +22,13 @@
         <div class="mt-4">
             <x-forms.input-label for="password" :value="__('Password')" />
 
-            <x-forms.text-input id="password" class="block w-full"
-                            type="password"
-                            name="password"
-                            required autocomplete="current-password" />
+            <x-forms.text-input
+              id="password"
+              class="block w-full"
+              type="password"
+              name="password"
+              required
+              autocomplete="current-password" />
 
             <x-forms.input-error :messages="$errors->get('password')" class="mt-2" />
         </div>
