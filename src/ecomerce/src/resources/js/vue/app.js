@@ -13,8 +13,9 @@ import CKEditor from '@ckeditor/ckeditor5-vue';
 //Own
 import appLayout from "./layout/app.vue";
 import Debug from'./components/__debug.vue';
-import IndexTable from'./components/__indexTable.vue';
-import RichTextEditor from'./components/__richTextEditor.vue';
+import IndexTable from'./components/_indexTable.vue';
+import RichTextEditor from'./components/_richTextEditor.vue';
+import FormExpansionPanels from'./components/_formExpansionPanels.vue';
 
 //VueApp
 const appDocument = document.querySelector("#app");
@@ -43,6 +44,7 @@ if (appDocument) {
 
     app.component("IndexTable", IndexTable);
     app.component("RichTextEditor", RichTextEditor);
+    app.component("FormExpansionPanels", FormExpansionPanels);
 
     app.mount(appDocument);
 }

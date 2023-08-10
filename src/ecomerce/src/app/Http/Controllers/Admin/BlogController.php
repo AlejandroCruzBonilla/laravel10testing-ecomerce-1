@@ -39,7 +39,7 @@ class BlogController extends Controller
     public function store(Request $request)
     {
         //
-        // dd($request);
+        dd($request);
         return Redirect::back()->withInput();
         return ;
     }

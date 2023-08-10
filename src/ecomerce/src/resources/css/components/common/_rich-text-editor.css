@@ -3,6 +3,7 @@
     border: solid 0.5px;
     @apply rounded-md;
     @apply border-gray-900;
+    @apply mt-1
 }
 
 .ck.ck-toolbar {

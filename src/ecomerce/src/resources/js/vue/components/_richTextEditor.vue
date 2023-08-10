@@ -1,7 +1,15 @@
 <template>
   <slot name="label"></slot>
-  <ckeditor class="border-solid border-gray-900" :id="id" :name="name" :rows="10" :editor="editor" :config="editorConfig"
-    :model-value="editorData" :disableTwoWayDataBinding="false" @input="onEditorInput" @ready="onReady"
+  <ckeditor
+    :id="id"
+    :name="name"
+    :rows="10"
+    :editor="editor"
+    :config="editorConfig"
+    :model-value="editorData"
+    :disableTwoWayDataBinding="false"
+    @input="onEditorInput"
+    @ready="onReady"
     tag-name="textarea">
   </ckeditor>
 </template>
