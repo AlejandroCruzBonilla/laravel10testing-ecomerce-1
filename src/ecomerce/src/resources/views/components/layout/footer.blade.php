@@ -14,11 +14,23 @@
 @php
     $copy = '© 2023 Copyright Brand';
     
-    $icons = [
-        'mdi-facebook' => 'https://facebook.com',
-        'mdi-twitter' => 'https://twitter.com',
-        'mdi-linkedin' => 'https://linkedin.com',
-        'mdi-instagram' => 'https://instagram.com',
+    $socialLinks = [
+        'Facebook' => [
+            'href' => 'https://facebook.com',
+            'icon' => 'fa-brands fa-facebook-f',
+        ],
+        'Instagram' => [
+            'href' => 'https://instagram.com',
+            'icon' => 'fa-brands fa-instagram',
+        ],
+        'Twitter' => [
+            'href' => 'https://twitter.com',
+            'icon' => 'fa-brands fa-twitter',
+        ],
+        'Linkedin' => [
+            'href' => 'https://linkedin.com',
+            'icon' => 'fa-brands fa-linkedin',
+        ],
     ];
 @endphp
 
@@ -28,7 +40,8 @@
 
         <div class="flex justify-center my-2">
             <x-nav.home-link>
-                <x-common.application-logo class="fill-slate-200" width="50px" height="50px"></x-common.application-logo>
+                <x-common.application-logo class="fill-slate-200" width="50px"
+                    height="50px"></x-common.application-logo>
             </x-nav.home-link>
         </div>
 
@@ -40,7 +53,7 @@
                     </x-nav.link>
                 @endforeach
             </div>
-            <x-layout.social :icons="$icons"></x-layout.social>
+            <x-layout.social :social-links="$socialLinks"></x-layout.social>
         </div>
 
         <x-layout.copyright :copy="$copy"></x-layout.copyright>

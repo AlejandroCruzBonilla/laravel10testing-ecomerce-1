@@ -1,15 +1,6 @@
 import { createApp } from "vue";
-// import { router } from "./router";
-
-//Vuetify Imports
-import { createVuetify } from "vuetify";
-import * as components from "vuetify/components";
-import * as directives from "vuetify/directives";
-
-const vuetify = createVuetify({
-    components,
-    directives,
-});
+import FontAwesomeIcon from "./lib/fontAwesome";
+import vuetify from "./lib/vuetify";
 
 //PrimeVue
 import PrimeVue from "primevue/config";
@@ -25,9 +16,6 @@ const app = document.querySelector("#web-app");
 if (app) {
     const webApp = createApp();
 
-    //Services
-    // webApp.use(router);
-
     //Vuetify
     webApp.use(vuetify);
 
@@ -35,6 +23,9 @@ if (app) {
     webApp.use(PrimeVue, { unstyled: true });
     webApp.component("DataTable", DataTable);
     webApp.component("Column", Column);
+
+    //FontAwesome
+    webApp.component('FontAwesomeIcon', FontAwesomeIcon);
 
     //Own
     webApp.component("WebLayout", WebLayout);

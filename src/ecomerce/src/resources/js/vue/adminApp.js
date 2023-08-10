@@ -1,14 +1,7 @@
 import { createApp } from "vue";
+import FontAwesomeIcon from "./lib/fontAwesome";
+import vuetify from "./lib/vuetify";
 
-//Vuetify Imports
-import { createVuetify } from "vuetify";
-import * as components from "vuetify/components";
-import * as directives from "vuetify/directives";
-
-const vuetify = createVuetify({
-    components,
-    directives,
-});
 
 //PrimeVue
 import PrimeVue from "primevue/config";
@@ -41,6 +34,9 @@ if (app) {
     
     //CkEditor
     adminApp.use(CKEditor);
+
+    //FontAwesome
+    adminApp.component('FontAwesomeIcon', FontAwesomeIcon);
 
     //Own
     adminApp.component("AdminLayout", AdminLayout);

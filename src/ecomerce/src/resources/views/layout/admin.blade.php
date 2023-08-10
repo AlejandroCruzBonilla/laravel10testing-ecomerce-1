@@ -24,13 +24,17 @@
     <div id="admin-app">
         <admin-layout>
 
-            <template v-slot:nav_bar={mobile_menu_drawer,toggle_mobile_menu_drawer}>
+            <template #nav_bar={mobile_menu_drawer,toggle_mobile_menu_drawer}>
                 <x-nav.app-bar>
                     <x-slot name="navigation__bar">
                         <x-nav.toolbar>
                             <x-slot name="menu_icon">
-                                <v-app-bar-nav-icon class="z-10" @click="toggle_mobile_menu_drawer">
-                                </v-app-bar-nav-icon>
+                                <v-btn icon @click="toggle_mobile_menu_drawer">
+                                    <v-icon>
+                                        <font-awesome-icon :icon="mobile_menu_drawer ? 'fa-solid fa-xmark' : 'fa-solid fa-grip-lines'">
+                                        </font-awesome-icon>
+                                    </v-icon>
+                                </v-btn>
                             </x-slot>
                             <x-slot name="logo">
                                 {{-- <v-img  :width="150"src="https://placehold.co/150x50"></v-img> --}}
@@ -39,10 +43,14 @@
                         </x-nav.toolbar>
                     </x-slot>
                 </x-nav.app-bar>
+
+            </template>
+
+            <template #drawer={mobile_menu_drawer,toggle_mobile_menu_drawer}>
                 <x-nav.drawer></x-nav.drawer>
             </template>
 
-            <template v-slot:content>
+            <template #content>
                 <div class="px-2 py-6">
                     @if (isset($header))
                         <x-common.page-title>
@@ -53,7 +61,7 @@
                 </div>
             </template>
 
-            <template v-slot:footer>
+            <template #footer>
                 <x-layout.footer></x-layout.footer>
             </template>
 

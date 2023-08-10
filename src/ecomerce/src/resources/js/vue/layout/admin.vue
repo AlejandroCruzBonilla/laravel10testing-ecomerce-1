@@ -4,6 +4,9 @@
       <slot name="nav_bar" :mobile_menu_drawer="mobile_menu_drawer" :toggle_mobile_menu_drawer="toggleMobileMenuDrawer">
       </slot>
 
+      <slot name="drawer" :mobile_menu_drawer="mobile_menu_drawer" :toggle_mobile_menu_drawer="toggleMobileMenuDrawer">
+      </slot>
+
       <v-main id="main" class="min-h-screen">
         <slot name="content"></slot>
       </v-main>
