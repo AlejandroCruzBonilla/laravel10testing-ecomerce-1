@@ -1,0 +1,35 @@
+header.header .v-toolbar__prepend,
+header.header .v-toolbar__append {
+    margin: 0;
+}
+
+header.header .toolbar {
+    margin: 0 auto;
+}
+
+header.header .toolbar,
+header.header .toolbar-wrapper {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header.header .toolbar .home-link {
+    display: inline-flex;
+    align-items: center;
+}
+
+header.header .toolbar .home-link a {
+    width: 100%;
+}
+
+@media (min-width: 1024px) {
+    header.header .toolbar .toolbar-wrapper .toolbar-links {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        margin-left: 1rem;
+    }
+}

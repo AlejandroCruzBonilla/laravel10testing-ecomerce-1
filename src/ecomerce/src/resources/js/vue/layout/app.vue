@@ -1,17 +1,28 @@
 <template>
-  <v-layout class="justify-center">
-    <div class="flex flex-col w-full max-w-screen-2xl">
-      <slot name="nav_bar" :mobile_menu_drawer="mobile_menu_drawer" :toggle_mobile_menu_drawer="toggleMobileMenuDrawer">
-      </slot>
+  <v-layout class="layout">
+    
+    <slot name="admin-bar"></slot>
+    
+    <slot
+      name="nav"
+      :mobile_menu_drawer="mobile_menu_drawer"
+      :toggle_mobile_menu_drawer="toggleMobileMenuDrawer">
+    </slot>
 
-      <slot name="drawer" :mobile_menu_drawer="mobile_menu_drawer" :toggle_mobile_menu_drawer="toggleMobileMenuDrawer">
-      </slot>
+    <slot
+      name="drawer"
+      :mobile_menu_drawer="mobile_menu_drawer"
+      :toggle_mobile_menu_drawer="toggleMobileMenuDrawer">
+    </slot>
 
-      <v-main id="main" class="min-h-screen">
+    <v-main id="main">
+      <div class="main-wrapper">
         <slot name="content"></slot>
-      </v-main>
-      <slot name="footer"></slot>
-    </div>
+      </div>
+    </v-main>
+
+    <slot name="footer"></slot>
+
   </v-layout>
 </template>
 

@@ -23,9 +23,13 @@
     <div id="app">
         <app-layout>
 
-            <template #nav_bar={mobile_menu_drawer,toggle_mobile_menu_drawer}>
-                <x-nav.app-bar>
-                    <x-slot name="navigation__bar">
+            <template #admin-bar>
+                <x-nav.admin.bar></x-nav.admin.bar>
+            </template>
+
+            <template #nav={mobile_menu_drawer,toggle_mobile_menu_drawer}>
+                <x-nav.bar>
+                    <x-slot name="toolbar">
                         <x-nav.toolbar>
                             <x-slot name="menu_icon">
                                 <v-btn icon @click="toggle_mobile_menu_drawer">
@@ -36,13 +40,11 @@
                                 </v-btn>
                             </x-slot>
                             <x-slot name="logo">
-                                {{-- <v-img  :width="150"src="https://placehold.co/150x50"></v-img> --}}
                                 <x-common.application-logo width="50px" height="50px"></x-common.application-logo>
                             </x-slot>
                         </x-nav.toolbar>
                     </x-slot>
-                </x-nav.app-bar>
-
+                </x-nav.bar>
             </template>
 
             <template #drawer={mobile_menu_drawer,toggle_mobile_menu_drawer}>
@@ -50,12 +52,16 @@
             </template>
 
             <template #content>
-                <div class="px-2 py-6">
-                    @if (isset($header))
+                
+                <div class="page-title">
+                    @if (isset($title))
                         <x-common.page-title>
-                            {{ $header }}
+                            {{ $title }}
                         </x-common.page-title>
                     @endif
+                </div>
+
+                <div class="page-content">
                     {{ $slot }}
                 </div>
             </template>

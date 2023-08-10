@@ -5,12 +5,12 @@
         </div>
     @endif
 </template>
-<div class="nav__bar">
-    <div class="nav__bar-wrapper">
+<div class="toolbar">
+    <div class="toolbar-wrapper">
         <x-nav.home-link>
             {{ $logo }}
         </x-nav.home-link>
-        <div class="nav__links hidden lg:block">
+        <div class="toolbar-links hidden lg:block">
             @foreach (Helpers::getRoutesByPrefix('web') as $name => $route)
                 <x-nav.link class="mx-2" :href="route($name)" :active="request()->routeIs($name)">
                     {{ __(Helpers::cleanRouteName($name)) }}
@@ -22,4 +22,3 @@
 <template v-slot:append>
     <x-nav.auth-dropdown></x-nav.auth-dropdown>
 </template>
-<x-nav.admin.app-bar></x-nav.admin.app-bar>

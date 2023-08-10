@@ -34,9 +34,9 @@
     ];
 @endphp
 
-<v-footer name="footer_app">
+<v-footer name="footer">
 
-    <div class="mx-auto py-4 px-2">
+    <div class="footer-wrapper mx-auto">
 
         <div class="flex justify-center my-2">
             <x-nav.home-link>
