@@ -8,7 +8,8 @@
 		:value="old('slug', $node->slug)"
 		autofocus
 		prefix="{{$slugPrefix}}"
-		autocomplete="slug" />
+		autocomplete="slug" 
+		required />
     <x-forms.input-error class="mt-2" :messages="$errors->get('slug')" />
 </div>
 

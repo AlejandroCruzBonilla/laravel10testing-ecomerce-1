@@ -1,9 +1,6 @@
 <div class="mx-auto">
-	{{-- @if ($errors->count())
-		{{dd($errors)}}
-	@endif --}}
 	<form-expansion-panels 
-		:active-panels='[0]'
+		active-panels='all'
 		:has-errors={{$errors->count()?'true':'false'}}>
 
 			<x-forms.expansion-panel>
@@ -20,8 +17,8 @@
 							class="block w-full"
 							:value="old('title', $blog->title)"
 							autofocus
-							required
-							autocomplete="title" />
+							autocomplete="title" 
+							required />
 						<x-forms.input-error class="mt-2" :messages="$errors->get('title')" />
 					</div>
 	

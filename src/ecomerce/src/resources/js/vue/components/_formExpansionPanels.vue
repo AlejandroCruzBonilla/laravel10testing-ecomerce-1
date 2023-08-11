@@ -11,7 +11,7 @@ import { ref, onMounted } from 'vue';
 
 const props = defineProps({
   activePanels: {
-    type: Array,
+    type: [Array,String],
     default: []
   },
   hasErrors: {
@@ -41,8 +41,9 @@ onMounted(() => {
 
   panel.value = props.hasErrors
     ? setPanels()
+    : props.activePanels === 'all'
+    ? setPanels()
     : props.activePanels
-
 });
 
 

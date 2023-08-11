@@ -7,7 +7,8 @@
 		class="block w-full"
 		:value="old('meta[title]', '')"
 		autofocus
-		autocomplete="meta[title]" />
+		autocomplete="meta[title]" 
+		required />
     <x-forms.input-error class="mt-2" :messages="$errors->get('meta.title')" />
 </div>
 
@@ -20,6 +21,7 @@
 		class="block w-full"
 		:value="old('meta[description]', '')"
 		autofocus
-		autocomplete="meta[description]" />
+		autocomplete="meta[description]" 
+		required />
     <x-forms.input-error class="mt-2" :messages="$errors->get('meta.description')" />
 </div>
