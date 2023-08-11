@@ -1,4 +1,4 @@
-<form-expansion-panels>
+<form-expansion-panels :has-errors={{$errors->count()?'true':'false'}}>
     <x-forms.expansion-panel>
         <x-slot name="title">
             {{ __('Meta Tags') }}

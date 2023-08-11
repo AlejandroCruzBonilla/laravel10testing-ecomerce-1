@@ -18,13 +18,13 @@ class Blog extends Model
     protected $fillable = [
         'title',
         'body',
-        'fonts',
+        'references',
         'author',
         'slug',
         'status',
-        'seo_fields',
-        'og_fields',
-        'schema_org_fields',
+        'meta_tags',
+        'meta_tags_og',
+        'schema_org',
     ];
 
     function tags(): BelongsToMany

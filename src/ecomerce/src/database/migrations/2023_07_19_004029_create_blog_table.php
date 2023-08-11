@@ -24,9 +24,9 @@ return new class extends Migration
             $table->enum('status',['published','unpublished'])->default('unpublished');
 
             //Seo
-            $table->longText('seo_fields')->nullable();
-            $table->longText('og_fields')->nullable();
-            $table->longText('schema_org_fields')->nullable();
+            $table->longText('meta_tags')->nullable();
+            $table->longText('meta_tags_og')->nullable();
+            $table->longText('schema_org')->nullable();
 
             //Index
             $table->fullText('title');
