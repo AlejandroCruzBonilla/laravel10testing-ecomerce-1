@@ -24,6 +24,6 @@ Route::group([
     Route::resource('tags', TagController::class);
   });
   Route::middleware(['active'])->group(function () {
-    Route::resource('blog', BlogController::class);
+    Route::resource('blogs', BlogController::class);
   });
 });

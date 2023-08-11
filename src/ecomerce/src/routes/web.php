@@ -31,8 +31,8 @@ Route::group(['as' => 'web.'], function () {
         })->name('products.index');
     });
 
-    Route::group(['prefix' => 'blog',], function () {
-        Route::get('/', [BlogController::class, 'index'])->name('blog.index');
+    Route::group(['prefix' => 'blogs',], function () {
+        Route::get('/', [BlogController::class, 'index'])->name('blogs.index');
     });
 
     Route::get('/about', function () {

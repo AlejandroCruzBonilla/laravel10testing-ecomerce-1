@@ -8,7 +8,7 @@
     </x-slot>
 
     <div>
-        <form method="POST" action="{{ route('admin.blog.store') }}">
+        <form method="POST" action="{{ route('admin.blogs.store') }}">
             @csrf
             @include('pages.admin.blog.partials.form')
         </form>
