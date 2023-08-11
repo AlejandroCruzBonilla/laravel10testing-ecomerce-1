@@ -4,18 +4,14 @@
 <x-app-layout>
 
     <x-slot name="title">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Blog Create') }}
-        </h2>
+		{{ __('Blog Create') }}
     </x-slot>
 
-    
     <div>
         <form method="POST" action="{{ route('admin.blog.store') }}">
             @csrf
             @include('pages.admin.blog.partials.form')
         </form>
     </div>
- 
 
-</x-admin-layout>
+</x-app-layout>

@@ -1,5 +1,5 @@
-<div class="bg-white shadow xs:rounded-lg page__title mb-6">
-    <div class="mx-auto py-6 px-4 xs:px-6 lg:px-8">
+<div class="c1-card mb-6">
+    <x-header.1 class="text-gray-800">
         {{ $slot }}
-    </div>
+    </x-header.1>
 </div>

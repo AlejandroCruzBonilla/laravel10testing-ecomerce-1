@@ -1,0 +1,20 @@
+.c1-card {
+    @apply p-6;
+    @apply shadow;
+    @apply bg-white;
+    @apply rounded-lg;
+}
+
+.c2-card {
+    @apply p-4;
+    @apply shadow;
+    @apply bg-white;
+    @apply rounded-lg;
+}
+
+.c3-card {
+    @apply p-2;
+    @apply shadow;
+    @apply bg-white;
+    @apply rounded-lg;
+}

@@ -4,13 +4,11 @@
 <x-app-layout>
 
     <x-slot name="title">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Blogs') }}
-        </h2>
+		{{ __('Blogs') }}
     </x-slot>
 
     <x-nav.link class="rounded px-6 py-2 bg-gray-900 mx-2 text-gray-100" :href="route('admin.blog.create')">
-        {{__('Create New')}}
+        {{ __('Create New') }}
     </x-nav.link>
 
     @if ($blogs->items() && count($blogs->items()))
@@ -37,4 +35,4 @@
         <div class="paginador">{{ $blogs->links() }}</div>
     @endif
 
-</x-admin-layout>
+</x-app-layout>

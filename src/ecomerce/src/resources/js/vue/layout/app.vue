@@ -1,18 +1,15 @@
 <template>
-  <v-layout class="layout">
-    
+  <v-layout :class="[
+    'layout',
+    hasAdminRole ? 'administer' : ''
+  ]">
+
     <slot name="admin-bar"></slot>
-    
-    <slot
-      name="nav"
-      :mobile_menu_drawer="mobile_menu_drawer"
-      :toggle_mobile_menu_drawer="toggleMobileMenuDrawer">
+
+    <slot name="nav" :mobile_menu_drawer="mobile_menu_drawer" :toggle_mobile_menu_drawer="toggleMobileMenuDrawer">
     </slot>
 
-    <slot
-      name="drawer"
-      :mobile_menu_drawer="mobile_menu_drawer"
-      :toggle_mobile_menu_drawer="toggleMobileMenuDrawer">
+    <slot name="drawer" :mobile_menu_drawer="mobile_menu_drawer" :toggle_mobile_menu_drawer="toggleMobileMenuDrawer">
     </slot>
 
     <v-main id="main">
@@ -28,6 +25,13 @@
 
 <script setup>
 import { onMounted, ref } from "vue";
+
+const props = defineProps({
+  hasAdminRole: {
+    type: Boolean,
+    default: false
+  }
+})
 
 const mobile_menu_drawer = ref(false)
 

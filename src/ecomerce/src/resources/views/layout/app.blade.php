@@ -21,7 +21,13 @@
 <body>
     {{-- {{dd(Helpers::getRoutesByPrefix_Suffix('admin.','.index') )}} --}}
     <div id="app">
-        <app-layout>
+        <app-layout 
+		:has-admin-role={{
+			Auth::user() && 
+			Auth::user()->hasAnyRole(['admin','webmaster'])
+			? 'true'
+			: 'false'
+		}}>
 
             <template #admin-bar>
                 <x-nav.admin.bar></x-nav.admin.bar>
@@ -53,17 +59,14 @@
 
             <template #content>
                 
-                <div class="page-title">
-                    @if (isset($title))
-                        <x-common.page-title>
-                            {{ $title }}
-                        </x-common.page-title>
-                    @endif
-                </div>
+				@if (isset($title))
+					<x-common.page-title>
+						{{ $title }}
+					</x-common.page-title>
+				@endif
 
-                <div class="page-content">
-                    {{ $slot }}
-                </div>
+				{{ $slot }}
+               
             </template>
 
             <template #footer>

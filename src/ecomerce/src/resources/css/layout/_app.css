@@ -4,7 +4,7 @@
 }
 
 .layout .v-navigation-drawer__scrim {
-  position: fixed;
+    position: fixed;
 }
 
 .layout .admin__bar,
@@ -12,7 +12,7 @@
 .layout header.header .v-toolbar__content,
 .layout header.header .toolbar,
 .layout header.header .toolbar-wrapper,
-.layout main ,
+.layout main,
 .layout main .main-wrapper,
 .layout footer,
 .layout footer .footer-wrapper {
@@ -23,14 +23,18 @@
 .layout header.header .v-toolbar__content,
 .layout main .main-wrapper,
 .layout footer .footer-wrapper {
-  max-width: var(--layout-max-with);
-  padding-left: var(--layout-base-padding);
-  padding-right: var(--layout-base-padding);
-  margin: 0 auto;
+    max-width: var(--layout-max-with);
+    padding-left: var(--layout-base-padding);
+    padding-right: var(--layout-base-padding);
+    margin: 0 auto;
 }
 
 .layout main {
-  min-height: 100vh;
-  padding-top: 0;
-  margin-top: calc(var(--admin-bar-height) + var(--header-height) + 10px);
+    min-height: 100vh;
+    padding-top: 0;
+    margin-top: calc(var(--header-height) + 10px);
+}
+
+.layout.administer main {
+    margin-top: calc(var(--admin-bar-height) + var(--header-height) + 10px);
 }

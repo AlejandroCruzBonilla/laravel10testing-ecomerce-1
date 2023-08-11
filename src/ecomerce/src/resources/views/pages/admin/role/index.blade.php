@@ -4,9 +4,7 @@
 <x-app-layout>
 
     <x-slot name="title">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Roles') }}
-        </h2>
+        {{ __('Roles') }}
     </x-slot>
 
     @if ($roles->items() && count($roles->items()))
@@ -33,4 +31,4 @@
         <div class="paginador">{{ $roles->links() }}</div>
     @endif
 
-</x-admin-layout>
+</x-app-layout>
