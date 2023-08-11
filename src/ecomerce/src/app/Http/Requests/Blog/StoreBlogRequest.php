@@ -28,10 +28,20 @@ class StoreBlogRequest extends FormRequest
   {
     return [
       'title' => ['required', 'string'],
-      'body' => ['nullable','string'],
-      
+      'body' => ['nullable', 'string'],
+
       ...$this->commonRules(),
       ...$this->metaTagsRules(),
     ];
+  }
+
+  /**
+   * Prepare the data for validation.
+   */
+  protected function prepareForValidation(): void
+  {
+    $this->merge([
+      'slug' => $this->prepareSlug(),
+    ]);
   }
 }

@@ -46,6 +46,7 @@
 				<x-slot name="content">
 					@include('pages.admin.partials.forms.common-fields', [
 						'node' => $blog,
+						'slugPrefix' => '/blog/',
 					])
 				</x-slot>
 			</x-forms.expansion-panel>
