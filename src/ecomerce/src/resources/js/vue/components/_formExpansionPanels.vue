@@ -1,50 +1,57 @@
 <template>
-  <div ref="slotContainer">
-    <v-expansion-panels multiple v-model="panel">
-      <slot :setPanels="setPanels"></slot>
-    </v-expansion-panels>
-  </div>
+  <v-expansion-panels
+    multiple
+    v-model="panel"
+    ref="expansionPanel"
+    @update:model-value="onUpdatePanel">
+    <slot></slot>
+  </v-expansion-panels>
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
+
+import { ref, watch, onMounted, useSlots } from 'vue';
 
 const props = defineProps({
   activePanels: {
-    type: [Array,String],
-    default: []
-  },
-  hasErrors: {
-    type: Boolean,
-    default: false
+    type: [Array, String],
+    default: [],
   }
 })
 
+const emit = defineEmits(['all-panels','update-panels'])
+
+const slots = useSlots()
+
+const expansionPanel = ref(null)
 const panel = ref([])
-const slotContainer = ref(null)
 
-
-const setPanels = () => {
-  if (!slotContainer.value) return [];
-  const panels = slotContainer.value
-    .querySelector(':first-child.v-expansion-panels').children;
+const allPanels = () => {
+  if (!slots.default().length) return [];
 
   const p = []
-
-  for (let index = 0; index < panels.length; index++) {
+  for (let index = 0; index < slots.default().length; index++) {
     p.push(index)
   }
   return p;
 }
 
+const onUpdatePanel = (panel) => {
+  emit('update-panels', panel);
+}
+
+watch(() => props.activePanels, (activePanels, prev) => {
+  console.log({activePanels})
+  panel.value = activePanels
+})
+
+// const { activePanels } = toRefs(props)
+// watch(activePanels, (activePanels, prevActivePanels) => {
+//   console.log(activePanels)
+// });
+
 onMounted(() => {
-
-  panel.value = props.hasErrors
-    ? setPanels()
-    : props.activePanels === 'all'
-    ? setPanels()
-    : props.activePanels
-});
-
+  emit('all-panels', allPanels());
+})
 
 </script>

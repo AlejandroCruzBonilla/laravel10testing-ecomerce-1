@@ -15,6 +15,7 @@ import appLayout from "./layout/app.vue";
 import Debug from'./components/__debug.vue';
 import IndexTable from'./components/_indexTable.vue';
 import RichTextEditor from'./components/_richTextEditor.vue';
+import Form from'./components/_form.vue';
 import FormExpansionPanels from'./components/_formExpansionPanels.vue';
 
 //VueApp
@@ -44,6 +45,7 @@ if (appDocument) {
 
     app.component("IndexTable", IndexTable);
     app.component("RichTextEditor", RichTextEditor);
+    app.component("FormComponent", Form);
     app.component("FormExpansionPanels", FormExpansionPanels);
 
     app.mount(appDocument);

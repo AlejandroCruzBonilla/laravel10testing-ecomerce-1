@@ -19,7 +19,7 @@
 </head>
 
 <body>
-    {{-- {{dd(Helpers::getRoutesByPrefix_Suffix('admin.','.index') )}} --}}
+    {{-- {{dd(RouteHelpers::getRoutesByPrefix_Suffix('admin.','.index') )}} --}}
     <div id="app">
         <app-layout 
 		:has-admin-role={{

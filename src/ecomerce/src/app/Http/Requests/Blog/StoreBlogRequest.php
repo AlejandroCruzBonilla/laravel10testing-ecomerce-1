@@ -44,4 +44,35 @@ class StoreBlogRequest extends FormRequest
       'slug' => $this->prepareSlug(),
     ]);
   }
+
+  /**
+   * Get the error messages for the defined validation rules.
+   *
+   * @return array<string, string>
+   */
+  public function messages(): array
+  {
+    return [
+      ...self::selfMessages(),
+      ...self::commonMessages(),
+      ...self::metaTagsMessages()
+    ];
+  }
+
+
+  // statics methods
+  public static function selfMessages(){
+    return [
+      'title.required' => 'Title Field is required'
+    ];
+  }
+
+  public static function getValidationMessages(): array
+  {
+    return [
+      ...self::selfMessages(),
+      ...self::commonMessages(),
+      ...self::metaTagsMessages()
+    ];
+  }
 }

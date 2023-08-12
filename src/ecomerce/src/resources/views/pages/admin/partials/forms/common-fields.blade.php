@@ -9,7 +9,7 @@
 		autofocus
 		prefix="{{$slugPrefix}}"
 		autocomplete="slug" 
-		required />
+	/>
     <x-forms.input-error class="mt-2" :messages="$errors->get('slug')" />
 </div>
 

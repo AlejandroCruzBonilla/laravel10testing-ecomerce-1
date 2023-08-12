@@ -11,9 +11,9 @@
             {{ $logo }}
         </x-nav.home-link>
         <div class="toolbar-links hidden lg:block">
-            @foreach (Helpers::getRoutesByPrefix('web') as $name => $route)
+            @foreach (RouteHelpers::getRoutesByPrefix('web') as $name => $route)
                 <x-nav.link class="mx-2" :href="route($name)" :active="request()->routeIs($name)">
-                    {{ __(Helpers::cleanRouteName($name)) }}
+                    {{ __(RouteHelpers::cleanRouteName($name)) }}
                 </x-nav.link>
             @endforeach
         </div>

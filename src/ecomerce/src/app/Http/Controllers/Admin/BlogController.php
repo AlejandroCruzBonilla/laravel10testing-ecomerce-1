@@ -29,8 +29,10 @@ class BlogController extends Controller
     public function create()
     {
         $blog = new Blog();
+        $validationMessages = StoreBlogRequest::getValidationMessages();
         return view('pages.admin.blog.create',[
             'blog' => $blog,
+            'validationMessages' => $validationMessages,
         ]);
     }
 

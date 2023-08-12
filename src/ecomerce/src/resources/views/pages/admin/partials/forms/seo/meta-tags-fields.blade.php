@@ -8,7 +8,7 @@
 		:value="old('meta[title]', '')"
 		autofocus
 		autocomplete="meta[title]" 
-		required />
+	/>
     <x-forms.input-error class="mt-2" :messages="$errors->get('meta.title')" />
 </div>
 
@@ -22,6 +22,6 @@
 		:value="old('meta[description]', '')"
 		autofocus
 		autocomplete="meta[description]" 
-		required />
+	/>
     <x-forms.input-error class="mt-2" :messages="$errors->get('meta.description')" />
 </div>

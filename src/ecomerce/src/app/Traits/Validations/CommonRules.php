@@ -4,16 +4,26 @@ namespace App\Traits\Validations;
 
 use Illuminate\Support\Str;
 
-trait CommonRules {
+trait CommonRules
+{
 
-  public function commonRules() {
+  public function commonRules()
+  {
     return [
-      'slug' => ['required','string'],
-      'status' => ['required','string','in:published,unpublished'],
+      'slug' => ['required', 'string'],
+      'status' => ['required', 'string', 'in:published,unpublished'],
     ];
   }
 
-  public function prepareSlug() {
+  public function prepareSlug()
+  {
     return Str::slug($this->slug);
+  }
+
+  public static function commonMessages()
+  {
+    return [
+      'slug.required' => 'Slug Field is required',
+    ];
   }
 }

@@ -186,7 +186,7 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         // 'Example' => App\Facades\Example::class,
-        'Helpers'=> App\Helpers\Helpers::class,
+        'RouteHelpers'=> App\Helpers\RouteHelpers::class,
     ])->toArray(),
 
 ];

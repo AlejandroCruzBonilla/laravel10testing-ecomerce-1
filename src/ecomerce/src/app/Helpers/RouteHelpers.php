@@ -5,10 +5,8 @@ namespace App\Helpers;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Str;
 
-class Helpers
+class RouteHelpers
 {
- 
-
   public static function getRoutesByPrefix($prefix = '')
   {
     $list = Route::getRoutes()->getRoutesByName();
@@ -61,7 +59,6 @@ class Helpers
   }
 
   public static function cleanRouteName($name): string {
-
     return $name = ucfirst(preg_replace('/^\w+.(\w+).\w+$/', '${1}', $name));
   }
 }

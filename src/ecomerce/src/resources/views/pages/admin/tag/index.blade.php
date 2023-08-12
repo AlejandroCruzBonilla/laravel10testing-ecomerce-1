@@ -1,4 +1,4 @@
-{{-- {{ dd(Helpers::getRoutesByPrefix('admin.tags')) }} --}}
+{{-- {{ dd(RouteHelpers::getRoutesByPrefix('admin.tags')) }} --}}
 
 @section('title', 'Tag Index')
 @section('description', 'Tags Index')
