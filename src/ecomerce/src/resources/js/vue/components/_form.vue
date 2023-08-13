@@ -1,9 +1,6 @@
 <template>
   <form @submit="onSubmit" ref="form">
-    <slot
-      :activePanels="activePanels"
-      :onAllPanels="onAllPanels"
-      :onUpdatePanel="onUpdatePanel"></slot>
+    <slot :hasErrors="hasErrors"></slot>
 
     <input type="hidden" name="_token" :value="csrf">
     <slot name="submit" :onClick="onClick"></slot>
@@ -12,26 +9,20 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, useSlots } from 'vue';
 
 const props = defineProps({
-  activePanels: {
-    type: [Array, String],
-    default: []
-  },
-  hasErrors: {
-    type: Boolean,
-    default: false
-  },
   csrf: {
     type: String,
     required: true,
   }
 })
 
+
+const slots = useSlots();
+
 const form = ref(null);
-const activePanels = ref([])
-const allPanels = ref([])
+const hasErrors = ref(false);
 
 const onSubmit = (event) => {
 
@@ -49,7 +40,7 @@ const onClick = (event) => {
   form.value?.submit();
 
   if (!form.value?.checkValidity()) {
-    activePanels.value = allPanels.value;
+    hasErrors.value = true;
   }
   else{
     activePanels.value = props.activePanels
@@ -57,17 +48,8 @@ const onClick = (event) => {
   } 
 }
 
-const onAllPanels = (panels) =>{
-  allPanels.value = panels;
-}
+onMounted(()=>{
+  console.log(slots.default.props)
+})
 
-const onUpdatePanel = (panels) =>{
-  activePanels.value = panels;
-}
-
-onMounted(() => {
-  activePanels.value = props.hasErrors
-    ? allPanels.value
-    : props.activePanels
-});
 </script>
