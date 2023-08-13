@@ -36,12 +36,7 @@ const panel = ref([]);
 
 const allPanels = () => {
   if (!slots.default().length) return [];
-
-  const p = []
-  for (let index = 0; index < slots.default().length; index++) {
-    p.push(index)
-  }
-  return p;
+  return Array.from({length: slots.default().length}, (_,index)=>index);
 }
 
 onMounted(() => {
