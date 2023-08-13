@@ -1,6 +1,7 @@
 <x-common.expansion-panels 
 	:active-panels=$activePanels
 	:buttons=$buttons
+	reset-trigger-all-panels="onResetTriggerAllPanels"
 >
 
 	<x-common.expansion-panel>

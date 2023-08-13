@@ -1,11 +1,13 @@
 @props([
     'activePanels' => '[]',
     'buttons' => false,
+    'resetTriggerAllPanels' => '',
 ])
 
 <expansion-panels
   :active-panels={{$activePanels}} 
-  :trigger-all-panels="false"
+  :trigger-all-panels="triggerAllPanels"
+  @reset-trigger-all-panels="{{$resetTriggerAllPanels}}"
 >
     @if ($buttons)
         <template #buttons={onAllPanels,onNonePanels}>

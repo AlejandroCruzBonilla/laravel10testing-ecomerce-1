@@ -9,27 +9,28 @@
 </template>
 
 <script setup>
-import { ref, onMounted, useSlots } from 'vue';
+import { ref, onMounted } from 'vue';
 
 const props = defineProps({
+  hasErrors: {
+    type: Boolean,
+    default: false,
+  },
   csrf: {
     type: String,
     required: true,
   }
 })
 
-
-const slots = useSlots();
+const emit = defineEmits(['form-has-erros']);
 
 const form = ref(null);
-const hasErrors = ref(false);
+const hasErrors = ref(props.hasErrors);
 
 const onSubmit = (event) => {
-
   event.preventDefault();
   event.stopPropagation();
   console.log(event)
-
 }
 
 const onClick = (event) => {
@@ -37,19 +38,21 @@ const onClick = (event) => {
   event.stopPropagation();
   // console.log(form.value?.reportValidity());
   // console.log(form.value?.checkValidity());
-  form.value?.submit();
 
   if (!form.value?.checkValidity()) {
     hasErrors.value = true;
+    emit('form-has-erros', hasErrors.value);
+    // form.value?.submit();
   }
   else{
-    activePanels.value = props.activePanels
     form.value?.submit();
   } 
 }
 
 onMounted(()=>{
-  console.log(slots.default.props)
+  if(hasErrors){
+    emit('form-has-erros', hasErrors.value);
+  }
 })
 
 </script>

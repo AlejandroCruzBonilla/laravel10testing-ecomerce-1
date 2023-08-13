@@ -25,14 +25,14 @@ const props = defineProps({
     type: Boolean,
     default: false
   }
-})
+});
+
+const emit = defineEmits(['reset-trigger-all-panels']);
 
 const slots = useSlots()
 
 const expansionPanel = ref(null)
-const panel = ref([])
-// const triggerAllPanels = ref(props.triggerAllPanels)
-
+const panel = ref([]);
 
 const allPanels = () => {
   if (!slots.default().length) return [];
@@ -48,12 +48,6 @@ onMounted(() => {
   panel.value = props.activePanels
 })
 
-// watch(toggleAllPanels, (toggleAllPanels, prevToggleAllPanels) => {
-//   console.log(toggleAllPanels)
-//   if(toggleAllPanels) panel.value = allPanels()
-//   else panel.value = [];
-// })
-
 
 const onAllPanels = () =>{
   panel.value = allPanels();
@@ -65,8 +59,14 @@ const onNonePanels = () =>{
 
 const onUpdatePanel = (panel) => {
   // emit('update-panels', panel);
-  
 }
+
+watch(()=>props.triggerAllPanels, (triggerAllPanels, prevTriggerAllPanels) => {
+  if(triggerAllPanels){
+    emit('reset-trigger-all-panels');
+    onAllPanels();
+  }
+})
 
 // const { activePanels } = toRefs(props)
 // watch(activePanels, (activePanels, prevActivePanels) => {

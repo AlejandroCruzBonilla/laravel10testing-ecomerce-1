@@ -15,8 +15,11 @@ import appLayout from "./layout/app.vue";
 import Debug from'./components/__debug.vue';
 import IndexTable from'./components/_indexTable.vue';
 import RichTextEditor from'./components/_richTextEditor.vue';
-import FormComponent from'./components/_form.vue';
+import FormVue from'./components/_form.vue';
 import ExpansionPanels from'./components/_expansionPanels.vue';
+import WrapperFormPanels from'./components/_wrapperFormPanels.vue';
+
+
 
 //VueApp
 const appDocument = document.querySelector("#app");
@@ -45,8 +48,9 @@ if (appDocument) {
 
     app.component("IndexTable", IndexTable);
     app.component("RichTextEditor", RichTextEditor);
-    app.component("FormComponent", FormComponent);
+    app.component("FormVue", FormVue);
     app.component("ExpansionPanels", ExpansionPanels);
+    app.component("WrapperFormPanels", WrapperFormPanels);
 
     app.mount(appDocument);
 }

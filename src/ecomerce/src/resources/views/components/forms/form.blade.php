@@ -1,8 +1,15 @@
-<form-component
+@props([
+	'action'=> '',
+	'method'=> '',
+	'errorEventHandler' => '',
+])
+
+<form-vue
 	action="{{$action}}"
 	method="{{$method}}"
 	csrf="{{ csrf_token() }}"
 	:has-errors={{$errors->count()?'true':'false'}}
+	@form-has-erros="{{$errorEventHandler}}"
 >
 	<template #={hasErrors}>
 		{{$slot}}
@@ -16,4 +23,4 @@
 		</div>
 	</template>
 
-</form-component>
+</form-vue>
