@@ -1,15 +1,15 @@
 <template>
-  <form @submit="onSubmit" ref="form">
-    <slot :hasErrors="hasErrors"></slot>
+  <v-form ref="form">
+    <slot :hasErrors="hasErrors" :validationRules="validationRules"></slot>
 
     <input type="hidden" name="_token" :value="csrf">
     <slot name="submit" :onClick="onClick"></slot>
 
-  </form>
+  </v-form>
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, reactive } from 'vue';
 
 const props = defineProps({
   hasErrors: {
@@ -25,39 +25,43 @@ const props = defineProps({
 const emit = defineEmits(['form-has-erros']);
 
 const form = ref(null);
-const hasErrors = ref(props.hasErrors);
+const validationRules = reactive({
+  required: (message) => {
+    return value => !!value || message
+  },
+  min: (message, min) => {
+    return value => !!(value.length >= min) || message
+  },
+  test: () => {
+    return false || "message"
+  }
+});
 
-const onSubmit = (event) => {
-  event.preventDefault();
-  event.stopPropagation();
-  console.log(event)
-}
+const hasErrors = ref(props.hasErrors);
 
 const onClick = (event) => {
   event.preventDefault();
   event.stopPropagation();
-  // console.log();
-  // console.log(form.value?.reportValidity());
-  // console.log(form.value?.checkValidity());
 
-  if (!form.value?.checkValidity()) {
-    hasErrors.value = true;
-    emit('form-has-erros', hasErrors.value);
-
-    //TODO: TOMORROW Trigger Show Errors
-    form.value.querySelectorAll('input:not([type="hidden"])').forEach(input => {
-      input.reportValidity()
+  form.value.validate()
+    .then(({valid}) => {
+      if (!form.value?.checkValidity() || !valid) {
+        hasErrors.value = true;
+        emit('form-has-erros', hasErrors.value);
+      }
+      else {
+        form.value?.submit();
+      }
+    })
+    .catch(error => {
+      console.log({ error })
     });
-    // form.value?.submit();
-  }
-  else{
-    form.value?.submit();
-  } 
 }
 
-onMounted(()=>{
-  if(hasErrors){
+onMounted(() => {
+  if (hasErrors.value === true) {
     emit('form-has-erros', hasErrors.value);
+    form.value.validate()
   }
 })
 

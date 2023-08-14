@@ -11,7 +11,7 @@
 	:has-errors={{$errors->count()?'true':'false'}}
 	@form-has-erros="{{$errorEventHandler}}"
 >
-	<template #={hasErrors}>
+	<template #={hasErrors,validationRules}>
 		{{$slot}}
 	</template>
 

@@ -6,10 +6,8 @@
 		type="text"
 		class="block w-full"
 		:value="old('meta[title]', '')"
-		autofocus
-		autocomplete="meta[title]"
-		required />
-    <x-forms.input-error class="mt-2" :messages="$errors->get('meta.title')" />
+    rules="[validationRules.required('{{__($validationMessages->meta->title->required)}}')]"
+  />
 </div>
 
 <div class="input-group mb-3 input_box">
@@ -20,9 +18,6 @@
 		type="text"
 		class="block w-full"
 		:value="old('meta[description]', '')"
-		autofocus
-		autocomplete="meta[description]"
-		required 
+    rules="[validationRules.required('{{__($validationMessages->meta->description->required)}}')]"
 	/>
-    <x-forms.input-error class="mt-2" :messages="$errors->get('meta.description')" />
 </div>

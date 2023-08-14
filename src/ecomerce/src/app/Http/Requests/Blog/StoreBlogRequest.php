@@ -27,7 +27,7 @@ class StoreBlogRequest extends FormRequest
   public function rules(): array
   {
     return [
-      'title' => ['required', 'string'],
+      'title' => ['required', 'numeric','min:3'],
       'body' => ['nullable', 'string'],
 
       ...$this->commonRules(),
@@ -63,16 +63,35 @@ class StoreBlogRequest extends FormRequest
   // statics methods
   public static function selfMessages(){
     return [
-      'title.required' => 'Title Field is required'
+      'title.required' => 'Title Field is required',
+      // 'title.min' => 'Title Field is required'
     ];
   }
 
-  public static function getValidationMessages(): array
+  public static function getValidationMessages()
   {
-    return [
+    $messages = [
       ...self::selfMessages(),
       ...self::commonMessages(),
       ...self::metaTagsMessages()
     ];
+
+    $parsedMessages = [];
+
+    foreach ($messages as $name => $message) {
+
+      if(count(explode('.', $name)) > 2){
+        list($name, $subname, $rule)  = explode('.', $name);
+        $parsedMessages[$name][$subname][$rule] = $message;
+      }
+      else {
+        list($name, $rule)  = explode('.', $name);
+        $parsedMessages[$name][$rule] = $message;
+      }
+    }
+
+    return json_decode(
+      json_encode($parsedMessages)
+    );
   }
 }

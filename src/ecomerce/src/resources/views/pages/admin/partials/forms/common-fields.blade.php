@@ -6,11 +6,9 @@
       type="text"
       class="block w-full"
       :value="old('slug', $node->slug)"
-      autofocus
       prefix="{{ $slugPrefix }}"
-      autocomplete="slug"
-	  required />
-    <x-forms.input-error class="mt-2" :messages="$errors->get('slug')" />
+      rules="[validationRules.required('{{$validationMessages->slug->required}}')]"
+    />
 </div>
 
 <div class="input-group mb-3 input_box">
@@ -24,5 +22,4 @@
 			value="published">
         <span class="ml-2 text-sm text-gray-600">{{ __('Published') }}</span>
     </label>
-    <x-forms.input-error class="mt-2" :messages="$errors->get('status')" />
 </div>

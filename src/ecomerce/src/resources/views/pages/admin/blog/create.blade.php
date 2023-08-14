@@ -3,9 +3,13 @@
 
 <x-app-layout>
 
-    <x-slot name="title">
-        {{ __('Blog Create') }}
-    </x-slot>
+  <x-slot name="title">
+      {{ __('Blog Create') }}
+  </x-slot>
+
+  @if($errors->get('title'))
+  {{-- {{dd()}} --}}
+@endif
 
 	<wrapper-form-panels>
 		<template #={triggerAllPanels,onResetTriggerAllPanels,onFormHasErros}>
