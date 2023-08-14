@@ -20,8 +20,8 @@
           id="title"
           name="title"
           rules="[
-											validationRules.required('{{ __($validationMessages->title->required) }}')
-										]"
+						validationRules.required('{{ __($validationMessages->title->required) }}')
+					]"
           type="text"
         />
         {{-- <x-forms.input-error class="mt-2" :messages="$errors->get('title')" /> --}}
