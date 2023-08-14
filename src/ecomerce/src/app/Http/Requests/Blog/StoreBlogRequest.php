@@ -81,8 +81,8 @@ class StoreBlogRequest extends FormRequest
 		foreach ($messages as $name => $message) {
 
 			if (count(explode('.', $name)) > 2) {
-				list($name, $subname, $rule)  = explode('.', $name);
-				$parsedMessages[$name][$subname][$rule] = $message;
+				list($name, $subName, $rule)  = explode('.', $name);
+				$parsedMessages[$name][$subName][$rule] = $message;
 			} else {
 				list($name, $rule)  = explode('.', $name);
 				$parsedMessages[$name][$rule] = $message;
