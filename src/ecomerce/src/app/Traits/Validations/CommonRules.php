@@ -2,15 +2,18 @@
 
 namespace App\Traits\Validations;
 
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 
 trait CommonRules
 {
 
-	public function commonRules()
+	public function commonRules(String $table)
 	{
 		return [
-			'slug' => ['required', 'string'],
+			// 'slug' => ['required', 'string', 'unique:' . $model->getTable() . ',slug,'],
+			'slug' => ['required', 'string', 'unique:' . $table . ',slug,'],
+			// 'slug' => ['required', 'string'],
 			'status' => ['required', 'string', 'in:published,unpublished'],
 		];
 	}

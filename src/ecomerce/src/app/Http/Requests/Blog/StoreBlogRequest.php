@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests\Blog;
 
+use App\Models\Blog;
 use App\Traits\Validations\CommonRules;
 use App\Traits\Validations\MetaTagsRules;
 use Illuminate\Foundation\Http\FormRequest;
@@ -30,7 +31,7 @@ class StoreBlogRequest extends FormRequest
 			'title' => ['required'],
 			'body' => ['nullable', 'string'],
 
-			...$this->commonRules(),
+			...$this->commonRules('blogs'),
 			...$this->metaTagsRules(),
 		];
 	}

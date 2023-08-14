@@ -7,8 +7,8 @@
     {{ __('Blog Create') }}
   </x-slot>
 
-  @if ($errors->get('title'))
-    {{-- {{dd()}} --}}
+  @if ($errors->any())
+    {{-- {{dd($errors->all())}} --}}
   @endif
 
   <wrapper-form-panels>

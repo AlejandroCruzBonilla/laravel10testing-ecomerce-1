@@ -20,8 +20,10 @@ class Blog extends Model
 		'body',
 		'references',
 		'author',
+
 		'slug',
 		'status',
+		
 		'meta_tags',
 		'meta_tags_og',
 		'schema_org',

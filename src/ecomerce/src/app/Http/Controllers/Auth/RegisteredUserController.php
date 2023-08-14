@@ -42,7 +42,7 @@ class RegisteredUserController extends Controller
 			'password' => Hash::make($request->password),
 		]);
 
-		// New user Regular Roll
+		//TODO: find Role and add  New user Regular Roll - Remove Hardcoded role_id
 		$user->roles()->attach(1);
 
 		event(new Registered($user));
