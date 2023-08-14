@@ -32,7 +32,7 @@ const props = defineProps({
 	}
 })
 
-const emit = defineEmits(['form-has-erros']);
+const emit = defineEmits(['form-has-errors']);
 
 const form = ref(null);
 const validationRules = reactive({
@@ -57,7 +57,7 @@ const onClick = (event) => {
 		.then(({ valid }) => {
 			if (!form.value?.checkValidity() || !valid) {
 				hasErrors.value = true;
-				emit('form-has-erros', hasErrors.value);
+				emit('form-has-errors', hasErrors.value);
 			}
 			else {
 				form.value?.submit();
@@ -70,7 +70,7 @@ const onClick = (event) => {
 
 onMounted(() => {
 	if (hasErrors.value === true) {
-		emit('form-has-erros', hasErrors.value);
+		emit('form-has-errors', hasErrors.value);
 		form.value.validate()
 	}
 })

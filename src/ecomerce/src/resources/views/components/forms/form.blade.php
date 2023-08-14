@@ -9,7 +9,7 @@
   method="{{ $method }}"
   csrf="{{ csrf_token() }}"
   :has-errors={{ $errors->count() ? 'true' : 'false' }}
-  @form-has-erros="{{ $errorEventHandler }}"
+  @form-has-errors="{{ $errorEventHandler }}"
 >
   <template #={hasErrors,validationRules}>
     {{ $slot }}
