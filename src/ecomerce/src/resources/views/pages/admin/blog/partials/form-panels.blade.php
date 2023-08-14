@@ -25,7 +25,7 @@
             {{-- validationRules.test() --}}
           ]"
         />
-				<x-forms.input-error class="mt-2" :messages="$errors->get('title')" />
+				{{-- <x-forms.input-error class="mt-2" :messages="$errors->get('title')" /> --}}
 			</div>
 
 			<div class="input-group mb-3 input_box">
