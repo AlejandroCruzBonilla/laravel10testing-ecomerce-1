@@ -12,22 +12,22 @@
     <!-- Password -->
     <div>
       <x-forms.input-label
-        :value="__('Password')"
         for="password"
+        :value="__('Password')"
       />
 
       <x-forms.text-input
-        autocomplete="current-password"
         class="block w-full"
         id="password"
         name="password"
-        required
         type="password"
+        autocomplete="current-password"
+        required
       />
 
       <x-forms.input-error
-        :messages="$errors->get('password')"
         class="mt-2"
+        :messages="$errors->get('password')"
       />
     </div>
 

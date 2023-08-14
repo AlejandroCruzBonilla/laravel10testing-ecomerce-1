@@ -15,64 +15,64 @@
     <!-- Email Address -->
     <div>
       <x-forms.input-label
-        :value="__('Email')"
         for="email"
+        :value="__('Email')"
       />
       <x-forms.text-input
-        :value="old('email', $request->email)"
-        autocomplete="username"
-        autofocus
         class="block w-full"
         id="email"
         name="email"
-        required
         type="email"
+        :value="old('email', $request->email)"
+        autocomplete="username"
+        autofocus
+        required
       />
       <x-forms.input-error
-        :messages="$errors->get('email')"
         class="mt-2"
+        :messages="$errors->get('email')"
       />
     </div>
 
     <!-- Password -->
     <div class="mt-4">
       <x-forms.input-label
-        :value="__('Password')"
         for="password"
+        :value="__('Password')"
       />
       <x-forms.text-input
-        autocomplete="new-password"
         class="block w-full"
         id="password"
         name="password"
-        required
         type="password"
+        autocomplete="new-password"
+        required
       />
       <x-forms.input-error
-        :messages="$errors->get('password')"
         class="mt-2"
+        :messages="$errors->get('password')"
       />
     </div>
 
     <!-- Confirm Password -->
     <div class="mt-4">
       <x-forms.input-label
-        :value="__('Confirm Password')"
         for="password_confirmation"
+        :value="__('Confirm Password')"
       />
 
       <x-forms.text-input
-        autocomplete="new-password"
         class="block w-full"
         id="password_confirmation"
         name="password_confirmation"
-        required
         type="password"
+        autocomplete="new-password"
+        required
       />
 
       <x-forms.input-error
-        :messages="$errors->get('password_confirmation')"
         class="mt-2"
+        :messages="$errors->get('password_confirmation')"
       />
     </div>
 

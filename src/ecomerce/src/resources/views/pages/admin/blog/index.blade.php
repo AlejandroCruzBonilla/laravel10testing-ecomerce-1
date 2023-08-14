@@ -8,8 +8,8 @@
   </x-slot>
 
   <x-nav.link
-    :href="route('admin.blogs.create')"
     class="rounded px-6 py-2 bg-gray-900 mx-2 text-gray-100"
+    :href="route('admin.blogs.create')"
   >
     {{ __('Create New') }}
   </x-nav.link>

@@ -12,21 +12,21 @@
     <!-- Email Address -->
     <div>
       <x-forms.input-label
-        :value="__('Email')"
         for="email"
+        :value="__('Email')"
       />
       <x-forms.text-input
-        :value="old('email')"
-        autofocus
         class="block w-full"
         id="email"
         name="email"
-        required
         type="email"
+        :value="old('email')"
+        autofocus
+        required
       />
       <x-forms.input-error
-        :messages="$errors->get('email')"
         class="mt-2"
+        :messages="$errors->get('email')"
       />
     </div>
 

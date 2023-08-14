@@ -2,6 +2,6 @@
 
 <div>
   <p class="text-center text-gray-200">
-    {{__($copy)}}
+    {{ __($copy) }}
   </p>
 </div>

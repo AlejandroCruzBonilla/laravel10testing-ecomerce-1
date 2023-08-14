@@ -15,13 +15,13 @@
   >{{ __('Delete Account') }}</x-common.danger-button>
 
   <x-common.modal
+    name="confirm-user-deletion"
     :show="$errors->userDeletion->isNotEmpty()"
     focusable
-    name="confirm-user-deletion"
   >
     <form
-      action="{{ route('profile.destroy') }}"
       class="p-6"
+      action="{{ route('profile.destroy') }}"
       method="post"
     >
       @csrf
@@ -46,13 +46,13 @@
           class="block w-3/4"
           id="password"
           name="password"
-          placeholder="{{ __('Password') }}"
           type="password"
+          placeholder="{{ __('Password') }}"
         />
 
         <x-forms.input-error
-          :messages="$errors->userDeletion->get('password')"
           class="mt-2"
+          :messages="$errors->userDeletion->get('password')"
         />
       </div>
 

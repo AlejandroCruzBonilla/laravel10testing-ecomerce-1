@@ -10,19 +10,19 @@
     <x-slot name="content">
       <div class="input-group mb-3 input_box">
         <x-forms.input-label
-          :value="__('Title')"
           for="title"
+          :value="__('Title')"
         />
         <x-forms.text-input
-          :value="old('title', $blog->title)"
-          {{-- :error-messages="$errors->get('title')" --}}
           class="block w-full"
           id="title"
           name="title"
+          type="text"
+          :value="old('title', $blog->title)"
+          {{-- :error-messages="$errors->get('title')" --}}
           rules="[
 						validationRules.required('{{ __($validationMessages->title->required) }}')
 					]"
-          type="text"
         />
         {{-- <x-forms.input-error class="mt-2" :messages="$errors->get('title')" /> --}}
       </div>
@@ -35,8 +35,8 @@
         >
           <template v-slot:label>
             <x-forms.input-label
-              :value="__('Body')"
               for="body"
+              :value="__('Body')"
             />
           </template>
         </rich-text-editor>

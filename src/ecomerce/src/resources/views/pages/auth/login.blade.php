@@ -14,44 +14,44 @@
       <!-- Email Address -->
       <div>
         <x-forms.input-label
-          :value="__('Email')"
           for="email"
+          :value="__('Email')"
         />
         <x-forms.text-input
-          :value="old('email')"
-          autocomplete="username"
-          autofocus
           class="block w-full"
           id="email"
           name="email"
-          required
           type="email"
+          :value="old('email')"
+          autocomplete="username"
+          autofocus
+          required
         />
         <x-forms.input-error
-          :messages="$errors->get('email')"
           class="mt-2"
+          :messages="$errors->get('email')"
         />
       </div>
 
       <!-- Password -->
       <div class="mt-4">
         <x-forms.input-label
-          :value="__('Password')"
           for="password"
+          :value="__('Password')"
         />
 
         <x-forms.text-input
-          autocomplete="current-password"
           class="block w-full"
           id="password"
           name="password"
-          required
           type="password"
+          autocomplete="current-password"
+          required
         />
 
         <x-forms.input-error
-          :messages="$errors->get('password')"
           class="mt-2"
+          :messages="$errors->get('password')"
         />
       </div>
 

@@ -12,16 +12,16 @@
   @if ($buttons)
     <template #buttons={onAllPanels,onNonePanels}>
       <x-common.primary-button
-        @click="onAllPanels"
         class="mb-2 mr-2"
         type="button"
+        @click="onAllPanels"
       >
         {{ __('Expand All') }}
       </x-common.primary-button>
       <x-common.primary-button
-        @click="onNonePanels"
         class="mb-2 ml-2"
         type="button"
+        @click="onNonePanels"
       >
         {{ __('Collapse All') }}
       </x-common.primary-button>

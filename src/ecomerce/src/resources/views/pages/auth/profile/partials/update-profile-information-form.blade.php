@@ -10,16 +10,16 @@
   </header>
 
   <form
-    action="{{ route('verification.send') }}"
     id="send-verification"
+    action="{{ route('verification.send') }}"
     method="post"
   >
     @csrf
   </form>
 
   <form
-    action="{{ route('profile.update') }}"
     class="mt-6 space-y-6"
+    action="{{ route('profile.update') }}"
     method="post"
   >
     @csrf
@@ -27,42 +27,42 @@
 
     <div>
       <x-forms.input-label
-        :value="__('Name')"
         for="name"
+        :value="__('Name')"
       />
       <x-forms.text-input
-        :value="old('name', $user->name)"
-        autocomplete="name"
-        autofocus
         class="block w-full"
         id="name"
         name="name"
-        required
         type="text"
+        :value="old('name', $user->name)"
+        autocomplete="name"
+        autofocus
+        required
       />
       <x-forms.input-error
-        :messages="$errors->get('name')"
         class="mt-2"
+        :messages="$errors->get('name')"
       />
     </div>
 
     <div>
       <x-forms.input-label
-        :value="__('Email')"
         for="email"
+        :value="__('Email')"
       />
       <x-forms.text-input
-        :value="old('email', $user->email)"
-        autocomplete="username"
         class="block w-full"
         id="email"
         name="email"
-        required
         type="email"
+        :value="old('email', $user->email)"
+        autocomplete="username"
+        required
       />
       <x-forms.input-error
-        :messages="$errors->get('email')"
         class="mt-2"
+        :messages="$errors->get('email')"
       />
 
       @if ($user instanceof \Illuminate\Contracts\Auth\MustVerifyEmail && !$user->hasVerifiedEmail())
