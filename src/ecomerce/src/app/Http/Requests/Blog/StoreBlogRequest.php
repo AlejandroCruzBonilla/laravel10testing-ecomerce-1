@@ -27,7 +27,7 @@ class StoreBlogRequest extends FormRequest
   public function rules(): array
   {
     return [
-      'title' => ['required', 'numeric','min:3'],
+      'title' => ['required'],
       'body' => ['nullable', 'string'],
 
       ...$this->commonRules(),
@@ -64,7 +64,6 @@ class StoreBlogRequest extends FormRequest
   public static function selfMessages(){
     return [
       'title.required' => 'Title Field is required',
-      // 'title.min' => 'Title Field is required'
     ];
   }
 

@@ -21,11 +21,11 @@
             validationRules.required('{{
               __($validationMessages->title->required)
             }}'),
-            validationRules.min('minimo',4),
+            {{-- validationRules.min('minimo',3), --}}
             {{-- validationRules.test() --}}
           ]"
         />
-				{{-- <x-forms.input-error class="mt-2" :messages="$errors->get('title')" /> --}}
+				<x-forms.input-error class="mt-2" :messages="$errors->get('title')" />
 			</div>
 
 			<div class="input-group mb-3 input_box">
