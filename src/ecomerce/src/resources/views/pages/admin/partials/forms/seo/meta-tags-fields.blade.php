@@ -1,23 +1,29 @@
 <div class="input-group mb-3 input_box">
-    <x-forms.input-label for="meta[title]" :value="__('Title')" />
-    <x-forms.text-input
-		id="meta-title"
-		name="meta[title]"
-		type="text"
-		class="block w-full"
-		:value="old('meta[title]', '')"
-    rules="[validationRules.required('{{__($validationMessages->meta->title->required)}}')]"
+  <x-forms.input-label
+    :value="__('Title')"
+    for="meta[title]"
+  />
+  <x-forms.text-input
+    :value="old('meta[title]', '')"
+    class="block w-full"
+    id="meta-title"
+    name="meta[title]"
+    rules="[validationRules.required('{{ __($validationMessages->meta->title->required) }}')]"
+    type="text"
   />
 </div>
 
 <div class="input-group mb-3 input_box">
-    <x-forms.input-label for="meta[description]" :value="__('Description')" />
-   <x-forms.text-input
-		id="meta-description"
-		name="meta[description]"
-		type="text"
-		class="block w-full"
-		:value="old('meta[description]', '')"
-    rules="[validationRules.required('{{__($validationMessages->meta->description->required)}}')]"
-	/>
+  <x-forms.input-label
+    :value="__('Description')"
+    for="meta[description]"
+  />
+  <x-forms.text-input
+    :value="old('meta[description]', '')"
+    class="block w-full"
+    id="meta-description"
+    name="meta[description]"
+    rules="[validationRules.required('{{ __($validationMessages->meta->description->required) }}')]"
+    type="text"
+  />
 </div>

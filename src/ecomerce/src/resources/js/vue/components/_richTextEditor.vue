@@ -1,17 +1,18 @@
 <template>
-  <slot name="label"></slot>
-  <ckeditor
-    :id="id"
-    :name="name"
-    :rows="10"
-    :editor="editor"
-    :config="editorConfig"
-    :model-value="editorData"
-    :disableTwoWayDataBinding="false"
-    @input="onEditorInput"
-    @ready="onReady"
-    tag-name="textarea">
-  </ckeditor>
+	<slot name="label"></slot>
+	<ckeditor
+		:id="id"
+		:name="name"
+		:rows="10"
+		:editor="editor"
+		:config="editorConfig"
+		:model-value="editorData"
+		:disableTwoWayDataBinding="false"
+		@input="onEditorInput"
+		@ready="onReady"
+		tag-name="textarea"
+	>
+	</ckeditor>
 </template>
 
 <script>
@@ -79,174 +80,174 @@ import WordCount from '@ckeditor/ckeditor5-word-count/src/wordcount.js';
 
 export default {
 
-  props: {
-    id: {
-      type: String,
-      required: true
-    },
+	props: {
+		id: {
+			type: String,
+			required: true
+		},
 
-    name: {
-      type: String,
-      required: true
-    },
+		name: {
+			type: String,
+			required: true
+		},
 
-    value: {
-      type: String,
-      default: ""
-    },
-  },
+		value: {
+			type: String,
+			default: ""
+		},
+	},
 
-  setup({ value }) {
-    const editor = ClassicEditor;
-
-
-
-    const editorConfig = {
-      plugins: [
-        Alignment,
-        AutoImage,
-        Autoformat,
-        AutoLink,
-        BlockQuote,
-        Bold,
-        CloudServices,
-        Code,
-        DataFilter,
-        Essentials,
-        FindAndReplace,
-        FontBackgroundColor,
-        FontColor,
-        FontFamily,
-        FontSize,
-        GeneralHtmlSupport,
-        Heading,
-        Highlight,
-        HorizontalLine,
-        HtmlComment,
-        HtmlEmbed,
-        Image,
-        ImageCaption,
-        ImageInsert,
-        ImageResize,
-        ImageStyle,
-        ImageToolbar,
-        ImageUpload,
-        Indent,
-        IndentBlock,
-        Italic,
-        Link,
-        LinkImage,
-        List,
-        ListProperties,
-        MediaEmbed,
-        PageBreak,
-        Paragraph,
-        PasteFromOffice,
-        RemoveFormat,
-        SelectAll,
-        ShowBlocks,
-        SourceEditing,
-        Strikethrough,
-        // Style,
-        Subscript,
-        Superscript,
-        Table,
-        TableCaption,
-        TableCellProperties,
-        TableColumnResize,
-        TableToolbar,
-        TextTransformation,
-        TodoList,
-        Underline,
-        WordCount
-      ],
-      toolbar: {
-        items: [
-          'undo', 'redo', 'findAndReplace',
-          '|', 'heading',
-          '|', 'bold', 'italic', 'alignment', 'fontBackgroundColor', 'fontColor', 'fontFamily', 'fontSize',
-          '|', 'bulletedList', 'numberedList', 'todoList', 'outdent', 'indent', 'blockQuote',
-          '|', 'highlight', 'underline', 'strikethrough', 'horizontalLine', 'subscript', 'superscript', 'code',
-          '|', 'removeFormat',
-          '|', 'selectAll', 'showBlocks', 'sourceEditing', 'htmlEmbed',
-          '|', 'link', 'imageUpload', 'imageInsert', 'mediaEmbed', 'insertTable', 'pageBreak',
-          '|', // 'style',
-        ],
-        shouldNotGroupWhenFull: true
-      },
-      image: {
-        toolbar: [
-          'imageTextAlternative',
-          'toggleImageCaption',
-          'imageStyle:inline',
-          'imageStyle:block',
-          'imageStyle:side',
-          'linkImage'
-        ]
-      },
-      table: {
-        contentToolbar: [
-          'tableColumn',
-          'tableRow',
-          'mergeTableCells',
-          'tableCellProperties'
-        ]
-      },
-      heading: {
-        options: [
-          { model: 'paragraph', title: 'Paragraph', class: 'ck-heading_paragraph' },
-          { model: 'heading1', view: { name: 'h1', classes: 'text-5xl' }, title: 'Heading 1', class: 'ck-heading_heading1' },
-          { model: 'heading2', view: { name: 'h2', classes: 'text-4xl' }, title: 'Heading 2', class: 'ck-heading_heading2' },
-          { model: 'heading3', view: { name: 'h3', classes: 'text-3xl' }, title: 'Heading 3', class: 'ck-heading_heading3' },
-
-        ]
-      },
-      htmlSupport: {
-        allow: [
-          {
-            classes: true,
-          }
-        ],
-        disallow: []
-      }
-    }
-
-    const editorData = ref(value);
+	setup({ value }) {
+		const editor = ClassicEditor;
 
 
-    const emptyEditor = () => {
-      editorData.value = '';
-    }
 
-    const onEditorInput = (event) => {
-      editorData.value = event;
-    }
+		const editorConfig = {
+			plugins: [
+				Alignment,
+				AutoImage,
+				Autoformat,
+				AutoLink,
+				BlockQuote,
+				Bold,
+				CloudServices,
+				Code,
+				DataFilter,
+				Essentials,
+				FindAndReplace,
+				FontBackgroundColor,
+				FontColor,
+				FontFamily,
+				FontSize,
+				GeneralHtmlSupport,
+				Heading,
+				Highlight,
+				HorizontalLine,
+				HtmlComment,
+				HtmlEmbed,
+				Image,
+				ImageCaption,
+				ImageInsert,
+				ImageResize,
+				ImageStyle,
+				ImageToolbar,
+				ImageUpload,
+				Indent,
+				IndentBlock,
+				Italic,
+				Link,
+				LinkImage,
+				List,
+				ListProperties,
+				MediaEmbed,
+				PageBreak,
+				Paragraph,
+				PasteFromOffice,
+				RemoveFormat,
+				SelectAll,
+				ShowBlocks,
+				SourceEditing,
+				Strikethrough,
+				// Style,
+				Subscript,
+				Superscript,
+				Table,
+				TableCaption,
+				TableCellProperties,
+				TableColumnResize,
+				TableToolbar,
+				TextTransformation,
+				TodoList,
+				Underline,
+				WordCount
+			],
+			toolbar: {
+				items: [
+					'undo', 'redo', 'findAndReplace',
+					'|', 'heading',
+					'|', 'bold', 'italic', 'alignment', 'fontBackgroundColor', 'fontColor', 'fontFamily', 'fontSize',
+					'|', 'bulletedList', 'numberedList', 'todoList', 'outdent', 'indent', 'blockQuote',
+					'|', 'highlight', 'underline', 'strikethrough', 'horizontalLine', 'subscript', 'superscript', 'code',
+					'|', 'removeFormat',
+					'|', 'selectAll', 'showBlocks', 'sourceEditing', 'htmlEmbed',
+					'|', 'link', 'imageUpload', 'imageInsert', 'mediaEmbed', 'insertTable', 'pageBreak',
+					'|', // 'style',
+				],
+				shouldNotGroupWhenFull: true
+			},
+			image: {
+				toolbar: [
+					'imageTextAlternative',
+					'toggleImageCaption',
+					'imageStyle:inline',
+					'imageStyle:block',
+					'imageStyle:side',
+					'linkImage'
+				]
+			},
+			table: {
+				contentToolbar: [
+					'tableColumn',
+					'tableRow',
+					'mergeTableCells',
+					'tableCellProperties'
+				]
+			},
+			heading: {
+				options: [
+					{ model: 'paragraph', title: 'Paragraph', class: 'ck-heading_paragraph' },
+					{ model: 'heading1', view: { name: 'h1', classes: 'text-5xl' }, title: 'Heading 1', class: 'ck-heading_heading1' },
+					{ model: 'heading2', view: { name: 'h2', classes: 'text-4xl' }, title: 'Heading 2', class: 'ck-heading_heading2' },
+					{ model: 'heading3', view: { name: 'h3', classes: 'text-3xl' }, title: 'Heading 3', class: 'ck-heading_heading3' },
 
-    const onReady = (editor) => {
-      // You can store the "editor" and use when it is needed.
-      // console.log("Editor is ready to use!", editor.editing.view);
-      // console.log("Editor is ready to use!", editor.editing.view.document.getRoot())
-      // console.log("Editor is ready to use!", editor.editing.view.getDomRoot().parentNode)
+				]
+			},
+			htmlSupport: {
+				allow: [
+					{
+						classes: true,
+					}
+				],
+				disallow: []
+			}
+		}
 
-      // editor.editing.view.change((writer) => {
-      //   writer.setStyle({
-      //     'min-height': '250px',
-      //     'max-height': '250px'
-      //   }, editor.editing.view.document.getRoot())
-      // });
-    }
+		const editorData = ref(value);
 
-    return {
-      editor,
-      editorConfig,
-      editorData,
 
-      // methods
-      emptyEditor,
-      onEditorInput,
-      onReady
-    }
-  }
+		const emptyEditor = () => {
+			editorData.value = '';
+		}
+
+		const onEditorInput = (event) => {
+			editorData.value = event;
+		}
+
+		const onReady = (editor) => {
+			// You can store the "editor" and use when it is needed.
+			// console.log("Editor is ready to use!", editor.editing.view);
+			// console.log("Editor is ready to use!", editor.editing.view.document.getRoot())
+			// console.log("Editor is ready to use!", editor.editing.view.getDomRoot().parentNode)
+
+			// editor.editing.view.change((writer) => {
+			//   writer.setStyle({
+			//     'min-height': '250px',
+			//     'max-height': '250px'
+			//   }, editor.editing.view.document.getRoot())
+			// });
+		}
+
+		return {
+			editor,
+			editorConfig,
+			editorData,
+
+			// methods
+			emptyEditor,
+			onEditorInput,
+			onReady
+		}
+	}
 }
 </script>
 

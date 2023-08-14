@@ -8,21 +8,21 @@ use Illuminate\Http\Request;
 
 class BlogController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
-    {
-        //
-        return view('pages.web.blog.index');
-    }
+	/**
+	 * Display a listing of the resource.
+	 */
+	public function index()
+	{
+		//
+		return view('pages.web.blog.index');
+	}
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(Blog $blog)
-    {
-        //
-        return view('pages.web.blog.show');
-    }
+	/**
+	 * Display the specified resource.
+	 */
+	public function show(Blog $blog)
+	{
+		//
+		return view('pages.web.blog.show');
+	}
 }

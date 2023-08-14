@@ -7,23 +7,23 @@ use Illuminate\Support\Str;
 trait CommonRules
 {
 
-  public function commonRules()
-  {
-    return [
-      'slug' => ['required', 'string'],
-      'status' => ['required', 'string', 'in:published,unpublished'],
-    ];
-  }
+	public function commonRules()
+	{
+		return [
+			'slug' => ['required', 'string'],
+			'status' => ['required', 'string', 'in:published,unpublished'],
+		];
+	}
 
-  public function prepareSlug()
-  {
-    return Str::slug($this->slug);
-  }
+	public function prepareSlug()
+	{
+		return Str::slug($this->slug);
+	}
 
-  public static function commonMessages()
-  {
-    return [
-      'slug.required' => 'Slug Field is required',
-    ];
-  }
+	public static function commonMessages()
+	{
+		return [
+			'slug.required' => 'Slug Field is required',
+		];
+	}
 }

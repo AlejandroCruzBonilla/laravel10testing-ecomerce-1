@@ -6,39 +6,39 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
-    public function up(): void
-    {
-        Schema::create('blogs', function (Blueprint $table) {
-            $table->id();
-            $table->string('title');
-            $table->longText('body')->nullable();
-            $table->longText('references')->nullable();
-            $table->string('author')->nullable();
-            $table->timestamps();
-            
-            //page Settings
-            $table->string('slug')->unique();
-            $table->enum('status',['published','unpublished'])->default('unpublished');
+	/**
+	 * Run the migrations.
+	 */
+	public function up(): void
+	{
+		Schema::create('blogs', function (Blueprint $table) {
+			$table->id();
+			$table->string('title');
+			$table->longText('body')->nullable();
+			$table->longText('references')->nullable();
+			$table->string('author')->nullable();
+			$table->timestamps();
 
-            //Seo
-            $table->longText('meta_tags')->nullable();
-            $table->longText('meta_tags_og')->nullable();
-            $table->longText('schema_org')->nullable();
+			//page Settings
+			$table->string('slug')->unique();
+			$table->enum('status', ['published', 'unpublished'])->default('unpublished');
 
-            //Index
-            $table->fullText('title');
-            $table->fullText('body');
-        });
-    }
+			//Seo
+			$table->longText('meta_tags')->nullable();
+			$table->longText('meta_tags_og')->nullable();
+			$table->longText('schema_org')->nullable();
 
-    /**
-     * Reverse the migrations.
-     */
-    public function down(): void
-    {
-        Schema::dropIfExists('blogs');
-    }
+			//Index
+			$table->fullText('title');
+			$table->fullText('body');
+		});
+	}
+
+	/**
+	 * Reverse the migrations.
+	 */
+	public function down(): void
+	{
+		Schema::dropIfExists('blogs');
+	}
 };

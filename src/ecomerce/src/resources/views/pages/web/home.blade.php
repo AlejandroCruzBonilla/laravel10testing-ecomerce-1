@@ -2,7 +2,7 @@
 @section('description', 'Home Page description')
 
 <x-app-layout>
-    <x-slot name="title">
-		{{ __('Home Page') }}
-    </x-slot>
+  <x-slot name="title">
+    {{ __('Home Page') }}
+  </x-slot>
 </x-app-layout>

@@ -1,26 +1,35 @@
 <template>
 	<DataTable
 		v-if="tableRows.length"
-	  :lazy="false"
-	  :paginator="false"
-	  :rows="tablePagination.perPageItems"
-	  :totalRecords="tablePagination.totalItems"
-	  :value="tableRows"
-	  tableStyle="min-width: 50rem"
-	  @page="paginate">
-		<Column v-for="column of tableColumns" :key="column.field" :field="column.field" :header="column.header" />
-		<Column  header="Actions">
-      <template #body="{ data:{id} }">
+		:lazy="false"
+		:paginator="false"
+		:rows="tablePagination.perPageItems"
+		:totalRecords="tablePagination.totalItems"
+		:value="tableRows"
+		tableStyle="min-width: 50rem"
+		@page="paginate"
+	>
+		<Column
+			v-for="column of tableColumns"
+			:key="column.field"
+			:field="column.field"
+			:header="column.header"
+		/>
+		<Column header="Actions">
+			<template #body="{ data: { id } }">
 				<div v-if="actions.edit">
 					<a :href="`${tablePagination.path}/${id}/edit`">Edit</a>
 				</div>
 				<div v-if="actions.delete">
 					<!-- TODO Method: DELETE -->
-					<a disabled :href="`${tablePagination.path}/${id}/delete`">Delete</a>
+					<a
+						disabled
+						:href="`${tablePagination.path}/${id}/delete`"
+					>Delete</a>
 				</div>
 			</template>
-        
-    </Column>
+
+		</Column>
 	</DataTable>
 </template>
 
@@ -103,18 +112,18 @@ export default {
 
 			console.log(event);
 
-			const {page} = event;
+			const { page } = event;
 
 			// console.log(paginator.path);
-			fetch(paginator.path+`?page=${page+1}`,{
+			fetch(paginator.path + `?page=${page + 1}`, {
 				method: "GET",
 				headers: {
-      		// "X-CSRF-TOKEN':": csrfToken,
+					// "X-CSRF-TOKEN':": csrfToken,
 					'Authorization': `Bearer ${csrfToken}`,
-    		},
+				},
 			})
-				.then(response=>response.json())
-				.then(response=>{
+				.then(response => response.json())
+				.then(response => {
 					console.log(response)
 				})
 				.catch(console.error);
@@ -129,7 +138,7 @@ export default {
 
 			// Methods
 			paginate,
-			
+
 		};
 	},
 }

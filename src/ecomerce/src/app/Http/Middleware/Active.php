@@ -9,15 +9,15 @@ use Symfony\Component\HttpFoundation\Response;
 
 class Active
 {
-    /**
-     * Handle an incoming request.
-     *
-     * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
-     */
-    public function handle(Request $request, Closure $next, $active = 'true'): Response
-    {
-        if (filter_var($active, FILTER_VALIDATE_BOOLEAN))
-            return $next($request);
-        abort(404, 'Not Found');
-    }
+	/**
+	 * Handle an incoming request.
+	 *
+	 * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
+	 */
+	public function handle(Request $request, Closure $next, $active = 'true'): Response
+	{
+		if (filter_var($active, FILTER_VALIDATE_BOOLEAN))
+			return $next($request);
+		abort(404, 'Not Found');
+	}
 }

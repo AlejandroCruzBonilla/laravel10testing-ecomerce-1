@@ -8,20 +8,20 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Tag extends Model
 {
-    use HasFactory;
+	use HasFactory;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array<int, string>
-     */
-    protected $fillable = [
-        'name',
-        'description',
-    ];
+	/**
+	 * The attributes that are mass assignable.
+	 *
+	 * @var array<int, string>
+	 */
+	protected $fillable = [
+		'name',
+		'description',
+	];
 
-    function blogs(): BelongsToMany
-    {
-        return $this->belongsToMany(Blog::class)->withTimestamps();
-    }
+	function blogs(): BelongsToMany
+	{
+		return $this->belongsToMany(Blog::class)->withTimestamps();
+	}
 }

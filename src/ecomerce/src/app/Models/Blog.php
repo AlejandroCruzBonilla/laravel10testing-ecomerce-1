@@ -8,27 +8,27 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Blog extends Model
 {
-    use HasFactory;
+	use HasFactory;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array<int, string>
-     */
-    protected $fillable = [
-        'title',
-        'body',
-        'references',
-        'author',
-        'slug',
-        'status',
-        'meta_tags',
-        'meta_tags_og',
-        'schema_org',
-    ];
+	/**
+	 * The attributes that are mass assignable.
+	 *
+	 * @var array<int, string>
+	 */
+	protected $fillable = [
+		'title',
+		'body',
+		'references',
+		'author',
+		'slug',
+		'status',
+		'meta_tags',
+		'meta_tags_og',
+		'schema_org',
+	];
 
-    function tags(): BelongsToMany
-    {
-        return $this->belongsToMany(Tag::class)->withTimestamps();
-    }
+	function tags(): BelongsToMany
+	{
+		return $this->belongsToMany(Tag::class)->withTimestamps();
+	}
 }

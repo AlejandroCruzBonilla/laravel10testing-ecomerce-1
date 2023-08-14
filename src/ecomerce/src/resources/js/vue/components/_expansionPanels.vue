@@ -1,15 +1,17 @@
 <template>
-  <slot
-    name="buttons"
-    :onAllPanels="onAllPanels"
-    :onNonePanels="onNonePanels"></slot>
-  <v-expansion-panels
-    multiple
-    v-model="panel"
-    ref="expansionPanel"
-    @update:model-value="onUpdatePanel">
-    <slot></slot>
-  </v-expansion-panels>
+	<slot
+		name="buttons"
+		:onAllPanels="onAllPanels"
+		:onNonePanels="onNonePanels"
+	></slot>
+	<v-expansion-panels
+		multiple
+		v-model="panel"
+		ref="expansionPanel"
+		@update:model-value="onUpdatePanel"
+	>
+		<slot></slot>
+	</v-expansion-panels>
 </template>
 
 <script setup>
@@ -17,14 +19,14 @@
 import { ref, watch, onMounted, useSlots } from 'vue';
 
 const props = defineProps({
-  activePanels: {
-    type: Array,
-    default: [],
-  },
-  triggerAllPanels: {
-    type: Boolean,
-    default: false
-  }
+	activePanels: {
+		type: Array,
+		default: [],
+	},
+	triggerAllPanels: {
+		type: Boolean,
+		default: false
+	}
 });
 
 const emit = defineEmits(['reset-trigger-all-panels']);
@@ -35,32 +37,32 @@ const expansionPanel = ref(null)
 const panel = ref([]);
 
 const allPanels = () => {
-  if (!slots.default().length) return [];
-  return Array.from({length: slots.default().length}, (_,index)=>index);
+	if (!slots.default().length) return [];
+	return Array.from({ length: slots.default().length }, (_, index) => index);
 }
 
 onMounted(() => {
-  panel.value = props.activePanels
+	panel.value = props.activePanels
 })
 
 
-const onAllPanels = () =>{
-  panel.value = allPanels();
+const onAllPanels = () => {
+	panel.value = allPanels();
 }
 
-const onNonePanels = () =>{
-  panel.value = [];
+const onNonePanels = () => {
+	panel.value = [];
 }
 
 const onUpdatePanel = (panel) => {
-  // emit('update-panels', panel);
+	// emit('update-panels', panel);
 }
 
-watch(()=>props.triggerAllPanels, (triggerAllPanels, prevTriggerAllPanels) => {
-  if(triggerAllPanels){
-    emit('reset-trigger-all-panels');
-    onAllPanels();
-  }
+watch(() => props.triggerAllPanels, (triggerAllPanels, prevTriggerAllPanels) => {
+	if (triggerAllPanels) {
+		emit('reset-trigger-all-panels');
+		onAllPanels();
+	}
 })
 
 // const { activePanels } = toRefs(props)
