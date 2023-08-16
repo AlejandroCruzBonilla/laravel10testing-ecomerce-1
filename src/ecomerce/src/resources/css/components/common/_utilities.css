@@ -1,3 +1,11 @@
+.t-color {
+	@apply text-gray-950 dark:text-gray-100;
+}
+
+.bg-color {
+	@apply bg-gray-100 dark:bg-gray-950;
+}
+
 .card {
     @apply bg-gray-100 dark:bg-gray-950;
 }

@@ -1,7 +1,7 @@
 @props(['copy'])
 
 <div>
-  <p class="text-center text-gray-200">
+  <p class="text-center">
     {{ __($copy) }}
   </p>
 </div>

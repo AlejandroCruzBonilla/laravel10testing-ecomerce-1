@@ -25,9 +25,8 @@
 <input
   {{ $disabled ? 'disabled' : '' }}
   {{ $attributes->class([
-		'text-gray-800 dark:text-gray-100',
-		'bg-gray-100 dark:bg-gray-700',
-		'border-gray-800 dark:border-gray-100',
+		'bg-gray-200 dark:bg-gray-700',
+		'border-gray-800 dark:border-gray-200',
 		'border-solid focus:border-indigo-500 focus:ring-indigo-500',
 		'rounded-md shadow-sm',
 	]) }}

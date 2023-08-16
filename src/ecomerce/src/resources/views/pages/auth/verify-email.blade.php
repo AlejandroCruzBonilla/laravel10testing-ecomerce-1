@@ -1,5 +1,5 @@
 <x-app-layout>
-  <div class="mb-4 text-sm text-gray-600">
+  <div class="mb-4 text-sm">
     {{ __('Thanks for signing up! Before getting started, could you verify your email address by clicking on the link we just emailed to you? If you didn\'t receive the email, we will gladly send you another.') }}
   </div>
 
@@ -29,12 +29,9 @@
     >
       @csrf
 
-      <button
-        class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-        type="submit"
-      >
+      <x-common-primary-button type="submit">
         {{ __('Log Out') }}
-      </button>
+      </x-common-primary-button>
     </form>
   </div>
   </x-web-layout>

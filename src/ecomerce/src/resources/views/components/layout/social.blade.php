@@ -2,7 +2,7 @@
 
 <div class="my-2">
   <div>
-    <x-header.2 class="text-center text-gray-200">
+    <x-header.2 class="text-center">
       {{ __('Social Network') }}
     </x-header.2>
   </div>

@@ -1,10 +1,10 @@
 <section>
   <header>
-    <x-header.2 class="text-gray-800">
+    <x-header.2>
       {{ __('Update Password') }}
     </x-header.2>
 
-    <p class="mt-1 text-sm text-gray-600">
+    <p class="mt-1 text-sm">
       {{ __('Ensure your account is using a long, random password to stay secure.') }}
     </p>
   </header>
@@ -76,7 +76,7 @@
 
       @if (session('status') === 'password-updated')
         <p
-          class="text-sm text-gray-600"
+          class="text-sm"
           x-data="{ show: true }"
           x-init="setTimeout(() => show = false, 2000)"
           x-show="show"

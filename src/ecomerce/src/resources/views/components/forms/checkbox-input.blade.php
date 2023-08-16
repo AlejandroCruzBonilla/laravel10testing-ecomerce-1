@@ -26,7 +26,7 @@
     @checked(old($name, isset($node) ? $node[$name] : '') === $checkedValue ? true : false)
   >
 
-  <span class="ml-2 text-sm text-gray-700 dark:text-gray-200">
+  <span class="ml-2 text-sm">
     {{ $slot }}
   </span>
 </label>

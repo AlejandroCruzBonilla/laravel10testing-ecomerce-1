@@ -1,10 +1,10 @@
 <section>
   <header>
-    <x-header.2 class="text-gray-800">
+    <x-header.2>
       {{ __('Profile Information') }}
     </x-header.2>
 
-    <p class="mt-1 text-sm text-gray-600">
+    <p class="mt-1 text-sm">
       {{ __("Update your account's profile information and email address.") }}
     </p>
   </header>
@@ -67,15 +67,12 @@
 
       @if ($user instanceof \Illuminate\Contracts\Auth\MustVerifyEmail && !$user->hasVerifiedEmail())
         <div>
-          <p class="text-sm mt-2 text-gray-800">
+          <p class="text-sm mt-2">
             {{ __('Your email address is unverified.') }}
 
-            <button
-              class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-              form="send-verification"
-            >
+            <x-common.primary-button form="send-verification">
               {{ __('Click here to re-send the verification email.') }}
-            </button>
+            </x-common.primary-button>
           </p>
 
           @if (session('status') === 'verification-link-sent')
@@ -92,7 +89,7 @@
 
       @if (session('status') === 'profile-updated')
         <p
-          class="text-sm text-gray-600"
+          class="text-sm"
           x-data="{ show: true }"
           x-init="setTimeout(() => show = false, 2000)"
           x-show="show"

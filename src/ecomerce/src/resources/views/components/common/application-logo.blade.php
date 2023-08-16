@@ -6,11 +6,11 @@
 
 <svg
   {{ $attributes->class([
-      'fill-gray-100' => $onDarkBg,
+      'fill-gray-200' => $onDarkBg,
   
       'fill-gray-800' => $onLightBg,
   
-      'fill-gray-800 dark:fill-gray-100' =>
+      'fill-gray-800 dark:fill-gray-200' =>
           !$onDarkBg && !$onLightBg,
   ]) }}
   viewBox="0 0 316 316"
