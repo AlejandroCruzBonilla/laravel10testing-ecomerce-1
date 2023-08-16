@@ -1,8 +1,6 @@
-<template v-slot:prepend>
+<template #prepend>
   @if ($menu_icon)
-    <div class="nav__menu lg:hidden">
-      {{ $menu_icon }}
-    </div>
+    {{ $menu_icon }}
   @endif
 </template>
 <div class="toolbar">
@@ -23,6 +21,6 @@
     </div>
   </div>
 </div>
-<template v-slot:append>
+<template #append>
   <x-nav.auth-dropdown></x-nav.auth-dropdown>
 </template>

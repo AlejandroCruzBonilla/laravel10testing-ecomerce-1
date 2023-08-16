@@ -48,29 +48,7 @@
       </template>
 
       <template #nav={mobile_menu_drawer,toggle_mobile_menu_drawer}>
-        <x-nav.bar>
-          <x-slot name="toolbar">
-            <x-nav.toolbar>
-              <x-slot name="menu_icon">
-                <v-btn
-                  icon
-                  @click="toggle_mobile_menu_drawer"
-                >
-                  <v-icon>
-                    <font-awesome-icon :icon="mobile_menu_drawer ? 'fa-solid fa-xmark' : 'fa-solid fa-grip-lines'">
-                    </font-awesome-icon>
-                  </v-icon>
-                </v-btn>
-              </x-slot>
-              <x-slot name="logo">
-                <x-common.application-logo
-                  height="50px"
-                  width="50px"
-                ></x-common.application-logo>
-              </x-slot>
-            </x-nav.toolbar>
-          </x-slot>
-        </x-nav.bar>
+        <x-nav.bar></x-nav.bar>
       </template>
 
       <template #drawer={mobile_menu_drawer,toggle_mobile_menu_drawer}>

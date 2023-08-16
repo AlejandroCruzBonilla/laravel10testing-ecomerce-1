@@ -81,7 +81,11 @@
           </a>
         @endif
 
-        <x-common.primary-button class="ml-3">
+        <x-common.primary-button
+          class="ml-3"
+					type="submit"
+          {{-- on-light-bg --}}
+        >
           {{ __('Log in') }}
         </x-common.primary-button>
       </div>

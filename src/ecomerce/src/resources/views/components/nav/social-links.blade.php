@@ -4,17 +4,13 @@
 
 <div {{ $attributes->merge(['class' => $classes]) }}>
   @foreach ($socialLinks as $link)
-    <v-btn
-      class="m-2"
+    <a
       href="{{ $link['href'] }}"
-      density="comfortable"
-      icon
       target="_blank"
     >
-      <v-icon>
-        <font-awesome-icon icon="{{ $link['icon'] }}">
-        </font-awesome-icon>
-      </v-icon>
-    </v-btn>
+		<x-common.primary-button rounded on-dark-bg class="m-2 text-2xl w-12 h-12 bg-gray-100">
+      <font-awesome-icon  icon="{{ $link['icon'] }}"></font-awesome-icon>
+		</x-common.primary-button>
+    </a>
   @endforeach
 </div>

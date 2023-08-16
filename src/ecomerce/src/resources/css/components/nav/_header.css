@@ -1,5 +1,9 @@
-header.header .v-toolbar__prepend,
-header.header .v-toolbar__append {
+header.header{
+	display: flex;
+}
+
+header.header .prepend,
+header.header .append {
     margin: 0;
 }
 

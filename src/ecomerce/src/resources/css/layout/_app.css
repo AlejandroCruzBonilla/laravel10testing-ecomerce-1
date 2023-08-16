@@ -1,6 +1,5 @@
 .layout {
     flex-wrap: wrap;
-    color: var(--color-cod-gray);
 }
 
 .layout .v-navigation-drawer__scrim {
@@ -9,7 +8,7 @@
 
 .layout .admin__bar,
 .layout .admin__bar .admin__bar-wrapper,
-.layout header.header .v-toolbar__content,
+.layout header.header,
 .layout header.header .toolbar,
 .layout header.header .toolbar-wrapper,
 .layout main,
@@ -20,7 +19,7 @@
 }
 
 .layout .admin__bar .admin__bar-wrapper,
-.layout header.header .v-toolbar__content,
+.layout header.header,
 .layout main .main-wrapper,
 .layout footer .footer-wrapper {
     max-width: var(--layout-max-with);

@@ -34,7 +34,7 @@
   ];
 @endphp
 
-<v-footer name="footer">
+<footer class="py-4">
 
   <div class="footer-wrapper mx-auto">
 
@@ -66,4 +66,4 @@
     <x-layout.copyright :copy="$copy"></x-layout.copyright>
   </div>
 
-</v-footer>
+</footer>

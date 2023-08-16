@@ -1,5 +1,5 @@
 <template>
-	<v-layout :class="[
+	<div :class="[
 		'layout',
 		hasAdminRole ? 'administer' : ''
 	]">
@@ -20,15 +20,15 @@
 		>
 		</slot>
 
-		<v-main id="main">
+		<main id="main">
 			<div class="main-wrapper">
 				<slot name="content"></slot>
 			</div>
-		</v-main>
+		</main>
 
 		<slot name="footer"></slot>
 
-	</v-layout>
+	</div>
 </template>
 
 <script setup>

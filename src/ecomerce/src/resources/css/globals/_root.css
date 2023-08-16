@@ -6,6 +6,7 @@
 }
 
 body {
-  background-color: var(--color-mischka);
+	@apply bg-gray-300 dark:bg-gray-700;
+	@apply text-gray-800 dark:text-gray-100;
   font-size: 1rem;
 }

@@ -11,9 +11,11 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 // Dark Mode
 if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-  document.documentElement.classList.add('dark')
+	console.log('dark')
+  // document.documentElement.classList.add('dark')
 } else {
-  document.documentElement.classList.remove('dark')
+	console.log('normal')
+  // document.documentElement.classList.remove('dark')
 }
 
 /**

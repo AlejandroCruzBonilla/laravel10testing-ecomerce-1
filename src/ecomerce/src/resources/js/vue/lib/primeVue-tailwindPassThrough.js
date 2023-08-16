@@ -2,7 +2,7 @@ import { usePassThrough } from "primevue/passthrough";
 import Tailwind from "primevue/passthrough/tailwind";
 
 //Tailwind customization
-const CustomTailwind = usePassThrough(Tailwind,
+const CustomTailwind = usePassThrough(
 	{
 		column: {
 			bodyCell: {
@@ -17,4 +17,7 @@ const CustomTailwind = usePassThrough(Tailwind,
 		customizer: undefined    // Defines the custom method to merge PT options.
 	}
 );
+
+console.log(CustomTailwind)
+
 export default CustomTailwind;
