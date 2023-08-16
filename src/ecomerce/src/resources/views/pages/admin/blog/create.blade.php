@@ -8,7 +8,7 @@
   </x-slot>
 
   @if ($errors->any())
-    {{-- {{var_dump($errors->all())}} --}}
+    {{var_dump($errors->all())}}
   @endif
 
   <wrapper-form-panels>

@@ -1,16 +1,17 @@
 @props([
-    'value' => '',
-    'prefix' => '',
-    'sufix' => '',
-    'rules' => '[]',
-    'errorMessages' => null,
+    'disabled' => false,
+    // 'value' => '',
+    // 'prefix' => '',
+    // 'sufix' => '',
+    // 'rules' => '[]',
+    // 'errorMessages' => null,
 ])
 
-@isset($rules)
-@endisset
+{{-- @isset($rules)
+@endisset --}}
 
 
-@php
+{{-- @php
   if ($errorMessages) {
       if (gettype($errorMessages) === 'array') {
           $errorMessages = '[' . sprintf("'%s'", implode("','", $errorMessages)) . ']';
@@ -18,9 +19,21 @@
   } else {
       $errorMessages = '[]';
   }
-@endphp
+@endphp --}}
 
-<v-text-field
+
+<input
+  {{ $disabled ? 'disabled' : '' }}
+  {{ $attributes->class([
+		'text-gray-800 dark:text-gray-100',
+		'bg-gray-100 dark:bg-gray-700',
+		'border-gray-800 dark:border-gray-100',
+		'border-solid focus:border-indigo-500 focus:ring-indigo-500',
+		'rounded-md shadow-sm',
+	]) }}
+>
+
+{{-- <v-text-field
   max-errors="5"
   model-value="{{ $value }}"
   prefix="{{ $prefix }}"
@@ -29,4 +42,4 @@
   :error-messages="{{ $errorMessages }}"
   :rules="{{ $rules }}"
   {{ $attributes->merge(['class' => 'mt-1']) }}
-></v-text-field>
+></v-text-field> --}}

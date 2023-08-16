@@ -19,9 +19,13 @@
           name="title"
           type="text"
           :value="old('title', $blog->title)"
-          rules="[
+          {{-- rules="[
 						validationRules.required('{{ __($validationMessages->title->required) }}')
-					]"
+					]" --}}
+        />
+        <x-forms.input-error
+          class="mt-2"
+          :messages="$errors->get('title')"
         />
       </div>
 

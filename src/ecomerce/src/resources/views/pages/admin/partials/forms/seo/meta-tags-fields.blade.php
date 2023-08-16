@@ -9,7 +9,11 @@
     name="meta[title]"
     type="text"
     :value="old('meta.title', $node->{'meta.title'})"
-    rules="[validationRules.required('{{ __($validationMessages->meta->title->required) }}')]"
+    {{-- rules="[validationRules.required('{{ __($validationMessages->meta->title->required) }}')]" --}}
+  />
+  <x-forms.input-error
+    class="mt-2"
+    :messages="$errors->get('meta.title')"
   />
 </div>
 
@@ -24,6 +28,10 @@
     name="meta[description]"
     type="text"
     :value="old('meta.description', $node->{'meta.description'})"
-    rules="[validationRules.required('{{ __($validationMessages->meta->description->required) }}')]"
+    {{-- rules="[validationRules.required('{{ __($validationMessages->meta->description->required) }}')]" --}}
+  />
+  <x-forms.input-error
+    class="mt-2"
+    :messages="$errors->get('meta.description')"
   />
 </div>

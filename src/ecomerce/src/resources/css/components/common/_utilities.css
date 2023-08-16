@@ -1,14 +1,15 @@
-.c1-card {
+.card {
+    @apply bg-gray-100 dark:bg-gray-950;
+}
+
+.card.card-c1 {
     @apply p-6 rounded-lg;
-    @apply bg-gray-100 dark:bg-gray-950;
 }
 
-.c2-card {
+.card.card-c2 {
     @apply p-4 rounded-lg;
-    @apply bg-gray-100 dark:bg-gray-950;
 }
 
-.c3-card {
+.card.card-c3 {
     @apply p-2 rounded-lg;
-    @apply bg-gray-100 dark:bg-gray-950;
 }

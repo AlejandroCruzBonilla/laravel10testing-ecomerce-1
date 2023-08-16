@@ -17,7 +17,7 @@
 
   <template #submit={onClick}>
     <div class="flex items-center my-4">
-      <x-common.primary-button @click="onClick">
+      <x-common.primary-button type="submit" @click="onClick">
         {{ __('Save') }}
       </x-common.primary-button>
     </div>

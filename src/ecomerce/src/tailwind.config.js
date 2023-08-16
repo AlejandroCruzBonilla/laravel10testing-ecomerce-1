@@ -29,11 +29,10 @@ export default {
 			},
 		},
 	},
-
-	// plugins: [
-	//     forms({
-	//         strategy: "base", // only generate global styles
-	//         // strategy: "class", // only generate classes
-	//     }),
-	// ],
+	plugins: [
+	    forms({
+	        strategy: "base", // only generate global styles
+	        // strategy: "class", // only generate classes
+	    }),
+	],
 };

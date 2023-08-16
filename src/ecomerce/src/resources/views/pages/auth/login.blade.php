@@ -4,7 +4,7 @@
     {{ __('Login') }}
   </x-slot>
 
-  <div class="c1-card">
+  <div class="card card-c1">
     <form
       action="{{ route('login') }}"
       method="POST"
@@ -57,18 +57,9 @@
 
       <!-- Remember Me -->
       <div class="block mt-4">
-        <label
-          class="inline-flex items-center"
-          for="remember_me"
-        >
-          <input
-            class="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500"
-            id="remember_me"
-            name="remember"
-            type="checkbox"
-          >
-          <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
-        </label>
+        <x-forms.checkbox-input name="remember">
+          {{ __('Remember me') }}
+        </x-forms.checkbox-input>
       </div>
 
       <div class="flex items-center justify-end mt-4">
@@ -83,7 +74,7 @@
 
         <x-common.primary-button
           class="ml-3"
-					type="submit"
+          type="submit"
           {{-- on-light-bg --}}
         >
           {{ __('Log in') }}

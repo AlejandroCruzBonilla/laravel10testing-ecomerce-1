@@ -6,7 +6,7 @@ const CustomTailwind = usePassThrough(
 	{
 		column: {
 			bodyCell: {
-				class: ['ale-22222 dark:text-gray-900']
+				class: ['']
 			}
 		}
 	},

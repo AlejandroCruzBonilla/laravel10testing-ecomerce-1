@@ -41,7 +41,7 @@
     <div class="flex justify-center my-2">
       <x-nav.home-link>
         <x-common.application-logo
-          class="fill-slate-200"
+					on-dark-bg
           width="50px"
           height="50px"
         ></x-common.application-logo>
@@ -52,7 +52,7 @@
       <div class="flex justify-center py-4 xs:flex-col md:flex-row">
         @foreach (RouteHelpers::getRoutesByPrefix('web') as $name => $route)
           <x-nav.link
-            class="mx-2 text-gray-200"
+            class="mx-2"
             :href="route($name)"
             :active="request()->routeIs($name)"
           >

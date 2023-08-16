@@ -1,5 +1,18 @@
+@props([
+    'onDarkBg' => false,
+    'onLightBg' => false,
+])
+
+
 <svg
-  {{ $attributes }}
+  {{ $attributes->class([
+      'fill-gray-100' => $onDarkBg,
+  
+      'fill-gray-800' => $onLightBg,
+  
+      'fill-gray-800 dark:fill-gray-100' =>
+          !$onDarkBg && !$onLightBg,
+  ]) }}
   viewBox="0 0 316 316"
   xmlns="http://www.w3.org/2000/svg"
 >
