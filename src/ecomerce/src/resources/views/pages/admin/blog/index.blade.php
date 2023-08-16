@@ -7,20 +7,21 @@
     {{ __('Blogs') }}
   </x-slot>
 
-  <x-nav.link
-    class="rounded px-6 py-2 bg-gray-900 mx-2 text-gray-100"
+  <x-common.primary-button-link
+    class="mb-2"
     :href="route('admin.blogs.create')"
   >
     {{ __('Create New') }}
-  </x-nav.link>
+  </x-common.primary-button-link>
+
 
   @if ($blogs->items() && count($blogs->items()))
     <index-table
       :raw-data="{{ $blogs->toJson() }}"
       :items="{{ json_encode($blogs->items()) }}"
       :actions="{
-          edit: false,
-          delete: false
+          edit: true,
+          delete: true
       }"
       :paginator="{
           totalItems: {{ $blogs->total() }},
@@ -37,6 +38,22 @@
       }"
       csrf-token="{{ csrf_token() }}"
     >
+      <template #edit-btn-link={id,tablePagination}>
+        <x-common.primary-button-link
+          class="m-2"
+          v-bind:href="`${tablePagination.path}/${id}/edit`"
+        >
+          {{ __('Edit') }}
+        </x-common.primary-button-link>
+      </template>
+      <template #delete-btn-link={id,tablePagination}>
+        <x-common.primary-button-link
+          class="m-2"
+          v-bind:href="`${tablePagination.path}/${id}`"
+        >
+          {{ __('Delete') }}
+        </x-common.primary-button-link>
+      </template>
     </index-table>
     <div class="paginador">{{ $blogs->links() }}</div>
   @endif

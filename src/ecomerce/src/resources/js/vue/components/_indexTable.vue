@@ -6,7 +6,6 @@
 		:rows="tablePagination.perPageItems"
 		:totalRecords="tablePagination.totalItems"
 		:value="tableRows"
-		tableStyle="min-width: 50rem"
 		@page="paginate"
 	>
 		<Column
@@ -17,16 +16,19 @@
 		/>
 		<Column header="Actions">
 			<template #body="{ data: { id } }">
-				<div v-if="actions.edit">
-					<a :href="`${tablePagination.path}/${id}/edit`">Edit</a>
-				</div>
-				<div v-if="actions.delete">
-					<!-- TODO Method: DELETE -->
-					<a
-						disabled
-						:href="`${tablePagination.path}/${id}/delete`"
-					>Delete</a>
-				</div>
+				<slot
+					v-if="actions.edit"
+					name="edit-btn-link"
+					:id="id"
+					:tablePagination="tablePagination"
+				></slot>
+				<!-- TODO Method: DELETE -->
+				<slot
+					v-if="actions.delete"
+					name="delete-btn-link"
+					:id="id"
+					:tablePagination="tablePagination"
+				></slot>
 			</template>
 
 		</Column>
@@ -92,6 +94,7 @@ export default {
 
 		onMounted(() => {
 			console.log({ rawData });
+			console.log({ items });
 			if (!rawData.data.length) return;
 			tableRows.value = items;
 			tableColumns.value = setTableColumns(items);

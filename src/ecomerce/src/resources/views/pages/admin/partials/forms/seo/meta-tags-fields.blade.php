@@ -8,7 +8,7 @@
     id="meta-title"
     name="meta[title]"
     type="text"
-    :value="old('meta[title]', '')"
+    :value="old('meta.title', $node->{'meta.title'})"
     rules="[validationRules.required('{{ __($validationMessages->meta->title->required) }}')]"
   />
 </div>
@@ -23,7 +23,7 @@
     id="meta-description"
     name="meta[description]"
     type="text"
-    :value="old('meta[description]', '')"
+    :value="old('meta.description', $node->{'meta.description'})"
     rules="[validationRules.required('{{ __($validationMessages->meta->description->required) }}')]"
   />
 </div>

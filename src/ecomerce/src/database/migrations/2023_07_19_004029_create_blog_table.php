@@ -24,8 +24,8 @@ return new class extends Migration
 			$table->enum('status', ['published', 'unpublished'])->default('unpublished');
 
 			//Seo
-			$table->longText('meta_tags')->nullable();
-			$table->longText('meta_tags_og')->nullable();
+			$table->longText('meta')->nullable();
+			$table->longText('meta_og')->nullable();
 			$table->longText('schema_org')->nullable();
 
 			//Index

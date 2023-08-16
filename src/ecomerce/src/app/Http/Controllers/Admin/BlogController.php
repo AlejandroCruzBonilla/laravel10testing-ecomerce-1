@@ -15,9 +15,10 @@ class BlogController extends Controller
 	 */
 	public function index()
 	{
-		$blogs = Blog::select('id', 'title')
+		$blogs = Blog::select('id', 'title', 'slug', 'status')
 			->paginate(10)
 			->onEachSide(2);
+
 		return view('pages.admin.blog.index', [
 			'blogs' => $blogs,
 		]);
@@ -41,10 +42,18 @@ class BlogController extends Controller
 	 */
 	public function store(StoreBlogRequest $request)
 	{
-		//
-		dd($request);
-		return Redirect::back()->withInput();
-		return;
+
+		// $data = array_filter($request->all(), function($key) {
+		// 	return $key !== 'meta' && $key !== '_token';
+		// } ,ARRAY_FILTER_USE_KEY);
+
+		$data = $request->all();
+
+		$data['meta'] = json_encode($request->get('meta'));
+
+		Blog::create($data);
+
+		return Redirect::route('admin.blogs.index')->with('success', 'Blog created successfully.');
 	}
 
 	/**

@@ -4,6 +4,8 @@ import vuetify from "./lib/vuetify";
 
 //PrimeVue
 import PrimeVue from "primevue/config";
+import CustomTailwind from "./lib/primeVue-tailwindPassThrough";
+
 import DataTable from "primevue/datatable";
 import Column from "primevue/column";
 
@@ -29,7 +31,7 @@ if (appDocument) {
 	app.use(vuetify);
 
 	//PrimeVue
-	app.use(PrimeVue, { unstyled: true });
+	app.use(PrimeVue, { unstyled: true, pt: CustomTailwind });
 	app.component("DataTable", DataTable);
 	app.component("Column", Column);
 

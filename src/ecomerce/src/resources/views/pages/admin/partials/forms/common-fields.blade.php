@@ -9,9 +9,14 @@
     name="slug"
     type="text"
     :value="old('slug', $node->slug)"
+    :error-messages="$errors->get('slug')"
     prefix="{{ $slugPrefix }}"
     rules="[validationRules.required('{{ $validationMessages->slug->required }}')]"
   />
+  {{-- <x-forms.input-error
+    class="mt-2"
+    :messages="$errors->get('slug')"
+  /> --}}
 </div>
 
 <div class="input-group mb-3 input_box">

@@ -19,12 +19,10 @@
           name="title"
           type="text"
           :value="old('title', $blog->title)"
-          {{-- :error-messages="$errors->get('title')" --}}
           rules="[
 						validationRules.required('{{ __($validationMessages->title->required) }}')
 					]"
         />
-        {{-- <x-forms.input-error class="mt-2" :messages="$errors->get('title')" /> --}}
       </div>
 
       <div class="input-group mb-3 input_box">

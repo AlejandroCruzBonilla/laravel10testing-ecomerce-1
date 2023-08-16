@@ -27,6 +27,7 @@ trait CommonRules
 	{
 		return [
 			'slug.required' => 'Slug Field is required',
+			'slug.unique' => 'Slug already exists',
 		];
 	}
 }
