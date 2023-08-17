@@ -34,7 +34,7 @@
   ];
 @endphp
 
-<footer class="py-4">
+<footer class="py-4 text-font-on-primary-dark">
 
   <div class="footer-wrapper mx-auto">
 

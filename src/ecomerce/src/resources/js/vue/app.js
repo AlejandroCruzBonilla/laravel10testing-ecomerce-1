@@ -21,7 +21,8 @@ import CKEditor from "@ckeditor/ckeditor5-vue";
 //Own
 import appLayout from "./layout/app.vue";
 import Debug from "./components/__debug.vue";
-import navBar from "./components/_navBar.vue";
+import NavBar from "./components/_navBar.vue";
+import AdminBar from "./components/_adminBar.vue";
 import IndexTable from "./components/_indexTable.vue";
 import RichTextEditor from "./components/_richTextEditor.vue";
 import FormVue from "./components/_form.vue";
@@ -55,11 +56,11 @@ if (appDocument) {
 	app.component("FontAwesomeIcon", FontAwesomeIcon);
 
 	//Own
-	app.component("appLayout", appLayout);
-
 	app.component("DebugComponent", Debug);
 	
-	app.component("navBar", navBar);
+	app.component("appLayout", appLayout);
+	app.component("NavBar", NavBar);
+	app.component("AdminBar", AdminBar);
 	app.component("IndexTable", IndexTable);
 	app.component("RichTextEditor", RichTextEditor);
 	app.component("FormVue", FormVue);

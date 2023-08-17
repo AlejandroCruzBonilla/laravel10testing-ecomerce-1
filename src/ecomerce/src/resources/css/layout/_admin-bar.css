@@ -1,8 +1,10 @@
 .layout .admin__bar {
+	position: fixed;
+	top: 0;
   padding: 0;
+	z-index: 100;
   font-size: 1rem;
 	@apply bg-primary-dark;
 	@apply text-primary-light;
-	position: fixed;
-	top: 0;
+
 }

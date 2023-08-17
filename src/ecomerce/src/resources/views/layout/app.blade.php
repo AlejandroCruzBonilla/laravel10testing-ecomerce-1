@@ -42,15 +42,15 @@
     <app-layout
       :has-admin-role={{ Auth::user() && Auth::user()->hasAnyRole(['admin', 'webmaster']) ? 'true' : 'false' }}
     >
-      <template #admin-bar>
+      <template #admin-bar={onAdminBarHeight}>
         <x-nav.admin.bar></x-nav.admin.bar>
       </template>
 
-      <template #nav={mobile_menu_drawer,toggle_mobile_menu_drawer}>
+      <template #nav={adminBarHeight,mobileMenuDrawer,onToggleMobileMenuDrawer}>
         <x-nav.bar></x-nav.bar>
       </template>
 
-      <template #drawer={mobile_menu_drawer,toggle_mobile_menu_drawer}>
+      <template #drawer={mobileMenuDrawer,onToggleMobileMenuDrawer}>
         <x-nav.drawer></x-nav.drawer>
       </template>
 

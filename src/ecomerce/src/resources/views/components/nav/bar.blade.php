@@ -1,4 +1,4 @@
-<nav-bar class="header">
+<nav-bar class="header" :admin-bar-height="adminBarHeight">
   <x-nav.toolbar>
     <x-slot name="prepend">
       <div class="lg:hidden inline-flex items-center justify-center">
@@ -6,11 +6,11 @@
           class="text-lg w-10 h-10"
           rounded
 					on-light-bg
-          @click="toggle_mobile_menu_drawer"
+          @click="onToggleMobileMenuDrawer"
         >
           <font-awesome-icon
             width="16px"
-            :icon="mobile_menu_drawer ? 'fa-solid fa-xmark' : 'fa-solid fa-grip-lines'"
+            :icon="mobileMenuDrawer ? 'fa-solid fa-xmark' : 'fa-solid fa-grip-lines'"
           ></font-awesome-icon>
         </x-common.primary-button>
       </div>

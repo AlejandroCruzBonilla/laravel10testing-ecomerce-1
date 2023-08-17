@@ -4,19 +4,20 @@
 		hasAdminRole ? 'administer' : ''
 	]">
 
-		<slot name="admin-bar"></slot>
+		<slot name="admin-bar" :onAdminBarHeight="onAdminBarHeight"></slot>
 
 		<slot
 			name="nav"
-			:mobile_menu_drawer="mobile_menu_drawer"
-			:toggle_mobile_menu_drawer="toggleMobileMenuDrawer"
+			:adminBarHeight="adminBarHeight"
+			:mobileMenuDrawer="mobileMenuDrawer"
+			:onToggleMobileMenuDrawer="onToggleMobileMenuDrawer"
 		>
 		</slot>
 
 		<slot
 			name="drawer"
-			:mobile_menu_drawer="mobile_menu_drawer"
-			:toggle_mobile_menu_drawer="toggleMobileMenuDrawer"
+			:mobileMenuDrawer="mobileMenuDrawer"
+			:onToggleMobileMenuDrawer="onToggleMobileMenuDrawer"
 		>
 		</slot>
 
@@ -41,10 +42,15 @@ const props = defineProps({
 	}
 })
 
-const mobile_menu_drawer = ref(false)
+const mobileMenuDrawer = ref(false)
+const adminBarHeight = ref(0)
 
-const toggleMobileMenuDrawer = () => {
-	mobile_menu_drawer.value = !mobile_menu_drawer.value
+const onToggleMobileMenuDrawer = () => {
+	mobileMenuDrawer.value = !mobileMenuDrawer.value
+}
+
+const onAdminBarHeight = (height) => {
+	adminBarHeight.value = height
 }
 
 onMounted(function () {

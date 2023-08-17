@@ -18,6 +18,4 @@ const CustomTailwind = usePassThrough(
 	}
 );
 
-console.log(CustomTailwind)
-
 export default CustomTailwind;

@@ -1,8 +1,8 @@
 <pv-sidebar
-  v-model:visible="mobile_menu_drawer"
+  v-model:visible="mobileMenuDrawer"
   location="left"
   temporary
-  @update:model-value="toggle_mobile_menu_drawer"
+  @update:model-value="onToggleMobileMenuDrawer"
 >
   <x-nav.link-list></x-nav.link-list>
   <hr>

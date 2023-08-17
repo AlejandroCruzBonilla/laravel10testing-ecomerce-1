@@ -1,7 +1,7 @@
 header.header {
-    /* height: var(--header-height); */
     position: fixed;
     top: 0;
+		transition: top 0.3s; 
 }
 
 header.header .header-wrapper .header-content {
