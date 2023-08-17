@@ -1,4 +1,4 @@
-<nav-bar class="header" :admin-bar-height="adminBarHeight">
+<nav-bar class="header" :admin-bar-height="adminBarHeight" @nav-bar-height="onNavBarHeight">
   <x-nav.toolbar>
     <x-slot name="prepend">
       <div class="lg:hidden inline-flex items-center justify-center">

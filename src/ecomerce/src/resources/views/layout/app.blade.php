@@ -46,7 +46,7 @@
         <x-nav.admin.bar></x-nav.admin.bar>
       </template>
 
-      <template #nav={adminBarHeight,mobileMenuDrawer,onToggleMobileMenuDrawer}>
+      <template #nav={adminBarHeight,mobileMenuDrawer,onNavBarHeight,onToggleMobileMenuDrawer}>
         <x-nav.bar></x-nav.bar>
       </template>
 

@@ -20,6 +20,8 @@ const props = defineProps({
 	}
 })
 
+const emit = defineEmits(['nav-bar-height'])
+
 const header = ref(null)
 
 onMounted(() => {
@@ -34,6 +36,8 @@ onMounted(() => {
 		}
 		prevScrollPoss = currentScrollPos;
 	}
+
+	emit('nav-bar-height', height);
 })
 
 </script>
