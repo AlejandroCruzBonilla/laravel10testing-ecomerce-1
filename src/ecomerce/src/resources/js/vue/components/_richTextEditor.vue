@@ -171,7 +171,7 @@ export default {
 					'|', 'removeFormat',
 					'|', 'selectAll', 'showBlocks', 'sourceEditing', 'htmlEmbed',
 					'|', 'link', 'imageUpload', 'imageInsert', 'mediaEmbed', 'insertTable', 'pageBreak',
-					'|', // 'style',
+					// '|', 'style',
 				],
 				shouldNotGroupWhenFull: true
 			},

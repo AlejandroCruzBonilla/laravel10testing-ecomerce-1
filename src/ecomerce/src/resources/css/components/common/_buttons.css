@@ -5,14 +5,13 @@
     @apply font-semibold uppercase tracking-widest;
     @apply focus:outline-none focus:ring-2 focus:ring-offset-2;
     @apply transition ease-in-out duration-150;
-    @apply focus:ring-indigo-500;
+    @apply focus:ring-accent-dark;
 }
 
 .regular-button.primary {
-    @apply bg-gray-950 text-gray-100 dark:bg-gray-100 dark:text-gray-950;
+    @apply bg-primary-dark text-primary-light dark:bg-primary-light dark:text-primary-dark;
     @apply hover:bg-gray-800 focus:bg-gray-800 active:bg-gray-800;
     @apply hover:dark:bg-gray-300 focus:dark:bg-gray-300 dark:active:bg-gray-300;
-    @apply active:dark:bg-gray-200;
 }
 
 .regular-button.primary-dark-bg {

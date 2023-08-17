@@ -13,7 +13,7 @@
           for="title"
           :value="__('Title')"
         />
-        <x-forms.text-input
+        <x-forms.input-text
           class="block w-full"
           id="title"
           name="title"

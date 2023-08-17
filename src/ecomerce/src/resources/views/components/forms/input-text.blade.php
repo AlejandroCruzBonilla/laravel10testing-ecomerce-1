@@ -26,8 +26,8 @@
   {{ $disabled ? 'disabled' : '' }}
   {{ $attributes->class([
 		'bg-gray-200 dark:bg-gray-700',
-		'border-gray-800 dark:border-gray-200',
-		'border-solid focus:border-indigo-500 focus:ring-indigo-500',
+		'border-primary-dark dark:border-primary-light',
+		'border-solid focus:border-accent-dark focus:ring-accent-dark',
 		'rounded-md shadow-sm',
 	]) }}
 >

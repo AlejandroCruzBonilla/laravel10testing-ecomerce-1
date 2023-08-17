@@ -3,7 +3,7 @@
     for="slug"
     :value="__('Slug')"
   />
-  <x-forms.text-input
+  <x-forms.input-text
     class="block w-full"
     id="slug"
     name="slug"
@@ -20,14 +20,14 @@
 </div>
 
 <div class="input-group mb-3 input_box">
-  <x-forms.checkbox-input
+  <x-forms.input-checkbox
     name="status"
     :node="$node"
     checkedValue="published"
     unCheckedValue="unpublished"
   >
     {{ __('Published') }}
-  </x-forms.checkbox-input>
+  </x-forms.input-checkbox>
   <x-forms.input-error
     class="mt-2"
     :messages="$errors->get('status')"

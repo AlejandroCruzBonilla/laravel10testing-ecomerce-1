@@ -42,7 +42,7 @@
           value="{{ __('Password') }}"
         />
 
-        <x-forms.text-input
+        <x-forms.input-text
           class="block w-3/4"
           id="password"
           name="password"

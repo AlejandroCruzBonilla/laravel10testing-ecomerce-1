@@ -1,10 +1,8 @@
 <template>
 	<header>
-		<div class="prepend">
+		<div class="header-wrapper">
 			<slot name="prepend"></slot>
-		</div>
-		<slot></slot>
-		<div class="append">
+			<slot></slot>
 			<slot name="append"></slot>
 		</div>
 	</header>

@@ -1,8 +1,8 @@
 :root {
   --layout-max-with: 1400px;
   --layout-base-padding: 1rem;
-  --admin-bar-height: 50px;
-  --header-height: 64px;
+  --admin-bar-height: 40px;
+  --header-height: 74px;
 }
 
 body {

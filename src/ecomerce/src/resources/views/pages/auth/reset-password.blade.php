@@ -18,7 +18,7 @@
         for="email"
         :value="__('Email')"
       />
-      <x-forms.text-input
+      <x-forms.input-text
         class="block w-full"
         id="email"
         name="email"
@@ -40,7 +40,7 @@
         for="password"
         :value="__('Password')"
       />
-      <x-forms.text-input
+      <x-forms.input-text
         class="block w-full"
         id="password"
         name="password"
@@ -61,7 +61,7 @@
         :value="__('Confirm Password')"
       />
 
-      <x-forms.text-input
+      <x-forms.input-text
         class="block w-full"
         id="password_confirmation"
         name="password_confirmation"

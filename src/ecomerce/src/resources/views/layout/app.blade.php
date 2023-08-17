@@ -42,7 +42,6 @@
     <app-layout
       :has-admin-role={{ Auth::user() && Auth::user()->hasAnyRole(['admin', 'webmaster']) ? 'true' : 'false' }}
     >
-
       <template #admin-bar>
         <x-nav.admin.bar></x-nav.admin.bar>
       </template>

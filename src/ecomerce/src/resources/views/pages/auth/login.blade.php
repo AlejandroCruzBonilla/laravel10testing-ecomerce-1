@@ -17,7 +17,7 @@
           for="email"
           :value="__('Email')"
         />
-        <x-forms.text-input
+        <x-forms.input-text
           class="block w-full"
           id="email"
           name="email"
@@ -40,7 +40,7 @@
           :value="__('Password')"
         />
 
-        <x-forms.text-input
+        <x-forms.input-text
           class="block w-full"
           id="password"
           name="password"
@@ -57,9 +57,9 @@
 
       <!-- Remember Me -->
       <div class="block mt-4">
-        <x-forms.checkbox-input name="remember">
+        <x-forms.input-checkbox name="remember">
           {{ __('Remember me') }}
-        </x-forms.checkbox-input>
+        </x-forms.input-checkbox>
       </div>
 
       <div class="flex items-center justify-end mt-4">

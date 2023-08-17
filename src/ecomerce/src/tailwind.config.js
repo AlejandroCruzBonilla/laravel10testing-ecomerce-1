@@ -1,5 +1,7 @@
 import defaultTheme from "tailwindcss/defaultTheme";
+import colors from "tailwindcss/colors";
 import forms from "@tailwindcss/forms";
+
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -16,6 +18,27 @@ export default {
 
 	theme: {
 		extend: {
+
+			colors: {
+				font: {
+					DEFAULT: colors.gray[950],
+					dark: colors.gray[950],
+					light: colors.gray[100],
+					'on-primary-light': colors.gray[950],
+					'on-primary-dark': colors.gray[100],
+					'on-accent-light': colors.gray[950],
+					'on-accent-dark': colors.gray[100],
+				},
+				primary: {
+					dark: colors.gray[950],
+					light: colors.gray[100],
+				},
+				accent: {
+					dark: colors.indigo[600],
+					light: colors.indigo[400],
+				}
+			},
+
 			fontFamily: {
 				sans: ["Figtree", ...defaultTheme.fontFamily.sans],
 			},
@@ -30,9 +53,10 @@ export default {
 		},
 	},
 	plugins: [
-	    forms({
-	        strategy: "base", // only generate global styles
-	        // strategy: "class", // only generate classes
-	    }),
+		forms({
+			strategy: "base", // only generate global styles
+			// strategy: "class", // only generate classes
+		}),
 	],
 };
+

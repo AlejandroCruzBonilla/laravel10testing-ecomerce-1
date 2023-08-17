@@ -17,7 +17,7 @@
           for="email"
           :value="__('Email')"
         />
-        <x-forms.text-input
+        <x-forms.input-text
           class="block w-full"
           id="email"
           name="email"

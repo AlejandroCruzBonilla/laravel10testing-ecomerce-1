@@ -30,7 +30,7 @@
         for="name"
         :value="__('Name')"
       />
-      <x-forms.text-input
+      <x-forms.input-text
         class="block w-full"
         id="name"
         name="name"
@@ -51,7 +51,7 @@
         for="email"
         :value="__('Email')"
       />
-      <x-forms.text-input
+      <x-forms.input-text
         class="block w-full"
         id="email"
         name="email"

@@ -1,18 +1,38 @@
 <nav-bar class="header">
   <x-nav.toolbar>
-    <x-slot name="menu_icon">
-			<div class="lg:hidden  h-full">
-				<pv-button rounded outlined @click="toggle_mobile_menu_drawer">
-					<font-awesome-icon width="16px" :icon="mobile_menu_drawer ? 'fa-solid fa-xmark' : 'fa-solid fa-grip-lines'">
-					</font-awesome-icon>
-				</pv-button>
-			</div>
+    <x-slot name="prepend">
+      <div class="lg:hidden inline-flex items-center justify-center">
+        <x-common.primary-button
+          class="text-lg w-10 h-10"
+          rounded
+          @click="toggle_mobile_menu_drawer"
+        >
+          <font-awesome-icon
+            width="16px"
+            :icon="mobile_menu_drawer ? 'fa-solid fa-xmark' : 'fa-solid fa-grip-lines'"
+          ></font-awesome-icon>
+        </x-common.primary-button>
+      </div>
     </x-slot>
     <x-slot name="logo">
       <x-common.application-logo
         height="50px"
         width="50px"
       ></x-common.application-logo>
+    </x-slot>
+    <x-slot name="links">
+      @foreach (RouteHelpers::getRoutesByPrefix('web') as $name => $route)
+        <x-nav.link
+          class="mx-2"
+          :href="route($name)"
+          :active="request()->routeIs($name)"
+        >
+          {{ __(RouteHelpers::cleanRouteName($name)) }}
+        </x-nav.link>
+      @endforeach
+    </x-slot>
+    <x-slot name="append">
+      <x-nav.auth-dropdown></x-nav.auth-dropdown>
     </x-slot>
   </x-nav.toolbar>
 </nav-bar>

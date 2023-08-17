@@ -1,6 +1,0 @@
-input[type="checkbox"] {
-  @apply border-solid;
-  @apply border-gray-900;
-  @apply rounded;
-  @apply shadow-sm;
-}

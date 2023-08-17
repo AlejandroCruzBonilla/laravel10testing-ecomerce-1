@@ -22,7 +22,7 @@
         for="current_password"
         :value="__('Current Password')"
       />
-      <x-forms.text-input
+      <x-forms.input-text
         class="block w-full"
         id="current_password"
         name="current_password"
@@ -40,7 +40,7 @@
         for="password"
         :value="__('New Password')"
       />
-      <x-forms.text-input
+      <x-forms.input-text
         class="block w-full"
         id="password"
         name="password"
@@ -58,7 +58,7 @@
         for="password_confirmation"
         :value="__('Confirm Password')"
       />
-      <x-forms.text-input
+      <x-forms.input-text
         class="block w-full"
         id="password_confirmation"
         name="password_confirmation"

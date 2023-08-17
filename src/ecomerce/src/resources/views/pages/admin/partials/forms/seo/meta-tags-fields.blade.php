@@ -3,7 +3,7 @@
     for="meta[title]"
     :value="__('Title')"
   />
-  <x-forms.text-input
+  <x-forms.input-text
     class="block w-full"
     id="meta-title"
     name="meta[title]"
@@ -22,7 +22,7 @@
     for="meta[description]"
     :value="__('Description')"
   />
-  <x-forms.text-input
+  <x-forms.input-text
     class="block w-full"
     id="meta-description"
     name="meta[description]"

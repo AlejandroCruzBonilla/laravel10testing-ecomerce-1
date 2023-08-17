@@ -21,7 +21,11 @@
     name="{{ $name }}"
     type="checkbox"
     value="{{ $checkedValue }}"
-    {{ $attributes->class(['border-gray-800 dark:border-gray-100', 'text-indigo-500  focus:ring-indigo-500']) }}
+    {{ $attributes->class([
+        'rounded',
+        'border-solid border-primary-dark dark:border-primary-light',
+        'text-accent-dark  focus:ring-accent-dark',
+    ]) }}
     {{-- {{ old($name, isset($node) ? $node[$name] : '') === $checkedValue ? 'checked' : '' }} --}}
     @checked(old($name, isset($node) ? $node[$name] : '') === $checkedValue ? true : false)
   >
