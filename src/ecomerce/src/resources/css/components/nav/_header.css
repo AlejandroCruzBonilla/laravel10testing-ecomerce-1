@@ -1,12 +1,14 @@
-header.header{
-	height: var(--header-height);
+header.header {
+    /* height: var(--header-height); */
+    position: fixed;
+    top: 0;
 }
 
-header.header .header-wrapper{
-	display: flex;
-	@apply p-3 rounded-lg;
-	@apply bg-primary-light dark:bg-primary-dark;
-	@apply text-primary-dark dark:text-primary-light;
+header.header .header-wrapper .header-content {
+    display: flex;
+    @apply p-2 rounded-lg;
+    @apply bg-primary-light dark:bg-primary-dark;
+    @apply text-primary-dark dark:text-primary-light;
 }
 
 header.header .prepend,
@@ -21,6 +23,9 @@ header.header .toolbar {
 header.header .toolbar,
 header.header .toolbar-wrapper {
     height: 100%;
+    width: 100%;
+}
+header.header .toolbar-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;

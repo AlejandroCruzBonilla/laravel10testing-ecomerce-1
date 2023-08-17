@@ -10,8 +10,6 @@
 .layout .admin__bar .admin__bar-wrapper,
 .layout header.header,
 .layout header.header .header-wrapper,
-.layout header.header .toolbar,
-.layout header.header .toolbar-wrapper,
 .layout main,
 .layout main .main-wrapper,
 .layout footer,
@@ -20,7 +18,7 @@
 }
 
 .layout .admin__bar .admin__bar-wrapper,
-.layout header.header,
+.layout header .header-wrapper,
 .layout main .main-wrapper,
 .layout footer .footer-wrapper {
     max-width: var(--layout-max-with);
@@ -29,12 +27,16 @@
     margin: 0 auto;
 }
 
+.layout.administer .header {
+    top: var(--admin-bar-height);
+}
+
 .layout main {
     min-height: 100vh;
     padding-top: 0;
-    margin-top: calc(var(--header-height) + 10px);
+    margin-top: calc(var(--header-height) + 20px);
 }
 
 .layout.administer main {
-    margin-top: calc(var(--admin-bar-height) + var(--header-height) + 10px);
+    margin-top: calc(var(--admin-bar-height) + var(--header-height) + 20px);
 }

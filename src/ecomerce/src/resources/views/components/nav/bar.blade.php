@@ -5,6 +5,7 @@
         <x-common.primary-button
           class="text-lg w-10 h-10"
           rounded
+					on-light-bg
           @click="toggle_mobile_menu_drawer"
         >
           <font-awesome-icon

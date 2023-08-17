@@ -4,6 +4,7 @@
       class="text-lg w-10 h-10"
       id="profile-dropdown"
       rounded
+			on-light-bg
     >
       <font-awesome-icon
         width="18px"

@@ -3,4 +3,6 @@
   font-size: 1rem;
 	@apply bg-primary-dark;
 	@apply text-primary-light;
+	position: fixed;
+	top: 0;
 }
