@@ -2,7 +2,7 @@
   v-model:visible="mobileMenuDrawer"
   location="left"
   temporary
-  @update:model-value="onToggleMobileMenuDrawer"
+  @update:visible="onToggleMobileMenuDrawer"
 >
   <x-nav.link-list></x-nav.link-list>
   <hr>

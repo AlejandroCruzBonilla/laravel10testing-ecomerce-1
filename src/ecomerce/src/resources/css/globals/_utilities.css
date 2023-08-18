@@ -1,27 +1,27 @@
 
 /*  */
 .font--primary {
-	@apply text-font-dark dark:text-font-light;
+	@apply text-font-dark dark:text-font-light !important;
 }
 
 /*  */
 .background--primary {
-    @apply bg-background-light-100 dark:bg-background-dark-900;
+    @apply bg-background-light-100 dark:bg-background-dark-900 !important;
 }
 .background--secondary {
-    @apply bg-background-light-200 dark:bg-background-dark-800;
+    @apply bg-background-light-200 dark:bg-background-dark-800 !important;
 }
 .background--tertiary  {
-    @apply bg-background-light-300 dark:bg-background-dark-700;
+    @apply bg-background-light-300 dark:bg-background-dark-700 !important;
 }
 
 /*  */
 .border--primary {
-	@apply border-background-light-100 dark:border-background-dark-900;
+	@apply border-background-light-100 dark:border-background-dark-900 !important;
 }
 .border--secondary {
-	@apply border-background-light-200 dark:border-background-dark-800;
+	@apply border-background-light-200 dark:border-background-dark-800 !important;
 }
 .border--tertiary {
-	@apply border-background-light-300 dark:border-background-dark-700;
+	@apply border-background-light-300 dark:border-background-dark-700 !important;
 }

@@ -7,7 +7,7 @@ import { RouterLink } from 'vue-router';
 
 //PrimeVue
 import PrimeVue from "primevue/config";
-import CustomTailwind from "./lib/primeVue-tailwindPassThrough";
+import CustomTailwind from "./lib/primeVue-customTailwind";
 
 import DataTable from "primevue/datatable";
 import Column from "primevue/column";
