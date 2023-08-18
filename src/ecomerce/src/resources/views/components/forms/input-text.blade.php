@@ -24,12 +24,7 @@
 
 <input
   {{ $disabled ? 'disabled' : '' }}
-  {{ $attributes->class([
-		'bg-gray-200 dark:bg-gray-700',
-		'border-primary-dark dark:border-primary-light',
-		'border-solid focus:border-accent-dark focus:ring-accent-dark',
-		'rounded-md shadow-sm',
-	]) }}
+  {{ $attributes->class(['input__text'])->merge(['type' => 'text']) }}
 >
 
 {{-- <v-text-field

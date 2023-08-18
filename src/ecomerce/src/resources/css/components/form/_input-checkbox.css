@@ -1,0 +1,5 @@
+.input__checkbox {
+	@apply rounded;
+	@apply border-solid border--primary;
+	@apply text-accent-dark-100 focus:ring-accent-dark-100;
+}

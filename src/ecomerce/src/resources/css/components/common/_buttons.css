@@ -1,24 +1,25 @@
-.regular-button {
+.btn {
     @apply inline-flex items-center justify-center;
-    @apply px-4 py-3;
+    @apply px-4 py-2;
     @apply border border-transparent;
     @apply font-semibold uppercase tracking-widest;
     @apply focus:outline-none focus:ring-2 focus:ring-offset-2;
     @apply transition ease-in-out duration-150;
-    @apply focus:ring-accent-dark;
+    @apply focus:ring-accent-dark-100;
 }
 
-.regular-button.primary {
-    @apply bg-primary-dark text-primary-light dark:bg-primary-light dark:text-primary-dark;
-    @apply hover:bg-gray-800 focus:bg-gray-800 active:bg-gray-800;
-    @apply hover:dark:bg-gray-300 focus:dark:bg-gray-300 dark:active:bg-gray-300;
+.btn--primary {
+    @apply bg-primary-dark-100 dark:bg-primary-light-100 text-primary-light-100  dark:text-primary-dark-100;
+    @apply hover:bg-primary-dark-200 focus:bg-primary-dark-200 active:bg-primary-dark-200;
+    @apply hover:dark:bg-primary-light-200 focus:dark:bg-primary-light-200 dark:active:bg-primary-light-200;
 }
 
-.regular-button.primary-dark-bg {
-    @apply bg-gray-100 text-gray-950;
-    @apply hover:bg-gray-300 focus:bg-gray-300 active:bg-gray-300;
+.btn--primary--on-bg-dark {
+    @apply bg-primary-light-100 text-primary-dark-100;
+    @apply hover:bg-primary-light-200 focus:bg-primary-light-200 active:bg-primary-light-200;
 }
-.regular-button.primary-light-bg {
-    @apply bg-gray-950 text-gray-100;
-    @apply hover:bg-gray-800 focus:bg-gray-800 active:bg-gray-800;
+
+.btn--primary--on-bg-light {
+    @apply bg-primary-dark-100 text-primary-light-100;
+    @apply hover:bg-primary-dark-200 focus:bg-primary-dark-200 active:bg-primary-dark-200;
 }

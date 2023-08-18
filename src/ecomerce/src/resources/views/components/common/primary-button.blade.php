@@ -9,13 +9,13 @@
           'rounded-full' => $rounded,
           'rounded-md' => !$rounded,
   
-          'primary-dark-bg' => $onDarkBg,
+          'btn--primary--on-bg-dark' => $onDarkBg,
   
-          'primary-light-bg' => $onLightBg,
+          'btn--primary--on-bg-light' => $onLightBg,
   
-          'primary' => !$onDarkBg && !$onLightBg,
-  
-          'regular-button',
+          'btn--primary' => !$onDarkBg && !$onLightBg,
+
+					'btn'
       ])->merge([
           'type' => 'button',
       ]) }}

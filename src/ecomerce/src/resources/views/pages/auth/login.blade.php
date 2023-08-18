@@ -4,7 +4,7 @@
     {{ __('Login') }}
   </x-slot>
 
-  <div class="card card-c1">
+  <div class="container container-c1">
     <form
       action="{{ route('login') }}"
       method="POST"

@@ -1,0 +1,5 @@
+.menu__root {
+    @apply py-1 w-48;
+    @apply border-solid border-2 border--tertiary rounded-md;
+    @apply background--primary font--primary;
+}

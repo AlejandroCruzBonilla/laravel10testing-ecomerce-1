@@ -13,7 +13,7 @@
     </x-common.primary-button>
   </a>
 
-  <div class="card card-c1 mb-4">
+  <div class="container container-c1 mb-4">
     @if ($blogs->items() && count($blogs->items()))
       <index-table
         :raw-data="{{ $blogs->toJson() }}"
@@ -38,15 +38,21 @@
         csrf-token="{{ csrf_token() }}"
       >
         <template #edit-btn-link={id,tablePagination}>
-          <a v-bind:href="`${tablePagination.path}/${id}/edit`">
-            <x-common.primary-button class="m-2">
+          <a
+            class="m-2"
+            v-bind:href="`${tablePagination.path}/${id}/edit`"
+          >
+            <x-common.primary-button>
               {{ __('Edit') }}
             </x-common.primary-button>
           </a>
         </template>
         <template #delete-btn-link={id,tablePagination}>
-          <a v-bind:href="`${tablePagination.path}/${id}`">
-            <x-common.primary-button class="m-2">
+          <a
+            class="m-2"
+            v-bind:href="`${tablePagination.path}/${id}`"
+          >
+            <x-common.primary-button>
               {{ __('Delete') }}
             </x-common.primary-button>
           </a>

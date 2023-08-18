@@ -1,5 +1,5 @@
 <x-app-layout>
-  <div class="card card-c1">
+  <div class="container container-c1">
     <div class="mb-4 text-sm">
       {{ __('This is a secure area of the application. Please confirm your password before continuing.') }}
     </div>

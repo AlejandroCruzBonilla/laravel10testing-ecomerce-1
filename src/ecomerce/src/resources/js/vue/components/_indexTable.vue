@@ -1,5 +1,5 @@
 <template>
-	<DataTable
+	<pv-data-table
 		v-if="tableRows.length"
 		:lazy="false"
 		:paginator="false"
@@ -8,13 +8,13 @@
 		:value="tableRows"
 		@page="paginate"
 	>
-		<Column
+		<pv-column
 			v-for="column of tableColumns"
 			:key="column.field"
 			:field="column.field"
 			:header="column.header"
 		/>
-		<Column header="Actions">
+		<pv-column header="Actions">
 			<template #body="{ data: { id } }">
 				<slot
 					v-if="actions.edit"
@@ -31,8 +31,8 @@
 				></slot>
 			</template>
 
-		</Column>
-	</DataTable>
+		</pv-column>
+	</pv-data-table>
 </template>
 
 <script>

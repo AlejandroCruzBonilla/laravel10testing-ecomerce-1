@@ -12,6 +12,7 @@ import CustomTailwind from "./lib/primeVue-tailwindPassThrough";
 import DataTable from "primevue/datatable";
 import Column from "primevue/column";
 import Menubar from 'primevue/menubar';
+import Menu from 'primevue/menu';
 import Sidebar from 'primevue/sidebar';
 import Button from 'primevue/button';
 
@@ -21,8 +22,9 @@ import CKEditor from "@ckeditor/ckeditor5-vue";
 //Own
 import appLayout from "./layout/app.vue";
 import Debug from "./components/__debug.vue";
-import NavBar from "./components/_navBar.vue";
 import AdminBar from "./components/_adminBar.vue";
+import NavBar from "./components/_navBar.vue";
+import AuthDropDown from "./components/_authDropdown.vue";
 import IndexTable from "./components/_indexTable.vue";
 import RichTextEditor from "./components/_richTextEditor.vue";
 import FormVue from "./components/_form.vue";
@@ -43,11 +45,11 @@ if (appDocument) {
 
 	//PrimeVue
 	app.use(PrimeVue, { unstyled: true, pt: CustomTailwind });
-	app.component("DataTable", DataTable);
-	app.component("Column", Column);
+	app.component("pvDataTable", DataTable);
+	app.component("pvColumn", Column);
 	app.component("pvSidebar", Sidebar);
 	app.component("pvButton", Button);
-	app.component("menuBar", Menubar);
+	app.component("pvMenu", Menu);
 
 	//CkEditor
 	app.use(CKEditor);
@@ -59,8 +61,9 @@ if (appDocument) {
 	app.component("DebugComponent", Debug);
 	
 	app.component("appLayout", appLayout);
-	app.component("NavBar", NavBar);
 	app.component("AdminBar", AdminBar);
+	app.component("NavBar", NavBar);
+	app.component("AuthDropDown", AuthDropDown);
 	app.component("IndexTable", IndexTable);
 	app.component("RichTextEditor", RichTextEditor);
 	app.component("FormVue", FormVue);

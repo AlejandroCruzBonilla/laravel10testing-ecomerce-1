@@ -18,24 +18,52 @@ export default {
 
 	theme: {
 		extend: {
-
 			colors: {
 				font: {
-					DEFAULT: colors.gray[950],
-					dark: colors.gray[950],
-					light: colors.gray[100],
-					'on-primary-light': colors.gray[950],
-					'on-primary-dark': colors.gray[100],
-					'on-accent-light': colors.gray[950],
-					'on-accent-dark': colors.gray[100],
+					DEFAULT: colors.neutral[950],
+					dark: colors.neutral[950],
+					light: colors.neutral[100],
+					'on-bg-light': colors.neutral[950],
+					'on-bg-dark': colors.neutral[100],
+					'on-accent-light': colors.neutral[950],
+					'on-accent-dark': colors.neutral[100],
 				},
+
+				background: {
+					dark: {
+						950: colors.neutral[950],
+						900: colors.neutral[900],
+						800: colors.neutral[800],
+						700: colors.neutral[700],
+					},
+					light: {
+						50: colors.neutral[50],
+						100: colors.neutral[100],
+						200: colors.neutral[200],
+						300: colors.neutral[300],
+					},
+				},
+
 				primary: {
-					dark: colors.gray[950],
-					light: colors.gray[100],
+					dark: {
+						100: colors.neutral[950],
+						200: colors.neutral[800],
+					},
+					light: {
+						100: colors.neutral[100],
+						200: colors.neutral[200],
+					},
 				},
+
 				accent: {
-					dark: colors.indigo[600],
-					light: colors.indigo[400],
+					dark: {
+						100: colors.indigo[400],
+						200: colors.indigo[500],
+					},
+					light: {
+						100: colors.indigo[400],
+						200: colors.indigo[500],
+					},
 				}
 			},
 

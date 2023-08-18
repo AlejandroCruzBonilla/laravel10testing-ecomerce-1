@@ -1,0 +1,27 @@
+
+/*  */
+.font--primary {
+	@apply text-font-dark dark:text-font-light;
+}
+
+/*  */
+.background--primary {
+    @apply bg-background-light-100 dark:bg-background-dark-900;
+}
+.background--secondary {
+    @apply bg-background-light-200 dark:bg-background-dark-800;
+}
+.background--tertiary  {
+    @apply bg-background-light-300 dark:bg-background-dark-700;
+}
+
+/*  */
+.border--primary {
+	@apply border-background-light-100 dark:border-background-dark-900;
+}
+.border--secondary {
+	@apply border-background-light-200 dark:border-background-dark-800;
+}
+.border--tertiary {
+	@apply border-background-light-300 dark:border-background-dark-700;
+}

@@ -2,6 +2,7 @@
   <div class="auth__links">
     @auth
       <div class="p-2 text-center">{{ Auth::user()->name }}</div>
+      <div class="p-2 text-center">{{ Auth::user()->roles->first()->name }}</div>
       <x-nav.link
         class="w-full"
         :href="route('profile.edit')"

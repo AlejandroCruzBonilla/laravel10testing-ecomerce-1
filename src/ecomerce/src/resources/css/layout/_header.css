@@ -1,14 +1,14 @@
 header.header {
     position: fixed;
     top: 0;
-		transition: top 0.3s; 
+    transition: top 0.3s;
+    z-index: 100;
 }
 
 header.header .header-wrapper .header-content {
     display: flex;
-    @apply p-2 rounded-lg;
-    @apply bg-primary-light dark:bg-primary-dark;
-    @apply text-primary-dark dark:text-primary-light;
+		@apply container container-c1;
+    @apply shadow-md dark:shadow-neutral-800;
 }
 
 header.header .prepend,

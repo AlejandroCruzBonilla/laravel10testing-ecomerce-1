@@ -1,0 +1,14 @@
+.container {
+    @apply background--primary;
+}
+.container-c1 {
+    @apply p-6 rounded-lg;
+}
+
+.container-c2 {
+    @apply p-4 rounded-lg;
+}
+
+.container-c3 {
+    @apply p-2 rounded-lg;
+}

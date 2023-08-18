@@ -1,11 +1,15 @@
-<nav-bar class="header" :admin-bar-height="adminBarHeight" @nav-bar-height="onNavBarHeight">
+<nav-bar
+  class="header"
+  :admin-bar-height="adminBarHeight"
+  @nav-bar-height="onNavBarHeight"
+>
   <x-nav.toolbar>
     <x-slot name="prepend">
       <div class="lg:hidden inline-flex items-center justify-center">
         <x-common.primary-button
           class="text-lg w-10 h-10"
           rounded
-					on-light-bg
+          on-light-bg
           @click="onToggleMobileMenuDrawer"
         >
           <font-awesome-icon
