@@ -49,7 +49,7 @@
     </div>
 
     <div class="flex my-2 justify-center flex-col">
-      <div class="flex justify-center py-4 xs:flex-col md:flex-row">
+      <div class="flex justify-center py-4 flex-col sm:flex-row">
         @foreach (RouteHelpers::getRoutesByPrefix('web') as $name => $route)
           <x-nav.link
             class="mx-2"

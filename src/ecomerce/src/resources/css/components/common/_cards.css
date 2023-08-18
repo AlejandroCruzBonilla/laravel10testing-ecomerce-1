@@ -1,14 +1,14 @@
 .card {
     @apply background--primary;
 }
-.card-c1 {
+.card--1 {
     @apply p-6 rounded-lg;
 }
 
-.card-c2 {
+.card--2 {
     @apply p-4 rounded-lg;
 }
 
-.card-c3 {
+.card--3 {
     @apply p-2 rounded-lg;
 }

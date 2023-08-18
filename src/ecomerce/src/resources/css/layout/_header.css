@@ -7,7 +7,7 @@ header.header {
 
 header.header .header-wrapper .header-content {
     display: flex;
-		@apply container container-c1;
+    @apply container--card container--card--2;
     @apply shadow-md dark:shadow-neutral-800;
 }
 

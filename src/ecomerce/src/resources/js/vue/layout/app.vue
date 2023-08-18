@@ -27,7 +27,9 @@
 
 		<main id="main">
 			<div class="main-wrapper">
-				<slot name="content"></slot>
+				<div class="main-content">
+					<slot name="content"></slot>
+				</div>
 			</div>
 		</main>
 

@@ -13,7 +13,7 @@
     </x-common.primary-button>
   </a>
 
-  <div class="container container-c1 mb-4">
+  <div class="container--card container--card--1 mb-4">
     @if ($blogs->items() && count($blogs->items()))
       <index-table
         :raw-data="{{ $blogs->toJson() }}"
