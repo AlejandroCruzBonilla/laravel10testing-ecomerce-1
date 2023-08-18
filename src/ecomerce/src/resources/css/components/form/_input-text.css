@@ -1,6 +1,7 @@
 .input__text {
+    @apply font--principal;
     @apply background--tertiary;
-    @apply border-solid border--primary;
-    @apply focus:border-accent-dark-100 focus:ring-accent-dark-100;
+    @apply border--principal;
+    @apply focus:border-accent-500 focus:ring-accent-500;
     @apply rounded-md shadow-sm;
 }

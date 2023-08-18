@@ -5,21 +5,21 @@
     @apply font-semibold uppercase tracking-widest;
     @apply focus:outline-none focus:ring-2 focus:ring-offset-2;
     @apply transition ease-in-out duration-150;
-    @apply focus:ring-accent-dark-100;
+    @apply focus:ring-accent-500;
 }
 
 .btn--primary {
-    @apply bg-primary-dark-100 dark:bg-primary-light-100 text-primary-light-100  dark:text-primary-dark-100;
-    @apply hover:bg-primary-dark-200 focus:bg-primary-dark-200 active:bg-primary-dark-200;
+    @apply bg-primary-dark-900 dark:bg-primary-light-100 text-primary-light-100  dark:text-primary-dark-900;
+    @apply hover:bg-primary-dark-800 focus:bg-primary-dark-800 active:bg-primary-dark-800;
     @apply hover:dark:bg-primary-light-200 focus:dark:bg-primary-light-200 dark:active:bg-primary-light-200;
 }
 
 .btn--primary--on-bg-dark {
-    @apply bg-primary-light-100 text-primary-dark-100;
+    @apply bg-primary-light-100 text-primary-dark-900;
     @apply hover:bg-primary-light-200 focus:bg-primary-light-200 active:bg-primary-light-200;
 }
 
 .btn--primary--on-bg-light {
-    @apply bg-primary-dark-100 text-primary-light-100;
-    @apply hover:bg-primary-dark-200 focus:bg-primary-dark-200 active:bg-primary-dark-200;
+    @apply bg-primary-dark-900 text-primary-light-100;
+    @apply hover:bg-primary-dark-800 focus:bg-primary-dark-800 active:bg-primary-dark-800;
 }

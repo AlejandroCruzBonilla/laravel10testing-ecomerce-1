@@ -30,41 +30,16 @@ export default {
 				},
 
 				background: {
-					dark: {
-						950: colors.neutral[950],
-						900: colors.neutral[900],
-						800: colors.neutral[800],
-						700: colors.neutral[700],
-					},
-					light: {
-						50: colors.neutral[50],
-						100: colors.neutral[100],
-						200: colors.neutral[200],
-						300: colors.neutral[300],
-					},
+					dark: colors.neutral,
+					light: colors.neutral,
 				},
 
 				primary: {
-					dark: {
-						100: colors.neutral[950],
-						200: colors.neutral[800],
-					},
-					light: {
-						100: colors.neutral[100],
-						200: colors.neutral[200],
-					},
+					dark: colors.neutral,
+					light: colors.neutral,
 				},
 
-				accent: {
-					dark: {
-						100: colors.indigo[400],
-						200: colors.indigo[500],
-					},
-					light: {
-						100: colors.indigo[400],
-						200: colors.indigo[500],
-					},
-				}
+				accent: colors.teal,
 			},
 
 			fontFamily: {

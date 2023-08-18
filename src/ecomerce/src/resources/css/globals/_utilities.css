@@ -1,27 +1,26 @@
-
 /*  */
-.font--primary {
-	@apply text-font-dark dark:text-font-light !important;
+.font--principal {
+    @apply text-font-dark dark:text-font-light;
 }
 
 /*  */
-.background--primary {
-    @apply bg-background-light-100 dark:bg-background-dark-900 !important;
+.background--principal {
+    @apply bg-background-light-100 dark:bg-background-dark-900;
 }
 .background--secondary {
-    @apply bg-background-light-200 dark:bg-background-dark-800 !important;
+    @apply bg-background-light-200 dark:bg-background-dark-800;
 }
-.background--tertiary  {
-    @apply bg-background-light-300 dark:bg-background-dark-700 !important;
+.background--tertiary {
+    @apply bg-background-light-300 dark:bg-background-dark-700;
 }
 
 /*  */
-.border--primary {
-	@apply border-background-light-100 dark:border-background-dark-900 !important;
+.border--principal {
+    @apply border-2 border-solid border-background-dark-900 dark:border-background-light-100;
 }
 .border--secondary {
-	@apply border-background-light-200 dark:border-background-dark-800 !important;
+    @apply border border-solid border-background-dark-800 dark:border-background-light-200;
 }
 .border--tertiary {
-	@apply border-background-light-300 dark:border-background-dark-700 !important;
+    @apply border border-solid border-background-dark-300 dark:border-background-light-500;
 }

@@ -16,7 +16,6 @@
     value="{{ $unCheckedValue }}"
   >
   <input
-    class="rounded shadow-sm "
     id="{{ $name }}"
     name="{{ $name }}"
     type="checkbox"

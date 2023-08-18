@@ -7,6 +7,6 @@
 
 body {
 	@apply background--tertiary;
-	@apply font--primary;
+	@apply font--principal;
   font-size: 1rem;
 }

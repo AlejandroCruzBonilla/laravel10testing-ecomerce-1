@@ -1,5 +1,5 @@
 .container--card {
-    @apply background--primary;
+    @apply background--principal;
 }
 .container--card--1 {
     @apply p-6 rounded-lg;

@@ -523,14 +523,13 @@ export default {
 	sidebar: {
 			root: ({ props }) => ({
 					class: [
-							'flex flex-col pointer-events-auto relative transition-transform duration-300',
-							'bg-white text-gray-700 border-0 shadow-lg',
+							'flex flex-col shadow-lg pointer-events-auto relative transition-transform duration-300',
+							'background--principal font--principal',
 							{
 									'!transition-none !transform-none !w-screen !h-screen !max-h-full !top-0 !left-0': props.position == 'full',
 									'h-full w-80': props.position == 'left' || props.position == 'right',
 									'h-40 w-full': props.position == 'top' || props.position == 'bottom'
 							},
-							'dark:border dark:border-blue-900/40 dark:bg-gray-900 dark:text-white/80'
 					]
 			}),
 			header: {
@@ -2121,7 +2120,7 @@ export default {
 	},
 	menu: {
 			root: {
-					class: 'py-1 bg-white dark:bg-gray-900 text-gray-700 dark:text-white/80 border border-gray-300 dark:border-blue-900/40 rounded-md w-48'
+					class: 'py-2 background--principal font--principal border--tertiary rounded-md w-48'
 			},
 			menu: {
 					class: ['m-0 p-0 list-none', 'outline-none']

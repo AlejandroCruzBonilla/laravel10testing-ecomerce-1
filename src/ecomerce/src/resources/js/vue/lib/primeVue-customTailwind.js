@@ -4,13 +4,7 @@ import Tailwind from "./primeVue-tailwindPassThrough";
 
 //Tailwind customization
 const CustomTailwind = usePassThrough(Tailwind,
-	{
-		menu: {
-			root: {
-				class: ['background--primary'],
-			},
-		},
-	},
+	{},
 	{
 		merge: true,
 		useMergeProps: true,
