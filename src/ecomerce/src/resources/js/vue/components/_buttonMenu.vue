@@ -10,11 +10,13 @@
 			:popup="true"
 		>
 			<template #start>
-				<slot name="menu-items"></slot>
+				<slot name="start"></slot>
 			</template>
 			<template #item="{ item }">
-				{{ console.log(item) }}
-				<!-- <slot name="menu-items"></slot> -->
+				<slot name="items" :item="item"></slot>
+			</template>
+			<template #end>
+				<slot name="end"></slot>
 			</template>
 		</pv-menu>
 	</div>
@@ -23,17 +25,16 @@
 <script setup>
 import { ref } from 'vue';
 
+const props = defineProps({
+	items: {
+		type: Array,
+		default: []
+	}
+})
 
 const menu = ref(null)
 
-const items = ref([
-	{
-		label: 'Update',
-		icon: 'pi pi-refresh',
-		url: 'https://vuejs.org/',
-		target: '_blank'
-	}
-]);
+
 
 
 const onClick = (event) => {

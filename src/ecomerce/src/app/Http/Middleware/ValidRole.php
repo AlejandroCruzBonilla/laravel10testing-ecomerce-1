@@ -14,12 +14,15 @@ class ValidRole
 	 *
 	 * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
 	 */
-	public function handle(Request $request, Closure $next, $role = 'guest'): Response
+	public function handle(Request $request, Closure $next, $roles = ['guest']): Response
 	{
+
+		// dd($roles);
+
 		// TODO: Implement array of roles
-		if ($role == 'guest') {
+		if ($roles === 'guest') {
 			return $next($request);
-		} else if (Auth::user() && $request->user()->hasAnyRole($role)) {
+		} else if (Auth::user() && $request->user()->hasAnyRole($roles)) {
 			return $next($request);
 		}
 		abort(401, 'Unauthorized');

@@ -4,7 +4,7 @@
     'errorEventHandler' => '',
 ])
 
-<form-vue
+<form-component
   action="{{ $action }}"
   method="{{ $method }}"
   csrf="{{ csrf_token() }}"
@@ -23,4 +23,4 @@
     </div>
   </template>
 
-</form-vue>
+</form-component>
