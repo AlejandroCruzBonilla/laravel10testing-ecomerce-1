@@ -20,7 +20,7 @@
           $menuItems[] = [
               'label' => __('Register'),
               'url' => route('register'),
-              'icon' => 'fa-solid fa-arrow-right-from-bracket',
+              'icon' => 'fa-solid fa-user',
               'active' => request()->routeIs('register'),
           ];
       }
