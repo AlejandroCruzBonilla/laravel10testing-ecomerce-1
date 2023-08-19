@@ -20,6 +20,8 @@ class RedirectIfAuthenticated
 		$guards = empty($guards) ? [null] : $guards;
 
 		foreach ($guards as $guard) {
+			// dd(Auth::guard('web'));
+			// dd(Auth::guard('web')->user()->hasAnyRole('asd'));
 			if (Auth::guard($guard)->check()) {
 				if (Auth::user() && $request->user()->hasAnyRole('admin')) {
 					return redirect(RouteServiceProvider::ADMIN_DASHBOARD);

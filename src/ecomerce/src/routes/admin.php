@@ -6,7 +6,7 @@ use App\Http\Controllers\Admin\TagController;
 use Illuminate\Support\Facades\Route;
 
 Route::group([
-	'middleware' => ['auth', 'valid_role:admin'],
+	'middleware' => ['auth', 'roles:admin, regular'],
 	'prefix' => 'admin',
 	'as' => 'admin.',
 ], function () {

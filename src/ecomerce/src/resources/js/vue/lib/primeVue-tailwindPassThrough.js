@@ -2120,18 +2120,18 @@ export default {
 	},
 	menu: {
 			root: {
-					class: 'py-2 background--principal font--principal border--tertiary rounded-md w-48'
+					class: 'py-3 background--principal font--principal border--tertiary rounded-md w-48'
 			},
 			menu: {
 					class: ['m-0 p-0 list-none', 'outline-none']
 			},
 			content: ({ context }) => ({
 					class: [
-							'text-gray-700 dark:text-white/80 transition-shadow duration-200 rounded-none',
-							'hover:text-gray-700 dark:hover:text-white/80 hover:bg-gray-200 dark:hover:bg-gray-800/80', // Hover
-							{
-									'bg-gray-300 text-gray-700 dark:text-white/80 dark:bg-gray-800/90': context.focused
-							}
+							'font--principal transition-shadow duration-200 rounded-none',
+							'', // Hover
+							// {
+							// 		'bg-gray-300 text-gray-700 dark:text-white/80 dark:bg-gray-800/90': context.focused
+							// }
 					]
 			}),
 			action: {

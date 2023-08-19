@@ -10,14 +10,17 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 
 import {
+	faArrowRightFromBracket,
   faEnvelope,
   faGripLines,
   faPhone,
   faUser,
+	faCircleUser,
   faXmark,
 } from '@fortawesome/free-solid-svg-icons';
 
 library.add(
+	faArrowRightFromBracket,
   faEnvelope,
   faFacebookF,
   faGripLines,
@@ -27,6 +30,7 @@ library.add(
   faTiktok,
   faTwitter,
   faUser,
+	faCircleUser,
   faXmark,
 );
 

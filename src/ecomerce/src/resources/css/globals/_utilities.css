@@ -14,6 +14,18 @@
     @apply bg-background-light-300 dark:bg-background-dark-700;
 }
 
+.hover--background--principal {
+    @apply hover:bg-background-light-100 dark:hover:bg-background-dark-900;
+}
+.hover--background--secondary {
+    @apply hover:bg-background-light-200 dark:hover:bg-background-dark-800;
+}
+.hover--background--tertiary {
+    @apply hover:bg-background-light-300 dark:hover:bg-background-dark-700;
+}
+
+
+
 .background--opacity-40{
 	@apply bg-opacity-40;
 }

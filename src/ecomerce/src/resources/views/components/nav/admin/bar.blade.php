@@ -1,4 +1,4 @@
-{{-- @if (Auth::user() && Auth::user()->hasAnyRole('admin'))
+@if (Auth::user() && Auth::user()->hasAnyRole('admin'))
   <admin-bar class="admin__bar" @admin-bar-height="onAdminBarHeight">
     <div class="admin__bar-wrapper">
       <div class="admin__bar-content h-full flex items-center">
@@ -6,4 +6,4 @@
       </div>
     </div>
   </admin-bar>
-@endif --}}
+@endif
