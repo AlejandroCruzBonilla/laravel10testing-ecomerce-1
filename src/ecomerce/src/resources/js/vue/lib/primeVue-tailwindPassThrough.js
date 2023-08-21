@@ -3725,8 +3725,8 @@ export default {
 					'text-left border-0 border-b border-solid border-gray-300 dark:border-blue-900/40 font-bold',
 					'transition duration-200',
 					context?.size === 'small' ? 'p-2' : context?.size === 'large' ? 'p-5' : 'p-4', // Size
-					context.sorted ? 'bg-blue-50 text-blue-700' : 'bg-slate-50 text-slate-700', // Sort
-					context.sorted ? 'dark:text-white/80 dark:bg-blue-300' : 'dark:text-white/80 dark:bg-gray-900', // Dark Mode
+					context.sorted ? 'bg-blue-50 text-blue-700' : 'background--primary', // Sort
+					// context.sorted ? 'dark:text-white/80 dark:bg-blue-300' : 'dark:text-white/80 dark:bg-gray-900', // Dark Mode
 					{
 						'sticky z-[1]': props.frozen || props.frozen === '', // Frozen Columns
 						'border-x border-y': context?.showGridlines,
@@ -3734,6 +3734,9 @@ export default {
 					}
 				]
 			}),
+			headertitle: {
+				class: 'w-full'
+			},
 			headercontent: {
 				class: 'flex items-center'
 			},
@@ -3741,7 +3744,7 @@ export default {
 				class: [
 					'text-left border-0 border-b border-solid border-gray-300',
 					context?.size === 'small' ? 'p-2' : context?.size === 'large' ? 'p-5' : 'p-4', // Size
-					'dark:text-white/80 dark:border-blue-900/40', // Dark Mode
+					'background--secondary', // Dark Mode
 					{
 						'sticky bg-inherit': props.frozen || props.frozen === '', // Frozen Columns
 						'border-x border-y': context?.showGridlines

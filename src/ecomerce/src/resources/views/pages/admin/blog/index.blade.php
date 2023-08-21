@@ -58,7 +58,7 @@
           </a>
         </template>
       </index-table>
-      <div class="paginador">{{ $blogs->links() }}</div>
+      <div class="paginador font--principal">{{ $blogs->links() }}</div>
     @endif
   </div>
 
