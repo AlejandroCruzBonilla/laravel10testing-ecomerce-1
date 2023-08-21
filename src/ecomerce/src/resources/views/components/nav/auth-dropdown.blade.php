@@ -58,7 +58,6 @@
         {{ Auth::user()->name }}
       </div>
     @endauth
-    {{-- <x-nav.auth-links></x-nav.auth-links> --}}
   </template>
   <template #end>
     @auth
