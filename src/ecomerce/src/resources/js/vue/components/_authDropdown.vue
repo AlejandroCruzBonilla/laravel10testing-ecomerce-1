@@ -14,7 +14,6 @@
 			</template>
 			<template #item="{ item }">
 				{{ console.log(item) }}
-				<!-- <slot name="menu-items"></slot> -->
 			</template>
 		</pv-menu>
 	</div>
